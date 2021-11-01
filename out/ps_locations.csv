@@ -1,0 +1,1495 @@
+"redcap_id","recruit_date","source","flyer_location","city_id","state_id","zip_id","ps_proj_eligible","screened","num_sources","LAT","LNG"
+"65",2021-05-23,"craigslist",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"67",2021-05-24,"other_person",NA,"Unit 12","Vermont",5478,"ineligible","no",1,44.808422,-73.082507
+"69",2021-05-25,"other",NA,"Plainfield ","Vermont",5667,"ineligible","no",1,44.269042,-72.38887
+"70",2021-05-25,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"76",2021-05-25,"facebook",NA,"Websterville ","Vermont",5678,"ineligible","no",1,44.156758,-72.475424
+"77",2021-05-26,"facebook",NA,"Milton","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"78",2021-05-27,"facebook",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"80",2021-05-27,"facebook",NA,"Townshend ","Vermont",5353,"ineligible","no",1,43.07105,-72.682202
+"81",2021-05-27,"facebook",NA,"Ludlow","Vermont",5149,"ineligible","no",1,43.380553,-72.712124
+"82",2021-05-27,"facebook",NA,"Fair Haven ","Vermont",5743,"ineligible","no",1,43.67733,-73.304926
+"85",2021-05-26,"clin_trials_web",NA,"St. Albans ","Vermont",5478,"ineligible","no",1,44.808422,-73.082507
+"87",2021-05-27,"other_person",NA,"North creek","New York",12853,"ineligible","no",1,43.657554,-74.064187
+"89",2021-05-28,"facebook",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"91",2021-05-28,"google",NA,"Chelsea","Vermont",5038,"ineligible","no",1,43.989747,-72.454953
+"93",2021-05-29,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"94",2021-05-29,"front_porch_forum",NA,"Chelsea","Vermont",5038,"ineligible","no",1,43.989747,-72.454953
+"97",2021-05-31,"other_person",NA,"Berlin","Vermont",5602,"ineligible","no",1,44.274953,-72.609475
+"99",2021-06-01,"facebook",NA,"Highgate","Vermont",5459,"ineligible","no",1,44.95006,-73.005367
+"102",2021-06-01,"facebook",NA,"Richford ","Vermont",5476,"ineligible","no",1,44.955228,-72.643138
+"104",2021-06-03,"other_person",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"106",2021-06-03,"google",NA,"White river jct ","Vermont",5001,"ineligible","no",1,43.672188,-72.380193
+"107",2021-03-06,"google",NA,"White river jct ","Vermont",5001,"ineligible","no",1,43.672188,-72.380193
+"110",2021-06-05,"facebook",NA,"Killingworth","Connecticut",6419,"ineligible","no",1,41.374419,-72.578328
+"112",2021-06-06,"facebook",NA,"Waterbury Center","Vermont",5677,"ineligible","no",1,44.4083,-72.709972
+"113",2021-06-06,"facebook",NA,"Grand isle","Vermont",5458,"ineligible","no",1,44.717847,-73.307486
+"115",2021-06-06,"facebook",NA,"Pownal","Vermont",5261,"ineligible","no",1,42.770285,-73.179047
+"118",2021-06-06,"front_porch_forum",NA,"Newark","Vermont",5871,"ineligible","no",1,44.689305,-71.936955
+"120",2021-06-07,"facebook",NA,"Richford","Vermont",5476,"ineligible","no",1,44.955228,-72.643138
+"125",2021-06-08,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"129",2021-06-08,"other_person",NA,"Montpelier","Vermont",5602,"ineligible","no",1,44.274953,-72.609475
+"130",2021-06-08,"other_person",NA,"Montpelier ","Vermont",5602,"ineligible","no",1,44.274953,-72.609475
+"131",2021-06-09,"other_person",NA,"Montpelier","Vermont",5602,"ineligible","no",1,44.274953,-72.609475
+"134",2021-06-09,"facebook",NA,"Fairfield ","Vermont",5455,"ineligible","no",1,44.801687,-72.967393
+"136",2021-06-09,"craigslist",NA,"So. Glens fslls","New York",12803,"ineligible","no",1,43.290078,-73.629363
+"138",2021-06-10,"flyer","I work for Accura Printing and we printed the flyers","Huntington","Vermont",5461,"ineligible","no",1,44.332701,-73.087409
+"139",2021-06-10,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"142",2021-06-10,"facebook",NA,"Barre","Vermont",5641,"ineligible","no",1,44.188842,-72.472172
+"146",2021-06-11,"facebook",NA,"Waterbury Center","Vermont",5677,"ineligible","no",1,44.4083,-72.709972
+"155",2021-06-12,"facebook",NA,"Highgate ","Vermont",5459,"ineligible","no",1,44.95006,-73.005367
+"156",2021-06-12,"front_porch_forum",NA,"Milton","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"157",2021-06-13,"facebook",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"159",2021-06-13,"facebook",NA,"Waterbury center","Vermont",5677,"ineligible","no",1,44.4083,-72.709972
+"160",2021-06-13,"facebook",NA,"Vergennes ","Vermont",5491,"ineligible","no",1,44.111961,-73.310796
+"163",2021-06-13,"facebook",NA,"Barre","Vermont",5641,"ineligible","no",1,44.188842,-72.472172
+"167",2021-06-14,"facebook",NA,"Bristol","Vermont",5443,"ineligible","no",1,44.139443,-73.03993
+"168",2021-06-14,"google",NA,"Arlington","Vermont",5250,"ineligible","no",1,43.103713,-73.173145
+"169",2021-06-14,"facebook",NA,"Fair Haven","Vermont",5743,"ineligible","no",1,43.67733,-73.304926
+"170",2021-06-15,"facebook",NA,"Essex Junction ","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"172",2021-06-15,"facebook",NA,"Readsboro ","Vermont",5350,"ineligible","no",1,42.790943,-72.97264
+"173",2021-06-15,"facebook",NA,"Richford","Vermont",5476,"ineligible","no",1,44.955228,-72.643138
+"175",2021-06-15,"facebook",NA,"Franklin","Vermont",5457,"ineligible","no",1,44.958733,-72.922009
+"178",2021-06-16,"facebook",NA,"Shaftsbury ","Vermont",5262,"ineligible","no",1,42.97375,-73.07524
+"179",2021-06-16,"facebook",NA,"Barre","Vermont",5641,"ineligible","no",1,44.188842,-72.472172
+"182",2021-06-17,"facebook",NA,"Saxtons River","Vermont",5154,"ineligible","no",1,43.135197,-72.546165
+"185",2021-06-17,"facebook",NA,"Cambridge ","Vermont",5444,"ineligible","no",1,44.649728,-72.896957
+"186",2021-06-17,"facebook",NA,"Fairfax","Vermont",5454,"ineligible","no",1,44.710289,-73.028877
+"189",2021-06-18,"facebook",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"190",2021-06-20,"facebook",NA,"St. Johnsbury ","Vermont",5819,"ineligible","no",1,44.404737,-71.983075
+"193",2021-06-22,"facebook",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"195",2021-06-23,"direct_mail",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"196",2021-06-23,"flyer","Saratoga Olive oil","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"198",2021-06-23,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"199",2021-06-23,"direct_mail","vt center on behavior and health flyer mailed to my home","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"201",2021-06-23,"direct_mail","mailbox","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"204",2021-06-23,"direct_mail","My home. ","Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"207",2021-06-24,"flyer","Kerry's Kwick Stop","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"208",2021-06-24,"neighborhood_news",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"209",2021-06-24,"front_porch_forum",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"210",2021-06-24,"front_porch_forum",NA,"Montpelier ","Vermont",5602,"ineligible","no",1,44.274953,-72.609475
+"214",2021-06-24,"front_porch_forum",NA,"Waterbury Center","Vermont",5677,"ineligible","no",1,44.4083,-72.709972
+"215",2021-06-24,"direct_mail","In my mailbox","Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"216",2021-06-24,"direct_mail","mailbox","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"217",2021-06-25,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"218",2021-06-25,"front_porch_forum",NA,"Montpelier","Vermont",5602,"ineligible","no",1,44.274953,-72.609475
+"219",2021-06-25,"craigslist",NA,"Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"220",2021-06-25,"direct_mail","In my mailbox ","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"223",2021-06-26,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"225",2021-06-26,"direct_mail","It was mailed to my house","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"228",2021-06-27,"direct_mail",NA,"burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"230",2021-06-27,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"232",2021-06-27,"neighborhood_news",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"236",2021-06-28,"facebook",NA,"Monroe","New Hampshire",3771,"ineligible","no",1,44.296664,-71.980649
+"238",2021-06-28,"front_porch_forum",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"239",2021-06-28,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"241",2021-06-29,"flyer",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"242",2021-06-29,"flyer","UVM","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"243",2021-06-29,"facebook",NA,"Fair Haven","Vermont",5743,"ineligible","no",1,43.67733,-73.304926
+"244",2021-06-29,"facebook",NA,"Montpelier ","Vermont",5602,"ineligible","no",1,44.274953,-72.609475
+"245",2021-06-30,"facebook",NA,"Bronx ","New York",10452,"ineligible","no",1,40.837393,-73.923437
+"246",2021-06-29,"neighborhood_news",NA,"Burlington ","Vermont",5408,"ineligible","no",1,44.511852,-73.249611
+"247",2021-06-30,"other_person",NA,"Colchester ","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"250",2021-07-01,"TV",NA,"Randolph Center ","Vermont",5061,"ineligible","no",1,43.916755,-72.570182
+"252",2021-07-01,"other_person",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"254",2021-07-01,"facebook",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"255",2021-07-01,"direct_mail","I'm mail","Burlington ","Vermont",95401,"ineligible","no",1,38.449137,-122.793752
+"257",2021-07-02,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"258",2021-07-02,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"259",2021-07-02,"direct_mail","Home","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"260",2021-07-02,"facebook",NA,"Cicero","New York",13039,"ineligible","no",1,43.172142,-76.056249
+"261",2021-07-02,"facebook",NA,"Tupper Lake","New York",12986,"ineligible","no",1,44.226011,-74.480931
+"265",2021-07-06,"craigslist",NA,"Bristol","Vermont",5443,"ineligible","no",1,44.139443,-73.03993
+"266",2021-07-06,"craigslist",NA,"Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"267",2021-07-06,"craigslist",NA,"essex junction","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"268",2021-07-06,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"271",2021-07-07,"craigslist",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"272",2021-07-08,"direct_mail","Mail","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"274",2021-07-09,"craigslist",NA,"burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"275",2021-07-09,"facebook",NA,"Altona","New York",12910,"ineligible","no",1,44.845249,-73.619461
+"280",2021-07-11,"front_porch_forum",NA,"Middlebury","Vermont",5753,"ineligible","no",1,43.997783,-73.178295
+"281",2021-07-14,"facebook",NA,"Ferrisburgh","Vermont",5456,"ineligible","no",1,44.221416,-73.264595
+"285",2021-07-17,"facebook",NA,"S Royalton ","Vermont",5068,"ineligible","no",1,43.780996,-72.547512
+"286",2021-07-20,"front_porch_forum",NA,"Brandon","Vermont",5733,"ineligible","no",1,43.810474,-73.09028
+"287",2021-07-22,"google",NA,"Underhill ","Vermont",5489,"ineligible","no",1,44.570909,-72.901598
+"289",2021-07-23,"flyer","Family Dollar ","Milton ","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"291",2021-07-25,"instagram",NA,"اصفهان","California",58938,"ineligible","no",1,NA,NA
+"293",2021-07-26,"flyer","The bulletin board on the bottom floor of the Fanny Allen Campus","South Burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"294",2021-07-26,"flyer","Bottom floor bulletin board at the Fanny Allen Campus","South Burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"295",2021-07-26,"flyer","Fanny Allen Campus","South Burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"296",2021-07-26,"flyer","Fanny Allen Campus","South Burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"297",2021-07-27,"facebook",NA,"Cohoes","New York",12047,"ineligible","no",1,42.784054,-73.726219
+"301",2021-08-04,"front_porch_forum",NA,"Lyndonville ","Vermont",5851,"ineligible","no",1,44.557132,-72.08059
+"302",2021-08-04,"craigslist",NA,"Barre","Vermont",5641,"ineligible","no",1,44.188842,-72.472172
+"303",2021-08-04,"front_porch_forum",NA,"Newport ","Vermont",5855,"ineligible","no",1,44.927131,-72.192236
+"308",2021-08-09,"front_porch_forum",NA,"Bristol ","Vermont",5443,"ineligible","no",1,44.139443,-73.03993
+"309",2021-08-09,"front_porch_forum",NA,"Essex Jct","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"311",2021-08-14,"flyer","Rocky's","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"312",2021-08-14,"google",NA,"Brattleboro","Vermont",5301,"ineligible","no",1,42.83868,-72.659997
+"313",2021-08-14,"front_porch_forum",NA,"Colchester ","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"314",2021-08-15,"flyer","Athens Diner","Colchester ","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"316",2021-08-18,"flyer","Next Level Barber's","Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"317",2021-08-18,"direct_mail",NA,"South Burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"319",2021-08-18,"direct_mail",NA,"South Burlington ","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"321",2021-08-18,"direct_mail",NA,"South Burlington ","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"322",2021-08-18,"other",NA,"Cedar lake ","Indiana",46303,"ineligible","no",1,41.373714,-87.478977
+"323",2021-08-19,"other_person",NA,"S Burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"326",2021-08-19,"direct_mail","Mailed to Post Office box 104 in Bristol, VT","Bristol","Vermont",5443,"ineligible","no",1,44.139443,-73.03993
+"329",2021-08-19,"flyer","Act 21 Pearl st.
+Burlington, Vt 05401","Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"330",2021-08-20,"direct_mail",NA,"Vergennes","Vermont",5491,"ineligible","no",1,44.111961,-73.310796
+"331",2021-08-20,"direct_mail",NA,"Vergennes ","Vermont",5491,"ineligible","no",1,44.111961,-73.310796
+"332",2021-08-20,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"333",2021-08-20,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"334",2021-08-20,"direct_mail",NA,"South Burlington ","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"337",2021-08-21,"direct_mail",NA,"Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"338",2021-08-21,"direct_mail",NA,"Jeffersonville","Vermont",5464,"ineligible","no",1,44.646262,-72.818997
+"339",2021-08-22,"craigslist",NA,"Essex Junction","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"340",2021-08-22,"direct_mail",NA,"South Burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"341",2021-08-22,"direct_mail","My mailbox","Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"344",2021-08-22,"front_porch_forum",NA,"Montpelier","Vermont",5602,"ineligible","no",1,44.274953,-72.609475
+"345",2021-08-23,"front_porch_forum",NA,"Plainfield","Vermont",5667,"ineligible","no",1,44.269042,-72.38887
+"346",2021-08-23,"flyer","Next Level Barbers","Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"348",2021-08-23,"google",NA,"Randolph","Vermont",5060,"ineligible","no",1,43.967072,-72.708604
+"350",2021-08-23,"facebook",NA,"Manchester","New Hampshire",3102,"ineligible","no",1,43.011907,-71.491063
+"352",2021-08-24,"direct_mail","Mail box","Essex","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"354",2021-08-24,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"355",2021-08-24,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"357",2021-08-24,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"358",2021-08-25,"direct_mail",NA,"South Burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"359",2021-08-25,"direct_mail","My home","Addison ","Vermont",5491,"ineligible","no",1,44.111961,-73.310796
+"361",2021-08-25,"direct_mail",NA,"Essex Junction","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"362",2021-08-25,"front_porch_forum",NA,"Berlin","Vermont",5663,"ineligible","no",1,44.147613,-72.691275
+"363",2021-08-25,"direct_mail",NA,"Essex Junction","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"366",2021-08-26,"direct_mail","My roommate brought it home. ","South Burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"367",2021-08-26,"flyer","Vermont Center in Behavior&Health","Essex Junction","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"368",2021-08-26,"front_porch_forum",NA,"Marshfield","Vermont",5658,"ineligible","no",1,44.364724,-72.35483
+"369",2021-08-26,"direct_mail","In my mailbox ","Williston ","Vermont",5495,"ineligible","no",1,44.429066,-73.096243
+"370",2021-08-25,"other_person",NA,"Shelburne ","Vermont",5482,"ineligible","no",1,44.380662,-73.211006
+"372",2021-08-27,"facebook",NA,"Essex Jct.","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"373",2021-08-27,"facebook",NA,"Essex Jct. ","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"377",2021-08-27,"direct_mail",NA,"Williston","Vermont",5495,"ineligible","no",1,44.429066,-73.096243
+"378",2021-08-28,"direct_mail","in mail was sent by the university of vermonet","milton","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"380",2021-08-28,"direct_mail",NA,"Milton","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"381",2021-08-28,"direct_mail",NA,"Milton","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"394",2021-08-31,"direct_mail",NA,"Milton","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"396",2021-08-31,"direct_mail",NA,"Milton","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"398",2021-09-01,"google",NA,"Pittsfield ","New Hampshire",3263,"ineligible","no",1,43.288501,-71.309368
+"399",2021-09-01,"google",NA,"Pittsfield ","New Hampshire",3263,"ineligible","no",1,43.288501,-71.309368
+"401",2021-09-02,"direct_mail","Home","Colchester ","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"402",2021-09-03,"flyer","Preventive medicine ","Berlin","Vermont",5602,"ineligible","no",1,44.274953,-72.609475
+"404",2021-09-04,"facebook",NA,"Foxborough","Massachusetts",2035,"ineligible","no",1,42.061338,-71.245802
+"405",2021-09-04,"other",NA,"Richmond","Vermont",5477,"ineligible","no",1,44.416769,-72.962422
+"406",2021-09-05,"direct_mail",NA,"Colchester ","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"408",2021-09-05,"google",NA,"Bayshore","New York",11706,"ineligible","no",1,40.722537,-73.252183
+"409",2021-09-05,"google",NA,"Bayshore","New York",11706,"ineligible","no",1,40.722537,-73.252183
+"410",2021-09-06,"direct_mail",NA,"Winooski ","Vermont",5440,"ineligible","no",1,44.957882,-73.291974
+"414",2021-09-07,"google",NA,"Hawassa","Hawaii",9294,"ineligible","no",1,NA,NA
+"415",2021-09-07,"direct_mail",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"416",2021-09-07,"flyer","Break Yard Jolley St. Albans VT","Saint Albans","Vermont",5478,"ineligible","no",1,44.808422,-73.082507
+"418",2021-09-08,"front_porch_forum",NA,"Essex jct","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"419",2021-09-08,"clin_trials_web",NA,"burlington ","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"424",2021-09-10,"front_porch_forum",NA,"Burlington ","Vermont",5408,"ineligible","no",1,44.511852,-73.249611
+"428",2021-09-11,"direct_mail",NA,"North Ferrisburgh ","Vermont",5473,"ineligible","no",1,44.241936,-73.194663
+"429",2021-09-11,"front_porch_forum",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"430",2021-09-12,"google",NA,"South hero ","Vermont",5486,"ineligible","no",1,44.642247,-73.30774
+"439",2021-09-14,"front_porch_forum",NA,"Orleans ","Vermont",5860,"ineligible","no",1,44.80266,-72.103996
+"441",2021-09-14,"craigslist",NA,"St. Albans","Vermont",5478,"ineligible","no",1,44.808422,-73.082507
+"442",2021-09-14,"instagram",NA,"Portsmouth","New Hampshire",3801,"ineligible","no",1,43.074812,-70.805443
+"447",2021-09-16,"facebook",NA,"Rutland","Vermont",5701,"ineligible","no",1,43.624577,-72.910204
+"450",2021-09-16,"front_porch_forum",NA,"Fairfield","Vermont",5455,"ineligible","no",1,44.801687,-72.967393
+"457",2021-09-17,"direct_mail","Sent to my house ","Saint Albans","Vermont",5478,"ineligible","no",1,44.808422,-73.082507
+"460",2021-09-18,"other_person",NA,"johnson ","Vermont",5656,"ineligible","no",1,44.648124,-72.68884
+"466",2021-09-18,"direct_mail",NA,"St.albans","Vermont",5478,"ineligible","no",1,44.808422,-73.082507
+"467",2021-09-19,"direct_mail",NA,"St.albans ","Vermont",5478,"ineligible","no",1,44.808422,-73.082507
+"468",2021-09-20,"front_porch_forum",NA,"rutland","Vermont",5701,"ineligible","no",1,43.624577,-72.910204
+"469",2021-09-20,"direct_mail",NA,"Georgia","Vermont",5478,"ineligible","no",1,44.808422,-73.082507
+"470",2021-09-20,"facebook",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"473",2021-09-21,"direct_mail",NA,"Milton ","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"476",2021-09-23,"facebook",NA,"Essex Junction ","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"478",2021-09-23,"facebook",NA,"Lunenburg ","Vermont",5906,"ineligible","no",1,44.470995,-71.705947
+"480",2021-09-24,"flyer","The Bagel in New North End ","South Burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"482",2021-09-25,"google",NA,"Johnson city","New York",13790,"ineligible","no",1,42.165361,-76.001942
+"485",2021-09-27,"facebook",NA,"Beacon","New York",12508,"ineligible","no",1,41.495996,-73.953632
+"488",2021-09-27,"front_porch_forum",NA,"Williamstown ","Vermont",5679,"ineligible","no",1,44.108944,-72.531912
+"491",2021-09-28,"facebook",NA,"Barre","Vermont",5641,"ineligible","no",1,44.188842,-72.472172
+"492",2021-09-27,"facebook",NA,"Winooski ","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"495",2021-10-01,"front_porch_forum",NA,"Graniteville ","Vermont",5654,"ineligible","no",1,44.140286,-72.475659
+"496",2021-10-02,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"498",2021-10-03,"direct_mail",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"500",2021-10-04,"front_porch_forum",NA,"Middlebury","Vermont",5752,"ineligible","no",1,NA,NA
+"501",2021-10-04,"facebook",NA,"vergennes","Vermont",5491,"ineligible","no",1,44.111961,-73.310796
+"502",2021-10-04,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"505",2021-10-05,"google",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"507",2021-10-07,"front_porch_forum",NA,"New Haven","Vermont",5472,"ineligible","no",1,44.102761,-73.155209
+"511",2021-10-12,"google",NA,"Schenectady ","New York",12304,"ineligible","no",1,42.77469,-73.898297
+"512",2021-10-12,"facebook",NA,"Brooklyn ","New York",11203,"ineligible","no",1,40.649591,-73.934371
+"513",2021-10-13,"other",NA,"Staten Island","New York",10305,"ineligible","no",1,40.596691,-74.074866
+"514",2021-10-14,"facebook",NA,"Richford ","Vermont",5476,"ineligible","no",1,44.955228,-72.643138
+"515",2021-10-14,"facebook",NA,"Richford ","Vermont",5476,"ineligible","no",1,44.955228,-72.643138
+"516",2021-10-15,"facebook",NA,"Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"518",2021-10-19,"google",NA,"Rochester ","New York",14620,"ineligible","no",1,43.128291,-77.605805
+"520",2021-10-19,"google",NA,"Cincinnati ","Ohio",45237,"ineligible","no",1,39.193038,-84.45226
+"521",2021-10-20,"facebook",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"525",2021-10-22,"BuildClinical",NA,"Essex junction","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"526",2021-10-22,"instagram",NA,"Burlington","Vermont",5405,"ineligible","no",1,44.473735,-73.19561
+"527",2021-10-22,"instagram",NA,"Burlington","Vermont",5405,"ineligible","no",1,44.473735,-73.19561
+"528",2021-10-22,"google",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"530",2021-10-23,"flyer","The bagel place ","Burlington","Vermont",5408,"ineligible","no",1,44.511852,-73.249611
+"531",2021-10-23,"BuildClinical",NA,"Colchester ","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"533",2021-10-23,"flyer","Gas Station in New North End","Hinesburg ","Vermont",5461,"ineligible","no",1,44.332701,-73.087409
+"534",2021-10-24,"front_porch_forum",NA,"Fairfield","Vermont",5455,"ineligible","no",1,44.801687,-72.967393
+"537",2021-10-25,"craigslist",NA,"Burlington","Vermont",5405,"ineligible","no",1,44.473735,-73.19561
+"539",2021-10-25,"front_porch_forum",NA,"Burlington","Vermont",5408,"ineligible","no",1,44.511852,-73.249611
+"540",2021-10-26,"BuildClinical",NA,"Vergennes","Vermont",5491,"ineligible","no",1,44.111961,-73.310796
+"541",2021-10-26,"BuildClinical",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"542",2021-10-26,"google",NA,"Brooklyn","New York",11212,"ineligible","no",1,40.662936,-73.913029
+"543",2021-10-26,"front_porch_forum",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000002",2020-10-19,"pt_in_other_studies",NA,"Huntington","Vermont",5461,"Project 2","yes",1,44.332701,-73.087409
+"S000015",2020-10-23,"facebook",NA,"Richford","Vermont",5488,"Project 1 and Project 3","yes",1,44.921329,-73.125393
+"S000019",2020-10-23,"pt_in_other_studies",NA,"Winooski","Vermont",5404,"Project 3","yes",1,44.495587,-73.184857
+"S000037",2020-10-20,"facebook",NA,"Winooski","Vermont",5404,"Project 1 and Project 3","no",1,44.495587,-73.184857
+"S000062",2021-05-21,"facebook",NA,"burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000071",2021-06-24,"front_porch_forum",NA,"Montpelier","Vermont",5602,"ineligible","no",1,44.274953,-72.609475
+"S000073",2021-10-26,"front_porch_forum",NA,"Burlington","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S000082",2020-10-17,"other_person",NA,"South Burlington","Vermont",5403,"Project 1","yes",1,44.444866,-73.173468
+"S000089",2020-11-03,"facebook",NA,"Swanton","Vermont",5488,"Project 3","yes",1,44.921329,-73.125393
+"S000100",2021-07-15,"front_porch_forum",NA,"Bristol","Vermont",5443,"Project 1 and Project 3","yes",1,44.139443,-73.03993
+"S000104",2021-05-17,"facebook",NA,"Burlington ","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S000108",2021-09-14,"other_person",NA,"Winooski","Vermont",5404,"Project 1 and Project 3","no",1,44.495587,-73.184857
+"S000118",2021-02-12,"other_person",NA,"shelburne ","Vermont",5482,"Project 2","no",1,44.380662,-73.211006
+"S000121",2021-06-03,"craigslist",NA,"south burlington ","Vermont",5403,"Project 2","yes",1,44.444866,-73.173468
+"S000126",2020-10-26,"other",NA,"Essex Junction","Vermont",5452,"Project 1 and Project 3","yes",1,44.538624,-73.050223
+"S000134",2021-03-08,"other_person",NA,"Chelsea","Vermont",5038,"ineligible","no",1,43.989747,-72.454953
+"S000136",2021-06-29,"facebook",NA,"Colchester ","Vermont",5446,"Project 3","no",1,44.541259,-73.184415
+"S000139",2021-06-08,"facebook",NA,"Colchester ","Vermont",5446,"Project 2","no",1,44.541259,-73.184415
+"S000148",2020-11-05,"pt_in_other_studies",NA,"Alburgh","Vermont",5440,"ineligible","no",1,44.957882,-73.291974
+"S000149",2020-10-26,"pt_in_other_studies",NA,"swanton","Vermont",5488,"Project 2","no",1,44.921329,-73.125393
+"S000153",2021-09-24,"craigslist",NA,"hampton","New Hampshire",3842,"Project 2","no",1,42.939601,-70.836728
+"S000154",2021-09-11,"craigslist",NA,"Cornish","Maine",4047,"Project 2","no",1,43.732798,-70.899149
+"S000155",2021-09-12,"direct_mail",NA,"Milton","Vermont",5468,"Project 3","no",1,44.657371,-73.144488
+"S000158",2021-04-07,"other",NA,"South Burlington","Vermont",5403,"Project 1 and Project 3","yes",1,44.444866,-73.173468
+"S000159",2021-04-20,"direct_mail",NA,"Burlington","Vermont",5408,"Project 1","no",1,44.511852,-73.249611
+"S000166",2020-10-08,"facebook",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000174",2020-10-05,"other_person",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000175",2020-10-05,"facebook",NA,"Williamstown ","Vermont",5679,"ineligible","no",1,44.108944,-72.531912
+"S000176",2020-10-05,"facebook",NA,"moriah","New York",12960,"ineligible","no",1,44.015756,-73.572348
+"S000177",2020-10-05,"facebook",NA,"South Burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"S000178",2020-10-05,"facebook",NA,"St.Albans ","Vermont",5478,"ineligible","no",1,44.808422,-73.082507
+"S000179",2020-10-06,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000180",2020-10-06,"facebook",NA,"Plainfield","Vermont",5667,"ineligible","no",1,44.269042,-72.38887
+"S000181",2020-10-05,"facebook",NA,"south burlington ","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"S000182",2020-10-07,"craigslist",NA,"east burke ","Vermont",5832,"Project 3","no",1,44.578371,-71.917466
+"S000183",2020-10-09,"facebook",NA,"Montpelier","Vermont",5602,"Project 3","no",1,44.274953,-72.609475
+"S000184",2020-10-09,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000185",2020-10-10,"facebook",NA,"Craftsbury","Vermont",5826,"ineligible","no",1,44.647727,-72.402091
+"S000186",2020-10-11,"other",NA,"Huntington ","Vermont",5465,"Project 3","no",1,44.464175,-72.951057
+"S000187",2020-10-12,"facebook",NA,"Wolcott","Vermont",5680,"Project 3","yes",1,44.540596,-72.471939
+"S000188",2020-10-23,"other",NA,"Burlington","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S000189",2020-10-12,"facebook",NA,"Colchester","Vermont",5446,"Project 1","yes",1,44.541259,-73.184415
+"S000190",2020-10-12,"facebook",NA,"Enosburg ","Vermont",5450,"Project 3","no",1,44.894578,-72.795246
+"S000191",2020-10-12,"facebook",NA,"Barre","Vermont",5641,"Project 3","no",1,44.188842,-72.472172
+"S000192",2020-10-12,"craigslist",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000193",2020-10-13,"facebook",NA,"Swanton ","Vermont",5488,"Project 1","yes",1,44.921329,-73.125393
+"S000194",2020-10-14,"facebook",NA,"Williston ","Vermont",5495,"ineligible","no",1,44.429066,-73.096243
+"S000195",2020-10-14,"facebook",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000196",2020-10-14,"other_person",NA,"Castleton","Vermont",5735,"Project 1","no",1,43.635473,-73.16776
+"S000197",2020-10-14,"facebook",NA,"Colchester","Vermont",5446,"Project 1 and Project 3","no",1,44.541259,-73.184415
+"S000198",2020-10-14,"facebook",NA,"Plattsburgh","New York",12901,"ineligible","no",1,44.70419,-73.471392
+"S000199",2020-10-15,"facebook",NA,"LYNDONVILLLE","Vermont",5851,"Project 2","no",1,44.557132,-72.08059
+"S000200",2020-10-15,"facebook",NA,"Waterbury","Vermont",5676,"Project 3","no",1,44.295598,-72.826991
+"S000201",2020-10-16,"facebook",NA,"Milton","Vermont",5468,"Project 3","no",1,44.657371,-73.144488
+"S000202",2020-10-19,"flyer","telephone pole close to City Market","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000203",2020-10-19,"flyer","laundromat on Pearl St","Burlington","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S000204",2020-10-20,"facebook",NA,"Wells River","Vermont",5081,"Project 1","no",1,44.123038,-72.065864
+"S000205",2020-10-20,"facebook",NA,"Bristol","Vermont",5443,"Project 2","yes",1,44.139443,-73.03993
+"S000206",2020-10-20,"facebook",NA,"Northfield","Vermont",5663,"ineligible","no",1,44.147613,-72.691275
+"S000207",2020-10-21,"facebook",NA,"Reading ","Vermont",5062,"ineligible","no",1,43.496493,-72.599969
+"S000208",2020-10-21,"facebook",NA,"Witherbee ","New York",12998,"Project 1","no",1,44.0778,-73.576545
+"S000209",2020-10-21,"facebook",NA,"Richford ","Vermont",5476,"ineligible","no",1,44.955228,-72.643138
+"S000210",2020-10-21,"facebook",NA,"Enosburg Falls","Vermont",5450,"ineligible","no",1,44.894578,-72.795246
+"S000211",2020-10-21,"facebook",NA,"E. Montpelier ","Vermont",5651,"Project 2","no",1,44.282307,-72.489262
+"S000212",2020-10-21,"facebook",NA,"Barre","Vermont",5641,"ineligible","no",1,44.188842,-72.472172
+"S000213",2020-10-21,"facebook",NA,"Groton","Vermont",5046,"Project 3","yes",1,44.232453,-72.257516
+"S000214",2020-10-21,"facebook",NA,"Essex","Vermont",5452,"Project 1","no",1,44.538624,-73.050223
+"S000215",2020-10-22,"facebook",NA,"Moriah","New York",12960,"Project 1 and Project 3","no",1,44.015756,-73.572348
+"S000216",2020-10-21,"facebook",NA,"burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000217",2020-10-21,"facebook",NA,"Barre","Vermont",5641,"Project 1 and Project 3","no",1,44.188842,-72.472172
+"S000218",2020-10-21,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000219",2020-10-21,"facebook",NA,"Fairfield ","Vermont",5455,"ineligible","no",1,44.801687,-72.967393
+"S000220",2020-10-21,"facebook",NA,"Glover","Vermont",5839,"Project 2","no",1,44.673683,-72.207014
+"S000221",2020-10-21,"facebook",NA,"Barre","Vermont",5641,"Project 3","no",1,44.188842,-72.472172
+"S000222",2020-10-22,"facebook",NA,"Mooers","New York",12958,"ineligible","no",1,44.960295,-73.571184
+"S000223",2020-10-22,"facebook",NA,"Montpelier ","Vermont",5602,"Project 1 and Project 3","yes",1,44.274953,-72.609475
+"S000224",2020-10-22,"facebook",NA,"Lake placid","New York",12946,"Project 1 and Project 3","no",1,44.206554,-74.046061
+"S000225",2020-10-22,"facebook",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000226",2020-10-22,"facebook",NA,"Port Henry ","New York",12974,"Project 1 and Project 3","no",1,44.060141,-73.464831
+"S000228",2020-10-22,"facebook",NA,"Burlington","Vermont",5148,"ineligible","no",1,43.231362,-72.791008
+"S000229",2020-10-22,"facebook",NA,"Plattsburgh ","New York",12901,"ineligible","no",1,44.70419,-73.471392
+"S000230",2020-10-23,"pt_in_other_studies",NA,"South Burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"S000231",2020-10-23,"pt_in_other_studies",NA,"Plattsburgh","New York",12901,"ineligible","no",1,44.70419,-73.471392
+"S000232",2020-10-23,"pt_in_other_studies",NA,"Burlington","Vermont",5401,"Project 2","yes",1,44.476621,-73.209998
+"S000233",2020-10-23,"other_person",NA,"Burlington","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S000234",2020-10-23,"pt_in_other_studies",NA,"Burlington","Vermont",5408,"ineligible","no",1,44.511852,-73.249611
+"S000235",2020-10-26,"pt_in_other_studies",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000236",2020-10-26,"other_person",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000237",2020-10-26,"pt_in_other_studies",NA,"Barre","Vermont",5641,"ineligible","no",1,44.188842,-72.472172
+"S000238",2020-10-26,"pt_in_other_studies",NA,"South Burlington","Vermont",5403,"Project 3","yes",1,44.444866,-73.173468
+"S000239",2020-10-22,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000240",2020-10-22,"facebook",NA,"Ticonderoga ","New York",12883,"ineligible","no",1,43.836596,-73.552843
+"S000241",2020-10-22,"facebook",NA,"Champlain","New York",12919,"ineligible","no",1,44.964539,-73.447083
+"S000242",2020-10-26,"pt_in_other_studies",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000243",2020-10-26,"other_person",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000244",2020-10-26,"pt_in_other_studies",NA,"Tunbridge","Vermont",5077,"Project 1","yes",1,43.908796,-72.459306
+"S000245",2020-10-22,"facebook",NA,"Rouses Point","New York",12979,"ineligible","no",1,44.991657,-73.373374
+"S000246",2020-10-22,"facebook",NA,"St Johnsbury","Vermont",5819,"ineligible","no",1,44.404737,-71.983075
+"S000247",2020-10-22,"facebook",NA,"Milton ","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"S000248",2020-10-23,"facebook",NA,"Essex jct ","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S000249",2020-10-23,"facebook",NA,"Hinesburg","Vermont",5461,"Project 3","no",1,44.332701,-73.087409
+"S000250",2021-02-02,"craigslist",NA,"Jericho","Vermont",5465,"Project 3","no",1,44.464175,-72.951057
+"S000251",2020-10-23,"facebook",NA,"Champlain","New York",12919,"Project 1","no",1,44.964539,-73.447083
+"S000252",2020-10-27,"other_person",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000253",2020-10-27,"pt_in_other_studies",NA,"Groton","Vermont",5406,"ineligible","no",1,NA,NA
+"S000254",2020-10-27,"pt_in_other_studies",NA,"Swanton","Vermont",5488,"ineligible","no",1,44.921329,-73.125393
+"S000255",2020-10-27,"flyer","Burlington bus stop","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000256",2020-10-27,"pt_in_other_studies",NA,"Barre","Vermont",5641,"ineligible","no",1,44.188842,-72.472172
+"S000257",2020-10-23,"craigslist",NA,"Randolph center ","Vermont",5061,"Project 1 and Project 3","no",1,43.916755,-72.570182
+"S000258",2020-12-06,"facebook",NA,"St. Albans","Vermont",5478,"Project 1 and Project 3","no",1,44.808422,-73.082507
+"S000259",2021-05-21,"facebook",NA,"North Creek","New York",12853,"ineligible","no",1,43.657554,-74.064187
+"S000260",2020-10-23,"pt_in_other_studies",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000261",2020-10-23,"direct_mail",NA,"Charlotte","Vermont",5445,"Project 1","yes",1,44.309955,-73.220978
+"S000262",2021-05-24,"instagram",NA,"Cadyville","New York",12918,"ineligible","no",1,44.700736,-73.676657
+"S000263",2020-10-23,"other",NA,"Ferrisburgh","Vermont",5456,"ineligible","no",1,44.221416,-73.264595
+"S000264",2020-10-28,"pt_in_other_studies",NA,"Essex Junction","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S000265",2020-10-28,"pt_in_other_studies",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000266",2020-10-28,"pt_in_other_studies",NA,"Essex","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S000267",2020-10-28,"pt_in_other_studies",NA,"Williamstown","Vermont",5679,"ineligible","no",1,44.108944,-72.531912
+"S000268",2020-10-28,"pt_in_other_studies",NA,"St. Albans","Vermont",5478,"ineligible","no",1,44.808422,-73.082507
+"S000269",2020-10-23,"pt_in_other_studies",NA,"Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"S000270",2020-10-23,"pt_in_other_studies",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000271",2020-10-23,"other_person",NA,"Colchester ","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"S000272",2020-10-23,"facebook",NA,"Saint albans ","Vermont",5478,"ineligible","no",1,44.808422,-73.082507
+"S000273",2020-10-28,"flyer","Winooski bus stop","Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"S000274",2020-10-23,"facebook",NA,"Plattsburgh ","New York",12901,"ineligible","no",1,44.70419,-73.471392
+"S000275",2020-10-23,"direct_mail",NA,"Swanton","Vermont",5488,"Project 1","no",1,44.921329,-73.125393
+"S000277",2020-10-29,"pt_in_other_studies",NA,"Northfield","Vermont",5663,"ineligible","no",1,44.147613,-72.691275
+"S000278",2020-10-23,"facebook",NA,"Plattsburgh ","New York",12901,"ineligible","no",1,44.70419,-73.471392
+"S000279",2020-10-23,"facebook",NA,"Waitsfield","Vermont",5673,"ineligible","no",1,44.198969,-72.840833
+"S000281",2020-10-23,"direct_mail",NA,"Plattsburgh","New York",12901,"ineligible","no",1,44.70419,-73.471392
+"S000282",2020-10-23,"other",NA,"Burlington","Vermont",5408,"ineligible","no",1,44.511852,-73.249611
+"S000283",2020-10-23,"other",NA,"Burlington ","Vermont",5401,"Project 1","no",1,44.476621,-73.209998
+"S000284",2020-10-23,"facebook",NA,"South Royalton","Vermont",5068,"ineligible","no",1,43.780996,-72.547512
+"S000285",2020-10-23,"other",NA,"south burlington ","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"S000286",2020-10-23,"other",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000287",2020-10-23,"pt_in_other_studies",NA,"Milton","Vermont",5468,"Project 1","yes",1,44.657371,-73.144488
+"S000288",2020-10-30,"pt_in_other_studies",NA,"Milton","Vermont",5468,"Project 2","no",1,44.657371,-73.144488
+"S000289",2020-11-03,"pt_in_other_studies",NA,"Northfield","Vermont",5663,"ineligible","no",1,44.147613,-72.691275
+"S000290",2020-10-23,"other",NA,"Lake Placid","New York",12946,"Project 1 and Project 3","no",1,44.206554,-74.046061
+"S000291",2020-11-04,"pt_in_other_studies",NA,"Essex Junction","Vermont",5452,"Project 2","no",1,44.538624,-73.050223
+"S000292",2020-10-23,"pt_in_other_studies",NA,"Burlington ","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S000293",2020-11-04,"other_person",NA,"North Hero","Vermont",5474,"ineligible","no",1,44.787732,-73.297992
+"S000294",2020-11-04,"other_person",NA,"Milton","Vermont",5468,"Project 2","yes",1,44.657371,-73.144488
+"S000295",2020-11-04,"facebook",NA,"Milton","Vermont",5468,"Project 1","no",1,44.657371,-73.144488
+"S000296",2020-11-04,"flyer","bus stop in Winooski","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000297",2020-11-04,"pt_in_other_studies",NA,"Berlin","Vermont",5602,"Project 1","no",1,44.274953,-72.609475
+"S000298",2020-11-04,"other",NA,"Winooski","Vermont",5404,"Project 1","no",1,44.495587,-73.184857
+"S000299",2020-11-05,"pt_in_other_studies",NA,"Burlington","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S000300",2020-10-23,"other",NA,"Albany","Vermont",5820,"ineligible","no",1,44.763124,-72.375244
+"S000301",2020-10-23,"other",NA,"Plattsburgh","New York",12901,"Project 2","no",1,44.70419,-73.471392
+"S000302",2020-10-23,"other",NA,"Jeffersonville ","Vermont",5464,"ineligible","no",1,44.646262,-72.818997
+"S000303",2020-10-23,"other",NA,"Chelsea ","Vermont",5038,"ineligible","no",1,43.989747,-72.454953
+"S000304",2020-11-05,"pt_in_other_studies",NA,"East Fairfield","Vermont",5448,"Project 3","yes",1,44.750291,-72.900865
+"S000305",2020-11-05,"other",NA,"Colchester","Vermont",5442,"Project 2","yes",1,44.757187,-72.671334
+"S000306",2020-10-23,"direct_mail",NA,"Burlington","Vermont",5401,"Project 1 and Project 3","no",1,44.476621,-73.209998
+"S000307",2020-10-23,"other",NA,"Milton","Vermont",5468,"Project 2","no",1,44.657371,-73.144488
+"S000308",2020-11-05,"pt_in_other_studies",NA,"Milton","Vermont",5468,"Project 2","yes",1,44.657371,-73.144488
+"S000309",2020-11-05,"other_person",NA,"Colchester","Vermont",5446,"Project 1","yes",1,44.541259,-73.184415
+"S000310",2020-11-06,"pt_in_other_studies",NA,"St. Albans","Vermont",5478,"Project 1","yes",1,44.808422,-73.082507
+"S000311",2020-11-06,"pt_in_other_studies",NA,"Burlington","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S000312",2020-11-09,"flyer","can't remember","Winooski","Vermont",5404,"Project 2","no",1,44.495587,-73.184857
+"S000313",2020-11-09,"pt_in_other_studies",NA,"St. Albans","Vermont",5478,"ineligible","no",1,44.808422,-73.082507
+"S000314",2020-10-23,"facebook",NA,"Milton ","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"S000315",2020-10-23,"other",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000316",2020-11-09,"flyer","UVM Hospital","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000318",2020-10-23,"pt_in_other_studies",NA,"Websterville ","Vermont",5678,"Project 1","yes",1,44.156758,-72.475424
+"S000319",2020-10-23,"facebook",NA,"Morrisville ","Vermont",5661,"Project 2","no",1,44.532336,-72.620258
+"S000320",2020-10-23,"other_person",NA,"Newport","Vermont",5855,"Project 3","no",1,44.927131,-72.192236
+"S000321",2020-10-23,"facebook",NA,"Lowell","Vermont",5847,"Project 3","no",1,44.793437,-72.458451
+"S000322",2020-10-23,"other",NA,"Barre","Vermont",5641,"Project 3","yes",1,44.188842,-72.472172
+"S000333",2020-10-23,"other",NA,"Milton","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"S000334",2020-10-23,"other",NA,"Fairfax ","Vermont",5454,"Project 1","no",1,44.710289,-73.028877
+"S000335",2020-10-23,"facebook",NA,"Brownington ","Vermont",5860,"Project 3","no",1,44.80266,-72.103996
+"S000336",2020-10-23,"direct_mail",NA,"South Burlington ","Vermont",5403,"Project 2","no",1,44.444866,-73.173468
+"S000337",2020-10-23,"pt_in_other_studies",NA,"Williston ","Vermont",5495,"Project 3","yes",1,44.429066,-73.096243
+"S000338",2020-10-23,"pt_in_other_studies",NA,"Fairfax ","Vermont",5454,"Project 1","no",1,44.710289,-73.028877
+"S000339",2020-11-10,"flyer","Irving, South Burlington ","South Burlington","Vermont",5403,"Project 3","no",1,44.444866,-73.173468
+"S000340",2020-11-10,"pt_in_other_studies",NA,"Mooers","New York",12958,"ineligible","no",1,44.960295,-73.571184
+"S000341",2020-10-23,"other",NA,"Richford ","Vermont",5476,"Project 3","no",1,44.955228,-72.643138
+"S000342",2021-02-26,"facebook",NA,"BARRE","Vermont",5641,"Project 2","no",1,44.188842,-72.472172
+"S000343",2020-10-23,"direct_mail",NA,"Winooski","Vermont",5404,"Project 3","no",1,44.495587,-73.184857
+"S000344",2020-10-23,"direct_mail",NA,"Hinesburg","Vermont",5461,"Project 1 and Project 3","yes",1,44.332701,-73.087409
+"S000345",2020-10-23,"pt_in_other_studies",NA,"whiting","Vermont",5778,"Project 2","no",1,43.876421,-73.212536
+"S000346",2020-10-23,"pt_in_other_studies",NA,"Hyde Park","Vermont",5655,"Project 2","no",1,44.624262,-72.570417
+"S000347",2020-10-23,"other",NA,"South Burlington ","Vermont",5403,"Project 2","no",1,44.444866,-73.173468
+"S000348",2020-10-31,"other_person",NA,"Burlington","Virginia",5401,"ineligible","no",1,44.476621,-73.209998
+"S000349",2020-10-23,"other",NA,"East Montpelier ","Vermont",5650,"ineligible","no",1,44.384616,-72.435941
+"S000350",2020-10-23,"craigslist",NA,"Duxbury","Vermont",5676,"Project 3","no",1,44.295598,-72.826991
+"S000351",2020-11-12,"flyer","flyer ""downtown""","Burlington","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S000352",2020-11-12,"flyer","liquor store in Winooski","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000353",2020-11-17,"pt_in_other_studies",NA,"Colchester","Vermont",5446,"Project 2","yes",1,44.541259,-73.184415
+"S000354",2020-11-17,"other",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000355",2020-11-17,"flyer","bus stop in Winooski","Burlington","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S000356",2020-11-18,"other_person",NA,"Burlington","Vermont",5401,"Project 1 and Project 3","yes",1,44.476621,-73.209998
+"S000357",2020-10-24,"other",NA,"Wolcott","Vermont",5680,"Project 2","no",1,44.540596,-72.471939
+"S000358",2020-10-24,"pt_in_other_studies",NA,"Montpelier","Vermont",5602,"Project 2","no",1,44.274953,-72.609475
+"S000359",2020-10-24,"craigslist",NA,"Winooski","Vermont",5404,"Project 2","no",1,44.495587,-73.184857
+"S000360",2020-10-24,"facebook",NA,"Montpelier ","Vermont",5602,"Project 2","no",1,44.274953,-72.609475
+"S000361",2020-10-24,"other_person",NA,"Burlington ","Vermont",5408,"Project 2","no",1,44.511852,-73.249611
+"S000362",2020-10-24,"direct_mail",NA,"Essex Junction ","Vermont",5452,"Project 3","no",1,44.538624,-73.050223
+"S000363",2020-10-24,"facebook",NA,"Montpelier","Vermont",5602,"Project 3","no",1,44.274953,-72.609475
+"S000364",2020-10-24,"other",NA,"Swanton","Vermont",5488,"Project 3","yes",1,44.921329,-73.125393
+"S000365",2021-05-27,"other",NA,"Plattsburgh","New York",12901,"Project 3","yes",1,44.70419,-73.471392
+"S000366",2020-10-24,"other",NA,"St Albans","Vermont",5478,"Project 3","yes",1,44.808422,-73.082507
+"S000367",2020-10-24,"craigslist",NA,"Waterbury center","Vermont",5677,"Project 1 and Project 3","yes",1,44.4083,-72.709972
+"S000368",2021-04-26,"front_porch_forum",NA,"Woodbury","Vermont",5681,"Project 2","no",1,44.458081,-72.379134
+"S000369",2020-10-24,"other",NA,"putney","Vermont",5346,"ineligible","no",1,43.037688,-72.536522
+"S000370",2020-10-25,"other",NA,"Waterbury Center ","Vermont",5677,"Project 3","no",1,44.4083,-72.709972
+"S000371",2020-10-25,"facebook",NA,"Winooski","Vermont",5404,"Project 3","no",1,44.495587,-73.184857
+"S000372",2020-10-27,"facebook",NA,"Chelsea","Vermont",5038,"Project 2","no",1,43.989747,-72.454953
+"S000373",2020-11-20,"pt_in_other_studies",NA,"Massena","New York",13662,"ineligible","no",1,44.932334,-74.883932
+"S000374",2020-10-26,"pt_in_other_studies",NA,"Essex junction ","Vermont",5452,"Project 3","yes",1,44.538624,-73.050223
+"S000375",2020-10-26,"direct_mail",NA,"Milton","Vermont",5468,"Project 2","no",1,44.657371,-73.144488
+"S000376",2020-10-26,"other",NA,"Ticonderoga","New York",12883,"Project 1","no",1,43.836596,-73.552843
+"S000377",2020-10-26,"direct_mail",NA,"Morrisville","Vermont",5661,"Project 3","no",1,44.532336,-72.620258
+"S000378",2020-10-26,"other",NA,"Barre","Vermont",5641,"Project 2","no",1,44.188842,-72.472172
+"S000379",2020-12-01,"pt_in_other_studies",NA,"Plattsburgh","New York",12901,"Project 3","no",1,44.70419,-73.471392
+"S000380",2020-12-01,"pt_in_other_studies",NA,"Winooski","Vermont",5404,"Project 3","yes",1,44.495587,-73.184857
+"S000381",2020-12-02,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000382",2020-12-03,"other_person",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000383",2020-10-27,"facebook",NA,"Hinesburg","Vermont",5461,"Project 3","no",1,44.332701,-73.087409
+"S000384",2020-10-27,"facebook",NA,"Burlington ","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S000385",2020-10-27,"facebook",NA,"Champlain","New York",12919,"Project 1 and Project 3","no",1,44.964539,-73.447083
+"S000386",2020-10-27,"facebook",NA,"Burlington ","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S000387",2020-10-27,"facebook",NA,"West Topsham","Vermont",5086,"ineligible","no",1,44.108949,-72.30073
+"S000388",2020-10-27,"facebook",NA,"Swanton","Vermont",5488,"Project 2","no",1,44.921329,-73.125393
+"S000389",2020-10-27,"facebook",NA,"Georgia","Vermont",5468,"Project 2","no",1,44.657371,-73.144488
+"S000390",2020-12-04,"pt_in_other_studies",NA,"Burlington","Vermont",5401,"Project 2","yes",1,44.476621,-73.209998
+"S000391",2020-10-27,"facebook",NA,"South Burlington ","Vermont",5403,"Project 3","no",1,44.444866,-73.173468
+"S000392",2021-04-18,"facebook",NA,"St. Albans ","Vermont",5478,"Project 1 and Project 3","no",1,44.808422,-73.082507
+"S000393",2020-10-27,"facebook",NA,"Grand isle","Vermont",5458,"Project 3","yes",1,44.717847,-73.307486
+"S000394",2020-10-27,"facebook",NA,"Plainfield ","Vermont",5667,"Project 1 and Project 3","yes",1,44.269042,-72.38887
+"S000395",2020-10-27,"facebook",NA,"Northfield","Vermont",5663,"Project 3","no",1,44.147613,-72.691275
+"S000396",2020-10-27,"facebook",NA,"Swanton","Vermont",5488,"Project 3","no",1,44.921329,-73.125393
+"S000397",2021-09-17,"front_porch_forum",NA,"Enosburg Falls","Vermont",5450,"Project 1 and Project 3","no",1,44.894578,-72.795246
+"S000398",2020-10-28,"other",NA,"Essex jct","Vermont",5452,"Project 3","no",1,44.538624,-73.050223
+"S000399",2020-10-28,"facebook",NA,"Underhill ","Vermont",5489,"Project 3","no",1,44.570909,-72.901598
+"S000400",2020-10-28,"craigslist",NA,"hartland","Vermont",5048,"Project 2","no",1,43.580615,-72.427711
+"S000401",2020-10-28,"clin_trials_web",NA,"Winooski","Vermont",5404,"Project 3","no",1,44.495587,-73.184857
+"S000402",2020-10-28,"facebook",NA,"Cambridge ","Vermont",5444,"Project 3","no",1,44.649728,-72.896957
+"S000403",2020-10-28,"facebook",NA,"Colchester","Vermont",5446,"Project 3","no",1,44.541259,-73.184415
+"S000404",2020-12-08,"other_person",NA,"Milton","Vermont",5468,"Project 1","yes",1,44.657371,-73.144488
+"S000406",2020-10-28,"other",NA,"Rouses point ","New York",12979,"Project 2","no",1,44.991657,-73.373374
+"S000407",2020-10-28,"craigslist",NA,"Essex ","Vermont",5461,"Project 3","yes",1,44.332701,-73.087409
+"S000408",2020-10-29,"facebook",NA,"Williamstown","Vermont",5679,"Project 2","no",1,44.108944,-72.531912
+"S000409",2020-10-29,"facebook",NA,"Fairfax","Vermont",5454,"Project 1 and Project 3","no",1,44.710289,-73.028877
+"S000410",2020-10-30,"pt_in_other_studies",NA,"Schroon lake","New York",12870,"Project 3","no",1,43.830056,-73.761222
+"S000411",2020-10-30,"facebook",NA,"Burlington","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S000412",2020-10-30,"facebook",NA,"Montpelier ","Vermont",5602,"Project 2","no",1,44.274953,-72.609475
+"S000413",2020-10-30,"facebook",NA,"Westport","New York",12993,"Project 3","no",1,44.211345,-73.476221
+"S000414",2020-10-31,"facebook",NA,"Barre","Vermont",5641,"Project 3","no",1,44.188842,-72.472172
+"S000415",2020-11-01,"facebook",NA,"essex junction ","Vermont",5452,"Project 2","no",1,44.538624,-73.050223
+"S000416",2020-11-01,"facebook",NA,"Barre","Vermont",5641,"Project 2","no",1,44.188842,-72.472172
+"S000417",2020-11-01,"facebook",NA,"Newport center ","Vermont",5857,"Project 3","yes",1,44.928911,-72.3127
+"S000418",2020-11-01,"facebook",NA,"Plattsburgh ","New York",12901,"Project 3","no",1,44.70419,-73.471392
+"S000419",2020-11-01,"facebook",NA,"Barre","Vermont",5641,"Project 2","no",1,44.188842,-72.472172
+"S000420",2020-11-03,"facebook",NA,"Burlington ","Vermont",5408,"Project 2","no",1,44.511852,-73.249611
+"S000421",2020-11-03,"other",NA,"South burlington","Vermont",5403,"Project 3","no",1,44.444866,-73.173468
+"S000422",2020-11-03,"craigslist",NA,"Malone","New York",12953,"Project 3","no",1,44.745352,-74.260037
+"S000423",2020-11-04,"facebook",NA,"Barre","Vermont",5641,"Project 2","no",1,44.188842,-72.472172
+"S000424",2020-11-04,"facebook",NA,"Whitehall ","New York",12887,"Project 3","no",1,43.53676,-73.365798
+"S000425",2020-11-04,"facebook",NA,"West Pawlet","Vermont",5775,"Project 3","no",1,43.365956,-73.228386
+"S000426",2020-11-04,"facebook",NA,"Plattsburgh ","New York",12901,"Project 3","no",1,44.70419,-73.471392
+"S000427",2020-11-04,"facebook",NA,"Granville","New York",12832,"Project 3","no",1,43.358467,-73.330271
+"S000428",2020-11-04,"facebook",NA,"Grafton","New Hampshire",3241,"Project 3","no",1,43.751504,-71.817394
+"S000429",2020-11-04,"other",NA,"Whitehall ","New York",12887,"Project 3","no",1,43.53676,-73.365798
+"S000430",2020-11-05,"facebook",NA,"Winooski","Vermont",5404,"Project 3","no",1,44.495587,-73.184857
+"S000431",2020-11-05,"facebook",NA,"Springfield ","Vermont",5156,"Project 2","no",1,43.310627,-72.461623
+"S000432",2020-12-18,"flyer","bus stop near UVMMC","South Burlington","Vermont",5403,"Project 3","yes",1,44.444866,-73.173468
+"S000433",2020-11-05,"other",NA,"Hinesburg","Vermont",5461,"Project 3","yes",1,44.332701,-73.087409
+"S000434",2020-11-05,"facebook",NA,"Poultney","Vermont",5764,"Project 3","no",1,43.539935,-73.189193
+"S000435",2020-11-05,"facebook",NA,"Rutland","Vermont",5701,"Project 2","yes",1,43.624577,-72.910204
+"S000436",2020-11-05,"facebook",NA,"N.Clarendon","Vermont",5759,"Project 2","no",1,43.532111,-72.964801
+"S000437",2020-11-05,"facebook",NA,"Proctor","Vermont",5701,"Project 3","no",1,43.624577,-72.910204
+"S000438",2020-11-05,"facebook",NA,"Winhall","Vermont",5340,"Project 3","no",1,43.168974,-72.972363
+"S000439",2020-11-05,"facebook",NA,"Swanton","Vermont",5488,"Project 3","no",1,44.921329,-73.125393
+"S000440",2020-11-05,"facebook",NA,"Barre","Vermont",5641,"Project 3","no",1,44.188842,-72.472172
+"S000441",2020-11-05,"facebook",NA,"Barre","Vermont",5641,"Project 3","yes",1,44.188842,-72.472172
+"S000442",2021-01-04,"flyer","food shelf on N Winooski Ave","Burlington","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S000443",2021-01-04,"flyer","King Street Laundry","Shelburne","Vermont",5482,"ineligible","no",1,44.380662,-73.211006
+"S000444",2020-11-06,"facebook",NA,"Littleton","New Hampshire",3561,"Project 2","no",1,44.34335,-71.795116
+"S000446",2020-11-06,"facebook",NA,"St. Johnsbury ","Vermont",5819,"Project 3","yes",1,44.404737,-71.983075
+"S000448",2020-11-06,"facebook",NA,"barre","Vermont",5641,"Project 3","no",1,44.188842,-72.472172
+"S000449",2020-11-06,"facebook",NA,"Plainfield ","New Hampshire",3781,"Project 3","no",1,43.560058,-72.299358
+"S000450",2020-11-06,"facebook",NA,"New Haven ","Vermont",5472,"Project 2","no",1,44.102761,-73.155209
+"S000451",2020-11-06,"facebook",NA,"Brandon","Vermont",5733,"Project 2","no",1,43.810474,-73.09028
+"S000452",2020-11-07,"facebook",NA,"Irasburg","Vermont",5845,"Project 2","no",1,44.800772,-72.290572
+"S000453",2020-11-07,"facebook",NA,"West topsham ","Vermont",5086,"Project 3","no",1,44.108949,-72.30073
+"S000454",2020-11-07,"facebook",NA,"Lyndonville","Vermont",5851,"Project 3","no",1,44.557132,-72.08059
+"S000455",2020-11-07,"facebook",NA,"Pittsford ","Vermont",5763,"Project 2","no",1,43.730204,-72.99523
+"S000456",2020-11-07,"facebook",NA,"Barre","Vermont",5641,"Project 2","no",1,44.188842,-72.472172
+"S000457",2020-11-08,"facebook",NA,"East fairfield","Vermont",5448,"Project 2","yes",1,44.750291,-72.900865
+"S000458",2020-11-08,"facebook",NA,"Enosburg","Vermont",5450,"Project 3","no",1,44.894578,-72.795246
+"S000459",2020-11-08,"facebook",NA,"Winooski","Vermont",5404,"Project 3","yes",1,44.495587,-73.184857
+"S000460",2020-11-08,"facebook",NA,"Rutland ","Vermont",5701,"Project 2","no",1,43.624577,-72.910204
+"S000461",2020-11-08,"facebook",NA,"Lisbon ","New Hampshire",3585,"Project 2","no",1,44.222416,-71.877173
+"S000462",2020-11-08,"facebook",NA,"Derbyline ","Vermont",5830,"Project 2","no",1,44.9721,-71.986969
+"S000463",2020-11-08,"facebook",NA,"Sharon","Vermont",5065,"Project 2","no",1,43.782477,-72.423363
+"S000464",2020-11-08,"facebook",NA,"Johnson ","Vermont",5656,"Project 3","no",1,44.648124,-72.68884
+"S000465",2020-11-08,"facebook",NA,"Whitehall ","New York",12887,"Project 3","no",1,43.53676,-73.365798
+"S000466",2020-11-09,"facebook",NA,"St johnsbury ","Vermont",5819,"Project 3","no",1,44.404737,-71.983075
+"S000467",2021-01-07,"flyer","Sterling Market in Johnson, VT","Derby","Vermont",5829,"Project 1","no",1,44.96721,-72.068265
+"S000469",2020-11-08,"facebook",NA,"Springfield ","Vermont",5156,"Project 2","no",1,43.310627,-72.461623
+"S000470",2020-11-10,"facebook",NA,"Rutland","Vermont",5701,"Project 3","no",1,43.624577,-72.910204
+"S000471",2020-11-11,"facebook",NA,"Waitsfield","Vermont",5673,"Project 3","no",1,44.198969,-72.840833
+"S000472",2020-11-11,"facebook",NA,"Fair Haven","Vermont",5743,"Project 3","no",1,43.67733,-73.304926
+"S000473",2020-11-11,"pt_in_other_studies",NA,"burlington","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S000474",2020-11-12,"facebook",NA,"Saint albans","Vermont",5478,"Project 2","no",1,44.808422,-73.082507
+"S000475",2020-11-12,"facebook",NA,"Weybridge","Vermont",5753,"Project 2","no",1,43.997783,-73.178295
+"S000476",2021-07-12,"flyer",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000477",2020-11-12,"facebook",NA,"Rutland ","Vermont",5701,"Project 2","no",1,43.624577,-72.910204
+"S000478",2020-11-12,"facebook",NA,"windsr","Vermont",5089,"Project 2","no",1,43.495591,-72.442313
+"S000479",2020-11-12,"facebook",NA,"Johnson","Vermont",5656,"Project 3","yes",1,44.648124,-72.68884
+"S000480",2020-11-12,"facebook",NA,"Huntington ","Vermont",5461,"Project 2","no",1,44.332701,-73.087409
+"S000481",2020-11-13,"facebook",NA,"Littleton","New Hampshire",3561,"Project 2","no",1,44.34335,-71.795116
+"S000482",2020-11-13,"facebook",NA,"Richford","Vermont",5476,"Project 3","no",1,44.955228,-72.643138
+"S000483",2020-11-13,"facebook",NA,"Rutland","Vermont",5701,"Project 2","no",1,43.624577,-72.910204
+"S000484",2020-11-14,"facebook",NA,"Barton ","Vermont",5822,"Project 3","no",1,44.751643,-72.140274
+"S000485",2020-11-15,"facebook",NA,"Newport ","Vermont",5866,"Project 2","no",1,44.640739,-72.110885
+"S000486",2020-11-15,"facebook",NA,"Rutland","Vermont",5701,"Project 2","no",1,43.624577,-72.910204
+"S000487",2020-11-15,"facebook",NA,"Claremont ","New Hampshire",3743,"Project 3","no",1,43.360727,-72.326929
+"S000488",2020-11-16,"facebook",NA,"Castleton","Vermont",5735,"Project 2","no",1,43.635473,-73.16776
+"S000489",2020-11-17,"facebook",NA,"Burlington ","Vermont",5401,"Project 2","yes",1,44.476621,-73.209998
+"S000490",2020-11-17,"facebook",NA,"St. Albans","Vermont",5478,"Project 2","no",1,44.808422,-73.082507
+"S000491",2020-11-17,"facebook",NA,"Lyme","New Hampshire",3768,"Project 3","no",1,43.816634,-72.094295
+"S000492",2020-11-17,"facebook",NA,"Keeseville","New York",12944,"Project 3","no",1,44.433105,-73.533248
+"S000493",2020-11-17,"facebook",NA,"fair haven","Vermont",5743,"Project 3","no",1,43.67733,-73.304926
+"S000494",2020-11-17,"clin_trials_web",NA,"Highgate center","Vermont",5459,"Project 3","no",1,44.95006,-73.005367
+"S000495",2020-10-23,"pt_in_other_studies",NA,"Chateaugay","New York",12920,"Project 3","no",1,44.882767,-74.066008
+"S000496",2020-10-29,"facebook",NA,"Essex junction","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S000497",2020-10-30,"facebook",NA,"Plainfield","Vermont",5667,"Project 1","no",1,44.269042,-72.38887
+"S000498",2020-10-30,"facebook",NA,"Montgomery center","Vermont",5471,"Project 1","yes",1,44.828065,-72.578206
+"S000499",2020-11-01,"facebook",NA,"Randolph","Vermont",5060,"Project 1","no",1,43.967072,-72.708604
+"S000500",2020-11-02,"direct_mail",NA,"burlinton ","Vermont",5408,"Project 1","no",1,44.511852,-73.249611
+"S000501",2020-11-02,"facebook",NA,"Witherbee","New York",12998,"Project 1","no",1,44.0778,-73.576545
+"S000502",2020-11-02,"facebook",NA,"Colchester ","Vermont",5446,"Project 1","no",1,44.541259,-73.184415
+"S000503",2020-11-04,"other_person",NA,"Burlington ","Vermont",5401,"Project 1","no",1,44.476621,-73.209998
+"S000504",2020-11-04,"facebook",NA,"Springfield","Vermont",5156,"Project 1","no",1,43.310627,-72.461623
+"S000505",2020-11-04,"facebook",NA,"Jeffersonville","Vermont",5464,"Project 1","no",1,44.646262,-72.818997
+"S000506",2020-11-05,"facebook",NA,"Craftsbury","Vermont",5826,"Project 1","no",1,44.647727,-72.402091
+"S000507",2020-11-06,"facebook",NA,"Charlestown","New Hampshire",3603,"Project 1","no",1,43.246634,-72.383931
+"S000508",2020-11-06,"facebook",NA,"Essex jct","Vermont",5452,"Project 1","no",1,44.538624,-73.050223
+"S000509",2020-11-06,"facebook",NA,"Port henry","New York",12974,"Project 1","no",1,44.060141,-73.464831
+"S000510",2020-11-09,"facebook",NA,"Chester","Vermont",5149,"Project 1","no",1,43.380553,-72.712124
+"S000511",2020-11-09,"facebook",NA,"Milton ","Vermont",5468,"Project 1","no",1,44.657371,-73.144488
+"S000512",2020-11-09,"facebook",NA,"Groton ","Vermont",4056,"Project 1","no",1,43.659549,-70.883523
+"S000514",2020-11-09,"facebook",NA,"Claremont ","New Hampshire",3743,"Project 1","no",1,43.360727,-72.326929
+"S000515",2020-11-10,"facebook",NA,"North Springfield ","Vermont",5150,"Project 1","no",1,43.334435,-72.530792
+"S000516",2020-11-11,"facebook",NA,"Wells ","Vermont",5774,"Project 1","no",1,43.442986,-73.191086
+"S000517",2020-11-11,"other_person",NA,"lisbon","New Hampshire",3585,"Project 1","no",1,44.222416,-71.877173
+"S000518",2020-11-11,"facebook",NA,"Springfield","Vermont",5156,"Project 1","yes",1,43.310627,-72.461623
+"S000519",2020-11-11,"facebook",NA,"Essex","Vermont",5452,"Project 1","no",1,44.538624,-73.050223
+"S000520",2020-11-12,"facebook",NA,"Charlestown","New Hampshire",3603,"Project 1","no",1,43.246634,-72.383931
+"S000521",2020-11-14,"facebook",NA,"Barton","Vermont",5819,"Project 1","no",1,44.404737,-71.983075
+"S000522",2020-11-17,"facebook",NA,"Jeffersonville ","Vermont",5464,"Project 1 and Project 3","no",1,44.646262,-72.818997
+"S000523",2020-11-17,"facebook",NA,"Newport Center","Vermont",5857,"Project 3","no",1,44.928911,-72.3127
+"S000524",2020-11-17,"other_person",NA,"Woodsville","New Hampshire",3785,"Project 2","no",1,44.043516,-71.9122
+"S000525",2020-11-18,"facebook",NA,"Meadville ","Pennsylvania",16335,"Project 2","no",1,41.630953,-80.156056
+"S000526",2020-11-18,"facebook",NA,"Irasburg","Vermont",5845,"Project 2","no",1,44.800772,-72.290572
+"S000527",2020-11-18,"other_person",NA,"Burlington","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S000528",2020-11-18,"other_person",NA,"Mount Holly","Vermont",5758,"Project 1 and Project 3","no",1,43.450789,-72.757786
+"S000529",2020-11-18,"facebook",NA,"Washington","Vermont",5676,"Project 2","yes",1,44.295598,-72.826991
+"S000530",2020-11-18,"facebook",NA,"Vergennes ","Vermont",5491,"Project 1 and Project 3","no",1,44.111961,-73.310796
+"S000531",2020-11-19,"other",NA,"Altona ","New York",12910,"Project 3","no",1,44.845249,-73.619461
+"S000532",2021-01-12,"other",NA,"Brandon","Vermont",5733,"ineligible","no",1,43.810474,-73.09028
+"S000533",2020-11-19,"facebook",NA,"Ticonderoga ","New York",12883,"Project 1 and Project 3","no",1,43.836596,-73.552843
+"S000534",2020-11-19,"facebook",NA,"Lyndon","Vermont",5850,"Project 3","yes",1,44.541247,-72.014699
+"S000535",2020-11-19,"facebook",NA,"St. Johnsbury","Vermont",5819,"Project 2","no",1,44.404737,-71.983075
+"S000536",2020-11-19,"facebook",NA,"Irasburg","Vermont",5845,"Project 3","no",1,44.800772,-72.290572
+"S000540",2020-11-23,"facebook",NA,"Bristol ","Vermont",5443,"Project 2","no",1,44.139443,-73.03993
+"S000541",2020-11-27,"pt_in_other_studies",NA,"Burlington ","Vermont",5408,"ineligible","no",1,44.511852,-73.249611
+"S000542",2021-01-14,"flyer","bus stop on Colchester Ave","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000544",2020-11-28,"facebook",NA,"Lisbon","New Hampshire",3585,"Project 2","no",1,44.222416,-71.877173
+"S000545",2020-12-04,"facebook",NA,"Claremont","New Hampshire",3743,"Project 1 and Project 3","no",1,43.360727,-72.326929
+"S000546",2020-12-04,"facebook",NA,"Claremont ","New Hampshire",3743,"Project 2","no",1,43.360727,-72.326929
+"S000547",2020-12-04,"facebook",NA,"Burlington ","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S000548",2021-08-23,"facebook",NA,"Brookfield","Vermont",5036,"Project 3","no",1,44.023908,-72.587891
+"S000549",2020-12-08,"facebook",NA,"Ascutney ","Vermont",5030,"Project 1","no",1,NA,NA
+"S000550",2020-12-10,"facebook",NA,"Burlington","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S000551",2020-12-11,"craigslist",NA,"Winooski","Vermont",5404,"Project 2","no",1,44.495587,-73.184857
+"S000552",2020-12-11,"craigslist",NA,"Burlington","Vermont",5408,"Project 3","yes",1,44.511852,-73.249611
+"S000553",2020-12-13,"craigslist",NA,"Essex Junction ","Vermont",5452,"Project 3","no",1,44.538624,-73.050223
+"S000554",2020-12-13,"facebook",NA,"White River Jct ","Vermont",5001,"Project 3","no",1,43.672188,-72.380193
+"S000555",2020-12-14,"facebook",NA,"Sheldon ","Vermont",5483,"Project 2","no",1,44.889912,-72.963139
+"S000556",2020-12-14,"craigslist",NA,"Saint Albans","Vermont",5478,"Project 3","no",1,44.808422,-73.082507
+"S000557",2021-01-20,"other_person",NA,"Rutland","Vermont",5701,"Project 2","no",1,43.624577,-72.910204
+"S000558",2021-01-31,"facebook",NA,"Sheldon","Vermont",5483,"Project 2","no",1,44.889912,-72.963139
+"S000559",2021-01-31,"facebook",NA,"Saint albans ","Vermont",5478,"Project 2","no",1,44.808422,-73.082507
+"S000560",2021-01-31,"facebook",NA,"Saint albans ","Vermont",5478,"Project 1","no",1,44.808422,-73.082507
+"S000561",2021-02-01,"craigslist",NA,"Burlington","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S000562",2021-02-03,"pt_in_other_studies",NA,"Colchester","Vermont",5408,"Project 2","yes",1,44.511852,-73.249611
+"S000563",2021-02-06,"facebook",NA,"Burlington","Vermont",5408,"Project 2","no",1,44.511852,-73.249611
+"S000564",2021-02-09,"clin_trials_web",NA,"Colchester","Vermont",5446,"Project 3","no",1,44.541259,-73.184415
+"S000565",2021-02-12,"facebook",NA,"Burlington","Vermont",5408,"Project 2","no",1,44.511852,-73.249611
+"S000566",2021-02-13,"other_person",NA,"Barre","Vermont",5641,"Project 1","no",1,44.188842,-72.472172
+"S000567",2020-10-23,"pt_in_other_studies",NA,"Williston ","Vermont",5495,"ineligible","no",1,44.429066,-73.096243
+"S000568",2020-10-23,"pt_in_other_studies",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000569",2021-02-13,"craigslist",NA,"Springfield","Vermont",5156,"Project 2","no",1,43.310627,-72.461623
+"S000570",2021-02-13,"facebook",NA,"Colchester ","Vermont",5446,"Project 2","no",1,44.541259,-73.184415
+"S000571",2021-02-14,"other",NA,"Winooski","Vermont",5404,"Project 3","no",1,44.495587,-73.184857
+"S000572",2021-02-14,"facebook",NA,"Brandon","Vermont",5733,"Project 2","no",1,43.810474,-73.09028
+"S000573",2021-02-14,"facebook",NA,"Rutland ","Vermont",5701,"Project 2","no",1,43.624577,-72.910204
+"S000574",2021-02-17,"facebook",NA,"Newport","Vermont",5855,"Project 2","no",1,44.927131,-72.192236
+"S000575",2021-02-18,"facebook",NA,"Alburgh","Vermont",5440,"Project 2","no",1,44.957882,-73.291974
+"S000576",2021-02-18,"facebook",NA,"Brandon","Vermont",5733,"Project 2","no",1,43.810474,-73.09028
+"S000577",2021-02-18,"facebook",NA,"Whiting ","Vermont",5778,"Project 2","no",1,43.876421,-73.212536
+"S000578",2021-02-18,"facebook",NA,"St. Albans","Vermont",5478,"Project 2","no",1,44.808422,-73.082507
+"S000579",2021-02-19,"craigslist",NA,"Sharon","Vermont",5065,"Project 1","no",1,43.782477,-72.423363
+"S000580",2021-10-25,"BuildClinical",NA,"Swanton","Vermont",5488,"Project 2","no",1,44.921329,-73.125393
+"S000581",2021-02-19,"other_person",NA,"Washington","Vermont",5675,"Project 2","no",1,44.076165,-72.422633
+"S000582",2021-02-19,"facebook",NA,"Barre","Vermont",5641,"Project 2","no",1,44.188842,-72.472172
+"S000583",2020-10-23,"pt_in_other_studies",NA,"Newport Center","Vermont",5647,"ineligible","no",1,44.409482,-72.259129
+"S000584",2020-10-23,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000585",2020-10-23,"other_person",NA,"Albany","Vermont",5820,"ineligible","no",1,44.763124,-72.375244
+"S000586",2021-02-23,"facebook",NA,"Burlington ","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S000587",2021-02-24,"facebook",NA,"barre","Vermont",5641,"Project 1 and Project 3","yes",1,44.188842,-72.472172
+"S000588",2021-02-23,"facebook",NA,"Pownal","Vermont",5261,"Project 2","no",1,42.770285,-73.179047
+"S000589",2021-02-23,"facebook",NA,"St Albans","Vermont",5478,"Project 2","no",1,44.808422,-73.082507
+"S000590",2021-02-25,"facebook",NA,"Northfield ","Vermont",5663,"Project 3","no",1,44.147613,-72.691275
+"S000591",2021-02-25,"facebook",NA,"South Burlington ","Vermont",5403,"Project 3","yes",1,44.444866,-73.173468
+"S000593",2020-10-23,"facebook",NA,"plattsburgh","New York",12901,"ineligible","no",1,44.70419,-73.471392
+"S000594",2020-10-23,"other",NA,"St.Albans ","Vermont",5478,"ineligible","no",1,44.808422,-73.082507
+"S000595",2020-10-23,"direct_mail",NA,"Portland ","Maine",4101,"ineligible","no",1,43.662607,-70.257949
+"S000596",2020-10-23,"direct_mail",NA,"Randolph","Vermont",5060,"ineligible","no",1,43.967072,-72.708604
+"S000597",2020-10-23,"pt_in_other_studies",NA,"Montpelier","Vermont",5602,"ineligible","no",1,44.274953,-72.609475
+"S000598",2020-10-23,"other",NA,"Leicester","Vermont",5733,"ineligible","no",1,43.810474,-73.09028
+"S000599",2020-10-23,"other",NA,"South Burlington ","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"S000600",2020-10-23,"direct_mail",NA,"Ticonderoga","New York",12883,"ineligible","no",1,43.836596,-73.552843
+"S000601",2020-10-23,"pt_in_other_studies",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000603",2020-10-23,"other",NA,"Pittsburg ","New Hampshire",3592,"ineligible","no",1,45.116236,-71.26111
+"S000604",2020-10-23,"pt_in_other_studies",NA,"Johnson","Vermont",5656,"ineligible","no",1,44.648124,-72.68884
+"S000605",2021-05-21,"facebook",NA,"Bristol","Vermont",5443,"ineligible","no",1,44.139443,-73.03993
+"S000606",2020-10-23,"other",NA,"Waterbury ","Vermont",5676,"ineligible","no",1,44.295598,-72.826991
+"S000607",2021-08-31,"other",NA,"Milton","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"S000608",2020-10-23,"facebook",NA,"Johnson ","Vermont",5656,"ineligible","no",1,44.648124,-72.68884
+"S000609",2020-10-23,"facebook",NA,"Fairfield","Vermont",5455,"ineligible","no",1,44.801687,-72.967393
+"S000610",2020-10-23,"direct_mail",NA,"Indio","California",92203,"ineligible","no",1,33.753959,-116.246487
+"S000611",2021-03-02,"facebook",NA,"So. Burlington","Vermont",5403,"Project 3","no",1,44.444866,-73.173468
+"S000612",2020-10-23,"other",NA,"Williamstown","Vermont",5679,"ineligible","no",1,44.108944,-72.531912
+"S000613",2020-10-23,"direct_mail",NA,"St. Johnsbury ","Vermont",5819,"ineligible","no",1,44.404737,-71.983075
+"S000614",2020-10-23,"other",NA,"Plattsburgh","New York",12901,"ineligible","no",1,44.70419,-73.471392
+"S000615",2020-10-23,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000616",2020-10-23,"other",NA,"Daytona beach","Florida",32118,"ineligible","no",1,29.209639,-81.002321
+"S000617",2020-10-24,"other",NA,"Plattsburgh","New York",12901,"ineligible","no",1,44.70419,-73.471392
+"S000618",2020-10-24,"other",NA,"Barre","Vermont",5641,"ineligible","no",1,44.188842,-72.472172
+"S000619",2020-10-24,"pt_in_other_studies",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"S000620",2020-10-24,"pt_in_other_studies",NA,"Brick","New Jersey",8724,"ineligible","no",1,40.086235,-74.11085
+"S000621",2020-10-24,"facebook",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000622",2020-10-24,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000623",2020-10-24,"facebook",NA,"Mineville","New York",12956,"ineligible","no",1,44.097612,-73.481333
+"S000624",2020-10-24,"pt_in_other_studies",NA,"Columbus","Ohio",43201,"ineligible","no",1,39.99083,-82.999946
+"S000625",2020-10-24,"other",NA,"Moretown","Vermont",5660,"ineligible","no",1,44.253995,-72.734479
+"S000626",2020-10-25,"direct_mail",NA,"Colchester ","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"S000627",2020-10-25,"other",NA,"Colchester ","Vermont",5439,"ineligible","no",1,44.494527,-73.16527
+"S000628",2021-03-03,"flyer","Garcia's Tobacco Shop in Burlington","South Burlington","Vermont",5403,"Project 3","yes",1,44.444866,-73.173468
+"S000629",2021-03-02,"facebook",NA,"Bennington ","Vermont",5201,"Project 1 and Project 3","no",1,42.869211,-73.128516
+"S000630",2021-03-03,"craigslist",NA,"Burlington","Vermont",5401,"Project 2","yes",1,44.476621,-73.209998
+"S000631",2021-03-04,"facebook",NA,"Hinsdale","New Hampshire",3451,"Project 1 and Project 3","no",1,42.809298,-72.504822
+"S000632",2021-03-04,"clin_trials_web",NA,"Colchester","Vermont",5446,"Project 2","yes",1,44.541259,-73.184415
+"S000633",2021-03-04,"facebook",NA,"Alburgh","Vermont",5440,"Project 2","no",1,44.957882,-73.291974
+"S000634",2020-10-25,"other_person",NA,"Colchester","Vermont",5439,"ineligible","no",1,44.494527,-73.16527
+"S000635",2021-06-24,"direct_mail","My house","Burlington","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S000636",2020-10-26,"direct_mail",NA,"Burlington ","Vermont",5408,"ineligible","no",1,44.511852,-73.249611
+"544",2021-10-27,"TV",NA,"Kumasi ","Georgia",94043,"ineligible","no",1,37.414028,-122.070679
+"S000637",2020-10-26,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000638",2020-10-26,"pt_in_other_studies",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000639",2020-10-26,"craigslist",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000640",2020-10-26,"direct_mail",NA,"Port Kent ","New York",12975,"ineligible","no",1,44.529091,-73.430536
+"S000641",2020-10-26,"other",NA,"Peacham","Vermont",5862,"ineligible","no",1,44.318185,-72.216116
+"S000642",2020-10-26,"facebook",NA,"Ticonderoga ","New York",12883,"ineligible","no",1,43.836596,-73.552843
+"S000643",2020-10-27,"facebook",NA,"St albans","Vermont",5478,"ineligible","no",1,44.808422,-73.082507
+"S000644",2020-10-27,"pt_in_other_studies",NA,"Essex Junction ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000645",2020-10-27,"facebook",NA,"Swanton","Vermont",5488,"ineligible","no",1,44.921329,-73.125393
+"S000646",2020-10-27,"craigslist",NA,"Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"S000647",2020-10-27,"other",NA,"Vergennes ","Vermont",5491,"ineligible","no",1,44.111961,-73.310796
+"S000648",2020-10-27,"other",NA,"Montpelier","Vermont",5602,"ineligible","no",1,44.274953,-72.609475
+"S000649",2020-10-27,"clin_trials_web",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000650",2020-10-27,"other",NA,"Saranac Lake ","New York",12983,"ineligible","no",1,44.307529,-74.147022
+"S000652",2020-10-27,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000653",2020-10-27,"other",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000654",2020-10-27,"facebook",NA,"Middlebury","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"S000655",2020-10-28,"facebook",NA,"northfield","Vermont",5663,"ineligible","no",1,44.147613,-72.691275
+"S000656",2020-10-28,"facebook",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000657",2020-10-28,"other_person",NA,"Montpelier","Vermont",5602,"ineligible","no",1,44.274953,-72.609475
+"S000658",2020-10-28,"facebook",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"S000659",2020-10-28,"facebook",NA,"Swanton","Vermont",5488,"ineligible","no",1,44.921329,-73.125393
+"S000660",2020-10-28,"facebook",NA,"Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"S000661",2021-03-05,"facebook",NA,"Newport","Vermont",5855,"Project 1 and Project 3","no",1,44.927131,-72.192236
+"S000662",2021-05-29,"facebook",NA,"Burlington","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S000663",2021-03-06,"facebook",NA,"Saint Albans","Vermont",5478,"Project 3","no",1,44.808422,-73.082507
+"S000664",2021-03-08,"flyer","City Market in Burlington","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000665",2020-10-28,"facebook",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"S000666",2020-10-28,"other",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000667",2020-10-28,"direct_mail",NA,"Belford","New Jersey",7718,"ineligible","no",1,40.419871,-74.085174
+"S000668",2020-10-28,"facebook",NA,"Middlebury ","Vermont",5753,"ineligible","no",1,43.997783,-73.178295
+"S000669",2020-10-28,"facebook",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"S000670",2020-10-29,"other_person",NA,"Graniteville ","Vermont",5654,"ineligible","no",1,44.140286,-72.475659
+"S000671",2020-10-29,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000672",2020-10-29,"pt_in_other_studies",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000673",2020-10-29,"facebook",NA,"Fairfax","Vermont",5454,"ineligible","no",1,44.710289,-73.028877
+"S000674",2020-10-29,"facebook",NA,"Swanton","Vermont",5488,"ineligible","no",1,44.921329,-73.125393
+"S000676",2020-10-31,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000678",2020-11-01,"facebook",NA,"Saranac Lake","New York",12983,"ineligible","no",1,44.307529,-74.147022
+"S000679",2020-11-01,"facebook",NA,"burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000680",2020-11-02,"other",NA,"Williston","Vermont",5495,"ineligible","no",1,44.429066,-73.096243
+"S000681",2020-11-02,"facebook",NA,"St albans","Vermont",5478,"ineligible","no",1,44.808422,-73.082507
+"S000682",2020-11-02,"facebook",NA,"East barre","Vermont",5649,"ineligible","no",1,44.166555,-72.3466
+"S000683",2020-11-02,"other",NA,"Groton","Vermont",5046,"ineligible","no",1,44.232453,-72.257516
+"S000684",2020-11-02,"craigslist",NA,"colchester ","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"S000685",2020-11-03,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000686",2020-11-04,"facebook",NA,"Whiting","Vermont",5778,"ineligible","no",1,43.876421,-73.212536
+"S000687",2020-11-04,"direct_mail",NA,"Barre","Vermont",5641,"ineligible","no",1,44.188842,-72.472172
+"S000688",2020-11-05,"facebook",NA,"St Albans","Vermont",5478,"ineligible","no",1,44.808422,-73.082507
+"S000689",2020-11-05,"facebook",NA,"White River Junction","Vermont",5001,"ineligible","no",1,43.672188,-72.380193
+"S000690",2020-11-05,"other",NA,"Jeffersonville ","Vermont",5464,"ineligible","no",1,44.646262,-72.818997
+"S000691",2021-03-07,"facebook",NA,"Hinesburg","Vermont",5461,"Project 3","no",1,44.332701,-73.087409
+"S000692",2021-03-07,"facebook",NA,"Newark ","Vermont",5871,"Project 2","no",1,44.689305,-71.936955
+"S000693",2020-11-05,"facebook",NA,"South Londonderry ","Vermont",5155,"ineligible","no",1,43.091967,-72.914343
+"S000694",2021-03-08,"facebook",NA,"Vergennes ","Vermont",5491,"Project 3","no",1,44.111961,-73.310796
+"S000695",2020-11-05,"facebook",NA,"Ludlow","Vermont",5149,"ineligible","no",1,43.380553,-72.712124
+"S000696",2020-11-05,"facebook",NA,"rutland","Vermont",5701,"ineligible","no",1,43.624577,-72.910204
+"S000697",2020-11-05,"facebook",NA,"Windsor ","Vermont",5089,"ineligible","no",1,43.495591,-72.442313
+"S000699",2020-11-05,"other",NA,"Barre ","Vermont",5641,"ineligible","no",1,44.188842,-72.472172
+"S000700",2021-03-09,"clin_trials_web",NA,"Burlington","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S000701",2021-03-10,"facebook",NA,"Rutland","Vermont",5702,"Project 3","no",1,NA,NA
+"S000702",2020-11-05,"craigslist",NA,"Bennington ","Vermont",5201,"ineligible","no",1,42.869211,-73.128516
+"S000703",2020-11-05,"facebook",NA,"Wallingford ","Vermont",5773,"ineligible","no",1,43.420109,-72.987065
+"S000704",2020-11-05,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000705",2020-11-05,"facebook",NA,"Burlington","Vermont",5405,"ineligible","no",1,44.473735,-73.19561
+"S000706",2020-11-06,"other",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000707",2020-11-06,"facebook",NA,"Lisbon ","New Hampshire",3585,"ineligible","no",1,44.222416,-71.877173
+"S000708",2020-11-06,"facebook",NA,"Saint Johnsbury ","Vermont",5819,"ineligible","no",1,44.404737,-71.983075
+"S000709",2020-11-06,"facebook",NA,"Montpelier ","Vermont",5602,"ineligible","no",1,44.274953,-72.609475
+"S000710",2020-11-06,"facebook",NA,"Rutland","Vermont",5701,"ineligible","no",1,43.624577,-72.910204
+"S000711",2020-11-07,"facebook",NA,"Montpelier","Vermont",5602,"ineligible","no",1,44.274953,-72.609475
+"S000712",2020-11-07,"facebook",NA,"Newport","Vermont",5855,"ineligible","no",1,44.927131,-72.192236
+"S000713",2020-11-07,"facebook",NA,"Vershire","Vermont",5079,"ineligible","no",1,43.956765,-72.326539
+"S000714",2020-11-07,"facebook",NA,"Newport","Vermont",5855,"ineligible","no",1,44.927131,-72.192236
+"S000715",2020-11-07,"direct_mail",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000716",2020-11-08,"facebook",NA,"Rutland","Vermont",5701,"ineligible","no",1,43.624577,-72.910204
+"S000717",2020-11-08,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000718",2020-11-08,"facebook",NA,"Wilder","Vermont",5088,"ineligible","no",1,NA,NA
+"S000719",2020-11-08,"facebook",NA,"West Rutland ","Vermont",5777,"ineligible","no",1,43.556449,-73.048787
+"S000720",2020-11-08,"facebook",NA,"Montpelier","Vermont",5602,"ineligible","no",1,44.274953,-72.609475
+"S000721",2020-11-08,"facebook",NA,"Colchester ","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"S000722",2020-11-08,"other_person",NA,"Port Henry","New York",12974,"ineligible","no",1,44.060141,-73.464831
+"S000723",2020-11-09,"facebook",NA,"Randolph ","Vermont",5060,"ineligible","no",1,43.967072,-72.708604
+"S000724",2020-11-09,"facebook",NA,"Claremont ","New Hampshire",3743,"ineligible","no",1,43.360727,-72.326929
+"S000725",2020-11-09,"other",NA,"saint albans","Vermont",5478,"ineligible","no",1,44.808422,-73.082507
+"S000726",2020-11-10,"direct_mail",NA,"Shelburne","Vermont",5482,"ineligible","no",1,44.380662,-73.211006
+"S000727",2020-11-10,"facebook",NA,"Graniteville","Vermont",5654,"ineligible","no",1,44.140286,-72.475659
+"S000728",2020-11-10,"facebook",NA,"Whitehall","New York",12887,"ineligible","no",1,43.53676,-73.365798
+"S000729",2020-11-10,"flyer","Winooski ","Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000730",2020-11-10,"other",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000731",2020-11-11,"facebook",NA,"Lebanon","New Hampshire",3766,"ineligible","no",1,43.632568,-72.234816
+"S000732",2020-11-11,"facebook",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"S000734",2021-03-10,"facebook",NA,"Rutland","Vermont",5701,"Project 1","no",1,43.624577,-72.910204
+"S000735",2021-03-10,"facebook",NA,"Lowell","Vermont",5847,"Project 1 and Project 3","no",1,44.793437,-72.458451
+"S000736",2021-03-10,"facebook",NA,"Saint Albans","Vermont",5478,"Project 3","no",1,44.808422,-73.082507
+"S000737",2021-03-11,"facebook",NA,"Underhill ","Vermont",5489,"Project 1 and Project 3","no",1,44.570909,-72.901598
+"S000738",2021-03-12,"flyer","Asian Bistro","South Burlington ","Vermont",5403,"Project 3","yes",1,44.444866,-73.173468
+"S000739",2020-11-11,"facebook",NA,"Glover","Vermont",5839,"ineligible","no",1,44.673683,-72.207014
+"S000740",2020-11-11,"flyer","Union street laundry ","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000741",2020-11-11,"other_person",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000742",2020-11-11,"facebook",NA,"Jeffersonville","Vermont",5464,"ineligible","no",1,44.646262,-72.818997
+"S000743",2020-11-11,"facebook",NA,"Williston","Vermont",5495,"ineligible","no",1,44.429066,-73.096243
+"S000744",2020-11-12,"facebook",NA,"South Burlington ","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"S000745",2020-11-12,"other_person",NA,"Burlington ","Vermont",5408,"ineligible","no",1,44.511852,-73.249611
+"S000746",2020-11-12,"other_person",NA,"plainfield","Vermont",5667,"ineligible","no",1,44.269042,-72.38887
+"S000747",2020-11-12,"other",NA,"Vergennes","Vermont",5491,"ineligible","no",1,44.111961,-73.310796
+"S000748",2020-11-12,"facebook",NA,"Newport ","Vermont",5855,"ineligible","no",1,44.927131,-72.192236
+"S000749",2020-11-12,"facebook",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000750",2020-11-12,"facebook",NA,"Fair Haven","Vermont",5743,"ineligible","no",1,43.67733,-73.304926
+"S000751",2020-11-12,"facebook",NA,"Poultney ","Vermont",5764,"ineligible","no",1,43.539935,-73.189193
+"S000752",2020-11-12,"facebook",NA,"West Pawlet","Vermont",5775,"ineligible","no",1,43.365956,-73.228386
+"S000753",2021-03-16,"other",NA,"Burlington ","Vermont",5401,"Project 1","no",1,44.476621,-73.209998
+"S000754",2020-11-13,"facebook",NA,"Montpelier ","Vermont",5602,"ineligible","no",1,44.274953,-72.609475
+"S000755",2020-11-13,"facebook",NA,"Lebanon","New Hampshire",3766,"ineligible","no",1,43.632568,-72.234816
+"S000756",2020-11-14,"facebook",NA,"Rutland","Vermont",5701,"ineligible","no",1,43.624577,-72.910204
+"S000757",2020-11-14,"facebook",NA,"Rochester ","Vermont",5767,"ineligible","no",1,43.879408,-72.831685
+"S000758",2020-11-14,"facebook",NA,"Milton","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"S000759",2020-11-14,"facebook",NA,"Arlington","Vermont",5250,"ineligible","no",1,43.103713,-73.173145
+"S000760",2020-11-14,"facebook",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"S000761",2020-11-14,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000762",2020-11-14,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000763",2020-11-14,"facebook",NA,"westfield ","Vermont",5874,"ineligible","no",1,44.883474,-72.484958
+"S000765",2020-11-15,"facebook",NA,"South Burlington ","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"S000766",2020-11-16,"facebook",NA,"St.johnsbury ","Vermont",5819,"ineligible","no",1,44.404737,-71.983075
+"S000767",2021-03-12,"other_person",NA,"Vergennes","Vermont",5491,"Project 3","no",1,44.111961,-73.310796
+"S000768",2021-03-13,"facebook",NA,"Vergennes","Vermont",5491,"Project 3","no",1,44.111961,-73.310796
+"S000769",2021-03-13,"flyer","Leonardo's in downtown Burlington","Burlington","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S000770",2021-03-13,"facebook",NA,"Bridport","Vermont",5734,"Project 3","no",1,43.981724,-73.331937
+"S000771",2021-03-14,"facebook",NA,"Saint albans ","Vermont",5478,"Project 3","no",1,44.808422,-73.082507
+"S000772",2021-03-14,"facebook",NA,"Charlotte","Vermont",5445,"Project 3","no",1,44.309955,-73.220978
+"S000773",2020-11-16,"facebook",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000774",2020-11-17,"facebook",NA,"Bomoseen","Vermont",5732,"ineligible","no",1,43.643813,-73.210774
+"S000775",2020-11-17,"facebook",NA,"South burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"S000776",2020-11-17,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000777",2020-11-17,"facebook",NA,"Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"S000778",2020-11-18,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000779",2020-11-18,"facebook",NA,"Windsor","Vermont",5089,"ineligible","no",1,43.495591,-72.442313
+"S000781",2020-11-18,"facebook",NA,"Brandon","Vermont",5733,"ineligible","no",1,43.810474,-73.09028
+"S000782",2020-11-18,"facebook",NA,"Starksboro ","Vermont",5487,"ineligible","no",1,44.210341,-72.993405
+"S000783",2020-11-19,"facebook",NA,"Brattleboro","Vermont",5301,"ineligible","no",1,42.83868,-72.659997
+"S000784",2020-11-19,"facebook",NA,"W. Rutland","Vermont",5777,"ineligible","no",1,43.556449,-73.048787
+"S000785",2020-11-19,"direct_mail",NA,"Milton","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"S000786",2020-11-19,"facebook",NA,"Danby","Vermont",5739,"ineligible","no",1,43.342621,-73.000196
+"S000787",2020-11-19,"other_person",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000789",2020-11-20,"facebook",NA,"Swanton","Vermont",5488,"ineligible","no",1,44.921329,-73.125393
+"S000790",2020-11-20,"facebook",NA,"Rutland ","Vermont",5701,"ineligible","no",1,43.624577,-72.910204
+"S000791",2020-11-21,"other",NA,"Enosburgfalls","Vermont",5450,"ineligible","no",1,44.894578,-72.795246
+"S000792",2021-05-18,"facebook",NA,"Rutland","Vermont",5701,"Project 2","no",1,43.624577,-72.910204
+"S000793",2020-11-23,"other",NA,"South Burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"S000795",2020-11-30,"facebook",NA,"Underhill","Vermont",5489,"ineligible","no",1,44.570909,-72.901598
+"S000796",2020-12-03,"facebook",NA,"Newport ","Vermont",5855,"ineligible","no",1,44.927131,-72.192236
+"S000797",2020-12-03,"facebook",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000798",2020-12-03,"facebook",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"S000799",2020-12-04,"facebook",NA,"Glens Falls","New York",12804,"ineligible","no",1,43.340954,-73.685911
+"S000800",2020-12-04,"facebook",NA,"St.johnsburu","Vermont",5819,"ineligible","no",1,44.404737,-71.983075
+"S000801",2020-12-06,"other",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000802",2020-12-07,"facebook",NA,"Barton","Vermont",5822,"ineligible","no",1,44.751643,-72.140274
+"S000803",2020-12-09,"other",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000804",2021-03-16,"craigslist",NA,"South Burlington","Vermont",5403,"Project 2","no",1,44.444866,-73.173468
+"S000805",2021-03-16,"front_porch_forum",NA,"Burlington","Vermont",5408,"Project 3","yes",1,44.511852,-73.249611
+"S000806",2021-03-17,"facebook",NA,"Burlington","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S000807",2020-12-09,"facebook",NA,"Lyndonville ","Vermont",5819,"ineligible","no",1,44.404737,-71.983075
+"S000808",2020-12-10,"craigslist",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000809",2020-12-11,"craigslist",NA,"Burlington  ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000810",2020-12-11,"craigslist",NA,"winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"S000811",2020-12-14,"facebook",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000812",2020-12-15,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000813",2020-12-15,"craigslist",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000814",2020-12-16,"facebook",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000815",2020-12-16,"craigslist",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000816",2020-12-17,"facebook",NA,"Rutland ","Vermont",5701,"ineligible","no",1,43.624577,-72.910204
+"S000817",2020-12-18,"facebook",NA,"Northfield Falls ","Vermont",5664,"ineligible","no",1,44.167173,-72.653138
+"S000818",2020-12-18,"craigslist",NA,"Plattsburgh","New York",12901,"ineligible","no",1,44.70419,-73.471392
+"S000819",2020-12-30,"craigslist",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000820",2020-12-31,"craigslist",NA,"Dover","New Hampshire",3820,"ineligible","no",1,43.190658,-70.887655
+"S000821",2020-12-15,"craigslist",NA,"Norwich","Vermont",5055,"ineligible","no",1,43.777628,-72.323984
+"S000822",2021-01-21,"other_person",NA,"Rutland ","Vermont",5701,"ineligible","no",1,43.624577,-72.910204
+"S000823",2021-01-25,"other_person",NA,"Burlington ","Vermont",5408,"ineligible","no",1,44.511852,-73.249611
+"S000825",2021-02-02,"facebook",NA,"Hardwick","Vermont",5843,"ineligible","no",1,44.518714,-72.348965
+"S000826",2021-02-04,"other_person",NA,"Burlington","Vermont",5408,"ineligible","no",1,44.511852,-73.249611
+"S000827",2021-02-05,"craigslist",NA,"waterbury","Vermont",5676,"ineligible","no",1,44.295598,-72.826991
+"S000828",2021-02-06,"facebook",NA,"Colchester ","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"S000829",2021-02-07,"other_person",NA,"Waterbury","Vermont",5676,"ineligible","no",1,44.295598,-72.826991
+"S000830",2021-02-08,"facebook",NA,"Essex Jct","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S000831",2021-02-12,"other_person",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"S000832",2021-02-13,"other",NA,"Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"S000833",2021-03-18,"direct_mail",NA,"Colchester","Vermont",5446,"Project 1 and Project 3","no",1,44.541259,-73.184415
+"S000834",2021-03-18,"front_porch_forum",NA,"Grand isle","Vermont",5458,"Project 2","no",1,44.717847,-73.307486
+"S000835",2021-03-20,"facebook",NA,"Derby Line","Vermont",5830,"Project 2","no",1,44.9721,-71.986969
+"S000836",2021-02-13,"other_person",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000837",2021-02-13,"facebook",NA,"winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"S000838",2021-02-14,"craigslist",NA,"Danby ","Vermont",5739,"ineligible","no",1,43.342621,-73.000196
+"S000839",2021-02-14,"facebook",NA,"New Haven","Vermont",5472,"Project 2","no",1,44.102761,-73.155209
+"S000840",2021-02-15,"facebook",NA,"Milton","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"S000841",2021-02-15,"facebook",NA,"East Hardwick","Vermont",5836,"ineligible","no",1,44.511564,-72.266145
+"S000842",2021-02-16,"facebook",NA,"Castleton ","Vermont",5743,"ineligible","no",1,43.67733,-73.304926
+"S000843",2021-05-13,"facebook",NA,"Burlington","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S000844",2021-06-17,"facebook",NA,"Barre","Vermont",5641,"Project 2","no",1,44.188842,-72.472172
+"S000845",2021-02-18,"facebook",NA,"sheldon","Vermont",5483,"ineligible","no",1,44.889912,-72.963139
+"S000846",2021-02-17,"other_person",NA,"Swanton","Vermont",5488,"ineligible","no",1,44.921329,-73.125393
+"S000847",2021-02-19,"other",NA,"Pikeville","Kentucky",41501,"ineligible","no",1,37.514355,-82.508901
+"S000848",2021-02-19,"facebook",NA,"Pittsford","Vermont",5763,"ineligible","no",1,43.730204,-72.99523
+"S000849",2021-02-21,"facebook",NA,"Graniteville ","Vermont",5654,"ineligible","no",1,44.140286,-72.475659
+"S000850",2021-02-22,"facebook",NA,"Shelburne ","Vermont",5482,"ineligible","no",1,44.380662,-73.211006
+"S000851",2021-02-23,"facebook",NA,"Bellows falls","Vermont",5101,"ineligible","no",1,43.182144,-72.493221
+"S000852",2021-02-23,"facebook",NA,"Woodsville","New Hampshire",3785,"ineligible","no",1,44.043516,-71.9122
+"S000853",2021-02-23,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000854",2021-02-24,"facebook",NA,"Randolph","Vermont",5060,"ineligible","no",1,43.967072,-72.708604
+"S000855",2021-06-06,"facebook",NA,"Ira","Vermont",5777,"Project 2","yes",1,43.556449,-73.048787
+"S000856",2021-02-25,"facebook",NA,"Washington","Vermont",5675,"ineligible","no",1,44.076165,-72.422633
+"S000857",2021-02-27,"neighborhood_news",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000858",2021-02-27,"facebook",NA,"Enosburg ","Vermont",5450,"ineligible","no",1,44.894578,-72.795246
+"S000859",2021-02-28,"craigslist",NA,"burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000860",2021-03-02,"google",NA,"Essex Junction","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S000861",2021-03-02,"flyer","Garcia's Tobacco Shop","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000862",2021-03-02,"craigslist",NA,"Waterbury","Vermont",5676,"ineligible","no",1,44.295598,-72.826991
+"S000864",2021-03-03,"other_person",NA,"St. George ","Vermont",5495,"ineligible","no",1,44.429066,-73.096243
+"S000865",2021-03-04,"facebook",NA,"North Clarendon ","Vermont",5759,"ineligible","no",1,43.532111,-72.964801
+"S000867",2021-03-05,"facebook",NA," Colchester ","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"S000868",2021-03-05,"facebook",NA,"Lyndon Center","Vermont",5850,"ineligible","no",1,44.541247,-72.014699
+"S000869",2021-03-05,"other",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000870",2021-03-05,"facebook",NA,"Swanton ","Vermont",5488,"ineligible","no",1,44.921329,-73.125393
+"S000871",2021-03-06,"facebook",NA,"East Haven","Vermont",5837,"ineligible","no",1,44.663809,-71.805296
+"S000872",2021-03-06,"facebook",NA,"Highgate ","Vermont",5459,"ineligible","no",1,44.95006,-73.005367
+"S000873",2021-03-07,"facebook",NA,"Bellows Falls","Vermont",5101,"ineligible","no",1,43.182144,-72.493221
+"S000874",2021-03-07,"other_person",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000875",2021-03-07,"facebook",NA,"Bristol ","Vermont",5443,"ineligible","no",1,44.139443,-73.03993
+"S000876",2021-03-07,"facebook",NA,"Burlington","Vermont",5408,"ineligible","no",1,44.511852,-73.249611
+"S000877",2021-03-08,"facebook",NA,"Whiting","Vermont",5778,"ineligible","no",1,43.876421,-73.212536
+"S000879",2021-03-09,"craigslist",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000880",2021-03-09,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000881",2021-03-10,"facebook",NA,"Brandon","Vermont",5733,"ineligible","no",1,43.810474,-73.09028
+"S000882",2021-03-12,"facebook",NA,"Randolph","Vermont",5060,"ineligible","no",1,43.967072,-72.708604
+"S000883",2021-03-12,"other_person",NA,"Shelburne","Vermont",5482,"ineligible","no",1,44.380662,-73.211006
+"S000884",2021-03-12,"facebook",NA,"fairfax","Vermont",5454,"ineligible","no",1,44.710289,-73.028877
+"S000885",2021-03-13,"facebook",NA,"Milton","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"S000886",2021-03-14,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000887",2021-03-15,"facebook",NA,"White River Junction","Vermont",5001,"ineligible","no",1,43.672188,-72.380193
+"S000888",2021-03-15,"facebook",NA,"Essex Junction","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S000889",2021-03-16,"front_porch_forum",NA,"Middlebury","Vermont",5753,"ineligible","no",1,43.997783,-73.178295
+"S000890",2021-03-17,"craigslist",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000891",2021-03-17,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000892",2021-03-18,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000893",2021-03-18,"front_porch_forum",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000894",2021-03-19,"facebook",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000895",2021-03-19,"other",NA,"Phila","Pennsylvania",19148,"ineligible","no",1,39.911612,-75.151475
+"S000896",2021-03-20,"facebook",NA,"Pawlet","Vermont",5761,"ineligible","no",1,43.360927,-73.151758
+"S000897",2021-03-20,"facebook",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"S000898",2021-03-20,"facebook",NA,"Lyndonville ","Vermont",5851,"ineligible","no",1,44.557132,-72.08059
+"S000899",2021-03-20,"facebook",NA,"South Newfane ","Vermont",5351,"ineligible","no",1,NA,NA
+"S000900",2021-03-22,"facebook",NA,"Colchester","Vermont",5439,"ineligible","no",1,44.494527,-73.16527
+"S000901",2021-03-22,"tiktok",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000902",2021-03-22,"facebook",NA,"Winooski","Vermont",5404,"Project 3","no",1,44.495587,-73.184857
+"S000903",2021-03-23,"tiktok",NA,"Winooski","Vermont",5404,"Project 3","no",1,44.495587,-73.184857
+"S000904",2021-03-24,"flyer","City Market in downtown Burlington","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000905",2021-03-24,"facebook",NA,"Franklin","Vermont",5457,"Project 2","no",1,44.958733,-72.922009
+"S000906",2021-03-24,"facebook",NA,"Winooski","Vermont",5404,"Project 2","no",1,44.495587,-73.184857
+"S000907",2021-03-24,"facebook",NA,"West burke","Vermont",5871,"Project 3","yes",1,44.689305,-71.936955
+"S000908",2021-03-24,"other",NA,"South Wheelock ","Vermont",5851,"Project 1","yes",1,44.557132,-72.08059
+"S000909",2021-03-25,"facebook",NA,"Brattleboro ","Vermont",5301,"Project 2","no",1,42.83868,-72.659997
+"S000910",2021-03-22,"other",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000911",2021-03-22,"facebook",NA,"Randolph Center","Vermont",5061,"ineligible","no",1,43.916755,-72.570182
+"S000912",2021-03-23,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000913",2021-03-24,"direct_mail",NA,"burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000914",2021-03-24,"tiktok",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000915",2021-03-24,"facebook",NA,"Brattleboro ","Vermont",5301,"ineligible","no",1,42.83868,-72.659997
+"S000916",2021-03-25,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000917",2021-03-26,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000918",2021-03-27,"facebook",NA,"Rutland","Vermont",5701,"ineligible","no",1,43.624577,-72.910204
+"S000920",2021-03-28,"google",NA,"south royalton","Vermont",5068,"ineligible","no",1,43.780996,-72.547512
+"S000921",2021-03-30,"facebook",NA,"Barre","Vermont",5641,"Project 2","no",1,44.188842,-72.472172
+"S000922",2021-03-30,"front_porch_forum",NA,"burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000923",2021-03-30,"facebook",NA,"bradford","Vermont",5033,"ineligible","no",1,44.012176,-72.158296
+"S000925",2021-03-30,"tiktok",NA,"South Burlington ","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"S000926",2021-03-30,"facebook",NA,"Saint Albans ","Vermont",5478,"ineligible","no",1,44.808422,-73.082507
+"S000927",2021-03-31,"facebook",NA,"Enosburg ","Vermont",5450,"ineligible","no",1,44.894578,-72.795246
+"S000928",2021-03-31,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000929",2021-03-30,"facebook",NA,"Burlington","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S000930",2021-03-31,"flyer",NA,"Burlington","Vermont",5401,"Project 1 and Project 3","yes",1,44.476621,-73.209998
+"S000931",2021-03-31,"front_porch_forum",NA,"Waterbury","Vermont",5676,"Project 3","no",1,44.295598,-72.826991
+"S000932",2021-04-01,"facebook",NA,"Bennington","Vermont",5201,"Project 3","no",1,42.869211,-73.128516
+"S000933",2021-04-01,"facebook",NA,"Overland Park","Kansas",66213,"Project 3","no",1,38.898859,-94.708219
+"S000934",2021-04-01,"facebook",NA,"Madison ","Wisconsin",53703,"Project 1","no",1,43.079575,-89.378389
+"S000935",2021-04-02,"facebook",NA,"South Burlington","Vermont",5403,"Project 2","yes",1,44.444866,-73.173468
+"S000936",2021-04-02,"facebook",NA,"Philadelphia","Pennsylvania",19131,"Project 3","no",1,39.990184,-75.217795
+"S000937",2021-05-24,"facebook",NA,"Stowe","Vermont",5672,"Project 1","no",1,44.491806,-72.712611
+"S000938",2021-04-03,"facebook",NA,"Jeffersonville ","Vermont",5464,"Project 2","no",1,44.646262,-72.818997
+"S000939",2021-09-14,"other_person",NA,"Jeffersonville","Vermont",5464,"Project 1 and Project 3","yes",1,44.646262,-72.818997
+"S000940",2021-04-05,"tiktok",NA,"Burlington ","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S000941",2021-04-05,"flyer","bulletin board on the corner of N Winooski St and Pearl St in Burlington","South Burlington","Vermont",5403,"Project 2","yes",1,44.444866,-73.173468
+"S000942",2021-04-05,"facebook",NA,"South Burlington ","Vermont",5403,"Project 3","no",1,44.444866,-73.173468
+"S000943",2021-04-08,"tiktok",NA,"Williston ","Vermont",5495,"Project 2","no",1,44.429066,-73.096243
+"S000944",2021-04-09,"craigslist",NA,"barre","Vermont",5641,"Project 1 and Project 3","yes",1,44.188842,-72.472172
+"S000945",2021-04-09,"facebook",NA,"Waterville ","Vermont",5492,"Project 1","no",1,44.737637,-72.761773
+"S000947",2021-04-13,"facebook",NA,"Newport","Vermont",5855,"Project 2","no",1,44.927131,-72.192236
+"S000948",2021-04-13,"tiktok",NA,"Burlington","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S000949",2021-04-16,"direct_mail",NA,"Burlington","Vermont",5408,"Project 1 and Project 3","no",1,44.511852,-73.249611
+"S000950",2021-04-19,"facebook",NA,"Burlington","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S000951",2021-04-20,"direct_mail",NA,"Burlington","Vermont",5408,"ineligible","no",1,44.511852,-73.249611
+"S000952",2021-04-20,"direct_mail",NA,"Burlington","Vermont",5408,"ineligible","no",1,44.511852,-73.249611
+"S000953",2021-04-15,"craigslist",NA,"White River Junction","Vermont",5001,"Project 3","no",1,43.672188,-72.380193
+"S000954",2021-04-16,"facebook",NA,"Bennington ","Vermont",5201,"Project 2","no",1,42.869211,-73.128516
+"S000955",2021-04-19,"craigslist",NA,"Williamstown","Vermont",5679,"Project 3","no",1,44.108944,-72.531912
+"S000956",2021-04-21,"direct_mail",NA,"Burlington","Vermont",5408,"ineligible","no",1,44.511852,-73.249611
+"S000957",2021-04-20,"facebook",NA,"Burlington","Vermont",5408,"Project 2","no",1,44.511852,-73.249611
+"S000958",2021-04-21,"google",NA,"Bennington","Vermont",5201,"Project 2","no",1,42.869211,-73.128516
+"S000959",2021-04-22,"direct_mail",NA,"Burlington","Vermont",5408,"Project 3","yes",1,44.511852,-73.249611
+"S000960",2021-04-23,"facebook",NA,"WRJ","Vermont",5001,"Project 2","no",1,43.672188,-72.380193
+"S000961",2021-04-25,"clin_trials_web",NA,"Morrisville","Vermont",5661,"Project 3","no",1,44.532336,-72.620258
+"S000962",2021-04-25,"craigslist",NA,"Burlington ","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S000963",2021-04-26,"TV",NA,"Milton","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"S000964",2021-04-26,"other_person",NA,"Milton","Vermont",5468,"Project 2","no",1,44.657371,-73.144488
+"S000965",2021-04-26,"front_porch_forum",NA,"Duxbury","Vermont",5676,"Project 3","no",1,44.295598,-72.826991
+"S000966",2021-04-27,"other_person",NA,"South Burlington","Vermont",5403,"Project 1 and Project 3","yes",1,44.444866,-73.173468
+"S000967",2021-04-28,"front_porch_forum",NA,"Waterbury","Vermont",5676,"Project 3","yes",1,44.295598,-72.826991
+"S000968",2021-04-28,"facebook",NA,"Waterbury","Vermont",5676,"Project 3","no",1,44.295598,-72.826991
+"S000969",2021-04-01,"facebook",NA,"Kilgore","Texas",75662,"ineligible","no",1,32.384458,-94.870169
+"S000970",2021-04-02,"front_porch_forum",NA,"Cambridge","Vermont",5444,"ineligible","no",1,44.649728,-72.896957
+"S000971",2021-04-04,"facebook",NA,"Pittsburgh ","Pennsylvania",15221,"ineligible","no",1,40.435791,-79.86427
+"S000972",2021-04-05,"tiktok",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000973",2021-04-06,"facebook",NA,"Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"S000974",2021-08-04,"craigslist",NA,"Burlington","Vermont",5041,"ineligible","no",1,43.956596,-72.538539
+"S000975",2021-04-09,"facebook",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000976",2021-04-12,"tiktok",NA,"Jericho ","Vermont",5465,"ineligible","no",1,44.464175,-72.951057
+"S000977",2021-04-12,"tiktok",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000978",2021-04-12,"front_porch_forum",NA,"Enosburg falls","Vermont",5450,"ineligible","no",1,44.894578,-72.795246
+"S000979",2021-04-13,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000980",2021-04-15,"tiktok",NA,"Guilford","Vermont",5301,"ineligible","no",1,42.83868,-72.659997
+"S000981",2021-04-15,"craigslist",NA,"White River Junction","Vermont",5001,"ineligible","no",1,43.672188,-72.380193
+"S000983",2021-04-16,"direct_mail",NA,"Burlington","Vermont",5408,"ineligible","no",1,44.511852,-73.249611
+"S000984",2021-04-16,"direct_mail",NA,"Burlington ","Vermont",5408,"ineligible","no",1,44.511852,-73.249611
+"S000985",2021-04-17,"other_person",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000986",2021-04-17,"other_person",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000987",2021-04-17,"direct_mail",NA,"Burlington","Vermont",5408,"ineligible","no",1,44.511852,-73.249611
+"S000988",2021-04-18,"facebook",NA,"Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"S000989",2021-04-29,"facebook",NA,"Saint Albans","Vermont",5478,"Project 3","yes",1,44.808422,-73.082507
+"S000990",2021-04-29,"front_porch_forum",NA,"Barre","Vermont",5641,"Project 1 and Project 3","no",1,44.188842,-72.472172
+"S000991",2021-04-18,"facebook",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000992",2021-04-21,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000993",2021-04-21,"facebook",NA,"Rutland ","Vermont",5701,"ineligible","no",1,43.624577,-72.910204
+"S000994",2021-04-22,"facebook",NA,"Milton","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"S000995",2021-04-22,"other_person",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000996",2021-04-25,"other",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S000997",2021-04-25,"facebook",NA,"Hancock","Vermont",5748,"ineligible","no",1,43.905325,-72.918146
+"S000998",2021-04-26,"facebook",NA,"Rutland","Vermont",5701,"ineligible","no",1,43.624577,-72.910204
+"S000999",2021-04-26,"facebook",NA,"Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"S001000",2021-04-27,"google",NA,"vershire","Vermont",5079,"ineligible","no",1,43.956765,-72.326539
+"S001001",2021-04-27,"facebook",NA,"Colchester","Vermont",5439,"ineligible","no",1,44.494527,-73.16527
+"S001002",2021-04-27,"front_porch_forum",NA,"Northfield","Vermont",5663,"ineligible","no",1,44.147613,-72.691275
+"S001003",2021-04-28,"google",NA,"Charlotte","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001004",2021-04-28,"facebook",NA,"Rutland ","Vermont",5701,"ineligible","no",1,43.624577,-72.910204
+"S001005",2021-04-29,"other_person",NA,"Wolcott","Vermont",5680,"ineligible","no",1,44.540596,-72.471939
+"S001006",2021-04-29,"facebook",NA,"South Burlington ","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"S001007",2021-04-30,"facebook",NA,"Hinesburg","Vermont",5461,"ineligible","no",1,44.332701,-73.087409
+"S001008",2021-05-02,"front_porch_forum",NA,"Montpelier ","Vermont",5602,"Project 3","yes",1,44.274953,-72.609475
+"S001009",2021-04-30,"facebook",NA,"Hydeville","Vermont",5735,"ineligible","no",1,43.635473,-73.16776
+"S001010",2021-04-25,"facebook",NA,"Waitsfield","Vermont",5673,"Project 2","no",1,44.198969,-72.840833
+"S001011",2021-04-30,"facebook",NA,"Montpelier","Vermont",5602,"Project 3","yes",1,44.274953,-72.609475
+"S001012",2021-04-30,"facebook",NA,"Colchester","Vermont",5446,"Project 1","no",1,44.541259,-73.184415
+"S001013",2021-05-02,"facebook",NA,"Pittsford ","Vermont",5763,"Project 1","no",1,43.730204,-72.99523
+"S001014",2021-05-02,"front_porch_forum",NA,"Middlebury","Vermont",5753,"Project 1","no",1,43.997783,-73.178295
+"S001015",2021-05-02,"neighborhood_news",NA,"Vergennes","Vermont",NA,"Project 3","no",1,NA,NA
+"S001016",2021-05-04,"facebook",NA,"Charlotte","Vermont",5445,"Project 2","no",1,44.309955,-73.220978
+"S001017",2021-05-03,"front_porch_forum",NA,"Hinesburg","Vermont",5461,"Project 3","no",1,44.332701,-73.087409
+"S001018",2021-05-04,"facebook",NA,"Derby line","Vermont",5830,"Project 2","no",1,44.9721,-71.986969
+"S001019",2021-05-04,"front_porch_forum",NA,"Middlebury","Vermont",5753,"Project 1 and Project 3","yes",1,43.997783,-73.178295
+"S001020",2021-04-30,"front_porch_forum",NA,"Middlesex ","Vermont",5602,"ineligible","no",1,44.274953,-72.609475
+"S001021",2021-05-01,"facebook",NA,"Plymouth","Vermont",5056,"ineligible","no",1,43.508851,-72.693755
+"S001022",2021-05-04,"facebook",NA,"Rutland","Vermont",5701,"ineligible","no",1,43.624577,-72.910204
+"S001023",2021-05-04,"front_porch_forum",NA,"Addison ","Vermont",5491,"Project 1 and Project 3","no",1,44.111961,-73.310796
+"S001024",2021-05-04,"front_porch_forum",NA,"Middlebury","Vermont",5753,"Project 3","no",1,43.997783,-73.178295
+"S001025",2021-05-05,"pt_in_other_studies",NA,"Bennington","Vermont",5201,"Project 3","yes",1,42.869211,-73.128516
+"S001026",2021-05-05,"craigslist",NA,"Burlington","Vermont",5401,"Project 1 and Project 3","yes",1,44.476621,-73.209998
+"S001027",2021-05-05,"facebook",NA,"essex junction","Vermont",5452,"Project 1 and Project 3","no",1,44.538624,-73.050223
+"S001028",2021-05-06,"other_person",NA,"Milton ","Vermont",5468,"Project 2","no",1,44.657371,-73.144488
+"S001029",2021-05-06,"facebook",NA,"Milyon","Vermont",5468,"Project 2","no",1,44.657371,-73.144488
+"S001030",2021-05-06,"facebook",NA,"Montpelier","Vermont",5602,"Project 2","no",1,44.274953,-72.609475
+"S001031",2021-05-07,"flyer","bus shelter on N Union St","Burlington","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S001032",2021-05-08,"other",NA,"Burlington","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S001033",2021-05-09,"front_porch_forum",NA,"Bristol","Vermont",5443,"Project 1 and Project 3","no",1,44.139443,-73.03993
+"S001034",2021-05-09,"facebook",NA,"Milton","Vermont",5468,"Project 3","no",1,44.657371,-73.144488
+"S001035",2021-05-09,"facebook",NA,"St. Albans","Vermont",5478,"Project 3","no",1,44.808422,-73.082507
+"S001036",2021-05-10,"facebook",NA,"Bellows falls ","Vermont",5101,"Project 3","no",1,43.182144,-72.493221
+"S001037",2021-05-10,"facebook",NA,"Rutland","Vermont",5701,"Project 2","no",1,43.624577,-72.910204
+"S001039",2021-05-13,"other_person",NA,"Swanton","Vermont",5488,"Project 2","no",1,44.921329,-73.125393
+"S001040",2021-05-13,"facebook",NA,"Brandon","Vermont",5733,"Project 2","no",1,43.810474,-73.09028
+"S001041",2021-05-14,"other_person",NA,"Bennington ","Vermont",5201,"Project 2","no",1,42.869211,-73.128516
+"S001042",2021-05-16,"bus_ad",NA,"Warren","New Hampshire",3279,"Project 3","yes",1,43.96583,-71.8591
+"S001043",2021-05-16,"front_porch_forum",NA,"Colchester","Vermont",5446,"Project 1","yes",1,44.541259,-73.184415
+"S001044",2021-05-16,"neighborhood_news",NA,"Colchester ","Vermont",5446,"Project 1 and Project 3","yes",1,44.541259,-73.184415
+"S001045",2021-05-16,"facebook",NA,"Winooski","Vermont",5404,"Project 1 and Project 3","yes",1,44.495587,-73.184857
+"S001046",2021-05-16,"facebook",NA,"Colchester","Vermont",5446,"Project 2","no",1,44.541259,-73.184415
+"S001047",2021-05-16,"facebook",NA,"Burlington ","Vermont",5401,"Project 1 and Project 3","no",1,44.476621,-73.209998
+"S001048",2021-05-18,"facebook",NA,"Wrj","Vermont",5001,"Project 1","no",1,43.672188,-72.380193
+"S001049",2021-05-20,"front_porch_forum",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001050",2021-05-19,"facebook",NA,"Richford","Vermont",5476,"Project 1","no",1,44.955228,-72.643138
+"S001051",2021-05-19,"facebook",NA,"South Hero","Vermont",5486,"Project 3","yes",1,44.642247,-73.30774
+"S001052",2021-05-19,"front_porch_forum",NA,"Hubbardton","Vermont",5743,"Project 3","no",1,43.67733,-73.304926
+"S001053",2021-05-19,"facebook",NA,"Burlington","Vermont",5408,"Project 3","no",1,44.511852,-73.249611
+"S001054",2021-05-24,"facebook",NA,"Wilder","Vermont",5088,"ineligible","no",1,NA,NA
+"S001055",2021-05-21,"facebook",NA,"Williston","Vermont",5495,"Project 3","yes",1,44.429066,-73.096243
+"S001056",2021-05-21,"facebook",NA,"Newport center","Vermont",5857,"Project 1 and Project 3","yes",1,44.928911,-72.3127
+"S001057",2021-05-22,"facebook",NA,"St.Albans","Vermont",5478,"Project 2","no",1,44.808422,-73.082507
+"S001058",2021-05-23,"facebook",NA,"Burlington","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S001060",2021-05-24,"facebook",NA,"montpelier","Vermont",5602,"Project 1 and Project 3","no",1,44.274953,-72.609475
+"S001061",2021-05-05,"facebook",NA,"West Burke ","Vermont",5871,"ineligible","no",1,44.689305,-71.936955
+"S001062",2021-05-06,"facebook",NA,"Morrisville ","Vermont",5661,"ineligible","no",1,44.532336,-72.620258
+"S001063",2021-05-06,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001064",2021-05-25,"front_porch_forum",NA,"Orange","Vermont",5641,"Project 1 and Project 3","no",1,44.188842,-72.472172
+"S001065",2021-05-25,"facebook",NA,"Middlebury ","Vermont",5753,"Project 3","yes",1,43.997783,-73.178295
+"S001066",2021-05-25,"facebook",NA,"Milton ","Vermont",5468,"Project 1 and Project 3","no",1,44.657371,-73.144488
+"S001067",2021-05-25,"facebook",NA,"St. Albans ","Vermont",5478,"Project 3","yes",1,44.808422,-73.082507
+"S001068",2021-05-27,"facebook",NA,"Burlington ","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S001069",2021-05-27,"facebook",NA,"Rutland ","Vermont",5701,"Project 2","no",1,43.624577,-72.910204
+"S001070",2021-05-06,"other_person",NA,"East Montpelier","Vermont",5651,"ineligible","no",1,44.282307,-72.489262
+"S001072",2021-05-27,"google",NA,"Windsor","Vermont",5089,"Project 2","no",1,43.495591,-72.442313
+"S001073",2021-05-27,"facebook",NA,"Alburgh","Vermont",5440,"Project 2","no",1,44.957882,-73.291974
+"S001074",2021-05-28,"facebook",NA,"Burlington","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S001075",2021-05-31,"facebook",NA,"Essex","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S001076",2021-05-31,"facebook",NA,"Jeffersonville","Vermont",5464,"Project 1","no",1,44.646262,-72.818997
+"S001077",2021-06-01,"facebook",NA,"Colchester","Vermont",5447,"Project 1 and Project 3","no",1,44.932454,-72.701892
+"S001078",2021-06-01,"facebook",NA,"Highgate ","Vermont",5459,"Project 3","no",1,44.95006,-73.005367
+"S001079",2021-06-01,"front_porch_forum",NA,"Swanton","Vermont",5488,"Project 1 and Project 3","yes",1,44.921329,-73.125393
+"S001080",2021-05-07,"front_porch_forum",NA,"Cornwall","Vermont",5753,"ineligible","no",1,43.997783,-73.178295
+"S001081",2021-05-09,"facebook",NA,"Waterbury ","Vermont",5676,"ineligible","no",1,44.295598,-72.826991
+"S001082",2021-06-06,"facebook",NA,"Barre","Vermont",5642,"Project 3","yes",1,NA,NA
+"S001083",2021-06-06,"front_porch_forum",NA,"Cabot ","Vermont",5647,"Project 3","no",1,44.409482,-72.259129
+"S001084",2021-06-06,"front_porch_forum",NA,"Hardwick","Vermont",5843,"Project 3","no",1,44.518714,-72.348965
+"S001085",2021-06-06,"front_porch_forum",NA,"Saint Albans ","Vermont",5478,"Project 1","no",1,44.808422,-73.082507
+"S001086",2021-06-07,"front_porch_forum",NA,"Alburgh","Vermont",5440,"Project 3","no",1,44.957882,-73.291974
+"S001087",2021-06-08,"other_person",NA,"Bennington","Vermont",5201,"Project 2","no",1,42.869211,-73.128516
+"S001089",2021-06-09,"facebook",NA,"Pownal","Vermont",5261,"Project 2","no",1,42.770285,-73.179047
+"S001090",2021-06-17,"other",NA,"Essex ","Vermont",5452,"Project 2","no",1,44.538624,-73.050223
+"S001091",2021-06-16,"facebook",NA,"St Johnsbury","Vermont",5819,"Project 2","no",1,44.404737,-71.983075
+"S001092",2021-06-15,"facebook",NA,"Burlington","Vermont",5408,"Project 1 and Project 3","no",1,44.511852,-73.249611
+"S001093",2021-06-14,"facebook",NA,"Richmond ","Vermont",5477,"Project 2","no",1,44.416769,-72.962422
+"S001094",2021-06-08,"facebook",NA,"Burlington ","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S001095",2021-06-08,"facebook",NA,"Winooski ","Vermont",5404,"Project 3","no",1,44.495587,-73.184857
+"S001096",2021-06-08,"front_porch_forum",NA,"Barton ","Vermont",5822,"Project 3","no",1,44.751643,-72.140274
+"S001097",2021-06-09,"craigslist",NA,"Lincoln","Vermont",5443,"Project 3","no",1,44.139443,-73.03993
+"S001098",2021-06-09,"craigslist",NA,"Norwood","New York",13668,"Project 3","no",1,44.75482,-74.986306
+"S001099",2021-06-20,"facebook",NA,"Chester","Vermont",5143,"Project 2","no",1,43.27763,-72.640348
+"S001100",2021-06-10,"flyer","Savida Healthcare. I work at this office","Swanton","Vermont",5488,"Project 1","no",1,44.921329,-73.125393
+"S001101",2021-06-10,"other",NA,"Richmond","Vermont",5477,"Project 2","no",1,44.416769,-72.962422
+"S001102",2021-06-10,"facebook",NA,"Bethel","Vermont",5032,"Project 3","no",1,43.80158,-72.65776
+"S001103",2021-06-11,"front_porch_forum",NA,"Alburgh","Vermont",5440,"Project 3","no",1,44.957882,-73.291974
+"S001104",2021-06-10,"front_porch_forum",NA,"Saint Albans","Vermont",5478,"Project 1 and Project 3","yes",1,44.808422,-73.082507
+"S001105",2021-06-11,"facebook",NA,"Saint albans","Vermont",5478,"Project 1 and Project 3","no",1,44.808422,-73.082507
+"S001106",2021-06-11,"facebook",NA,"Sutton","Vermont",5867,"Project 2","no",1,44.665071,-72.035973
+"S001107",2021-06-11,"front_porch_forum",NA,"Barnet","Vermont",5821,"Project 3","no",1,44.311345,-72.114854
+"S001109",2021-06-11,"facebook",NA,"Morrisville ","Vermont",5661,"Project 3","no",1,44.532336,-72.620258
+"S001110",2021-06-11,"other_person",NA,"Enosburg falls ","Vermont",5450,"Project 2","no",1,44.894578,-72.795246
+"S001111",2021-06-11,"google",NA,"Burlington ","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S001112",2021-06-13,"facebook",NA,"South Burlington ","Vermont",5403,"Project 3","no",1,44.444866,-73.173468
+"S001113",2021-06-13,"facebook",NA,"Brattleboro ","Vermont",5301,"Project 3","no",1,42.83868,-72.659997
+"S001114",2021-05-13,"facebook",NA,"Wallingford","Vermont",5773,"Project 2","no",1,43.420109,-72.987065
+"S001115",2021-06-13,"facebook",NA,"Winooski","Vermont",5404,"Project 2","no",1,44.495587,-73.184857
+"S001117",2021-06-17,"flyer","Savida","Winooski ","Vermont",5404,"Project 2","no",1,44.495587,-73.184857
+"S001118",2021-06-17,"other_person",NA,"Sudbury","Vermont",5733,"Project 3","yes",1,43.810474,-73.09028
+"S001120",2021-06-18,"facebook",NA,"Bennington","Vermont",5201,"Project 2","yes",1,42.869211,-73.128516
+"S001121",2021-06-23,"front_porch_forum",NA,"Milton","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"S001122",2021-06-23,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001123",2021-06-23,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001124",2021-06-23,"direct_mail",NA,"Burlington","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S001125",2021-06-24,"other_person",NA,"Shelburne","Vermont",5482,"Project 3","no",1,44.380662,-73.211006
+"S001126",2021-06-24,"direct_mail",NA,"Burlington","Vermont",5401,"Project 2","yes",1,44.476621,-73.209998
+"S001127",2021-06-24,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001128",2021-06-24,"direct_mail",NA,"Burlington","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S001129",2021-06-24,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001130",2021-06-25,"direct_mail","retirement home on N Prospect St","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001131",2021-06-29,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001132",2021-06-29,"direct_mail",NA,"Burlington","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S001133",2021-06-22,"google",NA,"Burlington","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S001134",2021-06-22,"other_person",NA,"Winooski","Vermont",5404,"Project 2","no",1,44.495587,-73.184857
+"S001135",2021-06-23,"direct_mail","Maild to me","Winooski ","Vermont",5404,"Project 1 and Project 3","no",1,44.495587,-73.184857
+"S001136",2021-06-23,"direct_mail","My mailbox ","Burlington","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S001137",2021-06-23,"direct_mail","Mail box from UVM","Burlington ","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S001138",2021-06-29,"direct_mail",NA,"Burlington","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S001139",2021-06-24,"direct_mail","It was put in my mailbox.","Burlington","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S001140",2021-06-24,"direct_mail","Mail","Burlington ","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S001141",2021-06-26,"direct_mail","mail mothers home","Burlington","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S001142",2021-06-26,"direct_mail",NA,"Burlington","Vermont",5401,"Project 1 and Project 3","no",1,44.476621,-73.209998
+"S001143",2021-06-19,"clin_trials_web",NA,"Burlington ","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S001144",2021-06-27,"front_porch_forum",NA,"Warren","Vermont",5674,"Project 3","yes",1,44.112526,-72.874028
+"S001145",2021-06-27,"direct_mail",NA,"Burlington","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S001146",2021-06-27,"front_porch_forum",NA,"Moretown ","Vermont",5660,"Project 1","no",1,44.253995,-72.734479
+"S001147",2021-06-28,"front_porch_forum",NA,"Winooski","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S001148",2021-06-28,"direct_mail","ruggles house","Burlinton","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S001149",2021-06-28,"direct_mail",NA,"Burlington","Vermont",5401,"Project 1 and Project 3","yes",1,44.476621,-73.209998
+"S001150",2021-06-29,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001151",2021-06-29,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001152",2021-06-30,"direct_mail",NA,"Burlington","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S001153",2021-06-30,"direct_mail",NA,"Burlington","Vermont",5401,"Project 2","yes",1,44.476621,-73.209998
+"S001154",2021-07-01,"direct_mail",NA,"Burlington","Vermont",5401,"Project 2","yes",1,44.476621,-73.209998
+"S001155",2021-05-11,"bus_ad",NA,"Jericho","Vermont",5465,"ineligible","no",1,44.464175,-72.951057
+"S001156",2021-05-14,"facebook",NA,"East Thetford","Vermont",5043,"ineligible","no",1,43.805093,-72.204671
+"S001157",2021-05-14,"front_porch_forum",NA,"Huntington","Vermont",5461,"ineligible","no",1,44.332701,-73.087409
+"S001158",2021-05-15,"front_porch_forum",NA,"Huntington","Vermont",5461,"ineligible","no",1,44.332701,-73.087409
+"S001159",2021-05-16,"facebook",NA,"Barre","Vermont",5641,"ineligible","no",1,44.188842,-72.472172
+"S001160",2021-05-16,"facebook",NA,"Saxton River","Vermont",5154,"ineligible","no",1,43.135197,-72.546165
+"S001161",2021-07-01,"other_person",NA,"Burlington ","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S001162",2021-07-03,"facebook",NA,"Bethlehem","New Hampshire",3574,"Project 3","no",1,44.260435,-71.609203
+"S001163",2021-07-03,"front_porch_forum",NA,"Barre","Vermont",5641,"Project 3","yes",1,44.188842,-72.472172
+"S001164",2021-07-04,"clin_trials_web",NA,"Concord","New Hampshire",3301,"Project 2","no",1,43.238549,-71.555988
+"S001165",2021-07-06,"clin_trials_web",NA,"South Burlington","Vermont",5403,"Project 3","no",1,44.444866,-73.173468
+"S001166",2021-07-06,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001167",2021-07-06,"flyer",NA,"Hancock","Vermont",5748,"Project 2","no",1,43.905325,-72.918146
+"S001168",2021-05-16,"facebook",NA,"Essex","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S001169",2021-07-06,"craigslist",NA,"Plattsburgh","New York",12901,"Project 3","no",1,44.70419,-73.471392
+"S001170",2021-07-08,"craigslist",NA,"Essex Junction","Vermont",5452,"Project 3","no",1,44.538624,-73.050223
+"S001171",2021-07-08,"google",NA,"Lebanon","New Hampshire",3766,"Project 1 and Project 3","no",1,43.632568,-72.234816
+"S001172",2021-05-16,"front_porch_forum",NA,"Sudbury","Vermont",5733,"ineligible","no",1,43.810474,-73.09028
+"S001173",2021-05-17,"facebook",NA,"Proctor","Virginia",5765,"ineligible","no",1,43.651666,-73.034649
+"S001174",2021-05-18,"facebook",NA,"Milton","Vermont",5468,"ineligible","no",1,44.657371,-73.144488
+"S001175",2021-05-19,"facebook",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001176",2021-07-08,"front_porch_forum",NA,"Milton ","Vermont",5468,"Project 3","yes",1,44.657371,-73.144488
+"S001177",2021-07-09,"front_porch_forum",NA,"milton","Vermont",5468,"Project 2","no",1,44.657371,-73.144488
+"S001178",2021-07-10,"craigslist",NA,"Brandon","Vermont",5733,"Project 1","no",1,43.810474,-73.09028
+"S001179",2021-07-12,"flyer","Burlington bus station","Burlington","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S001180",2021-07-10,"front_porch_forum",NA,"Winooski ","Vermont",5404,"Project 3","yes",1,44.495587,-73.184857
+"S001181",2021-05-19,"facebook",NA,"Vergennes","Vermont",5491,"ineligible","no",1,44.111961,-73.310796
+"S001182",2021-05-20,"facebook",NA,"Windsor","Vermont",5089,"ineligible","no",1,43.495591,-72.442313
+"S001183",2021-07-12,"front_porch_forum",NA,"Dhoreham","Vermont",5770,"Project 3","no",1,43.881953,-73.324504
+"S001184",2021-07-15,"direct_mail",NA,"Burlington","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S001186",2021-05-21,"facebook",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001187",2021-05-21,"facebook",NA,"Newport ","Vermont",5855,"ineligible","no",1,44.927131,-72.192236
+"S001189",2021-07-16,"other_person",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001190",2021-07-18,"direct_mail",NA,"Burlington ","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S001191",2021-07-19,"direct_mail",NA,"Burlington","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S001192",2021-07-19,"google",NA,"Winooski","Vermont",5404,"Project 3","no",1,44.495587,-73.184857
+"S001193",2021-07-19,"direct_mail",NA,"Burlington","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S001194",2021-07-19,"flyer","Champlain Farms Convenience Store","Burlington","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S001195",2021-07-19,"facebook",NA,"Elma","New York",14052,"Project 3","no",1,42.772531,-78.584321
+"S001197",2021-07-20,"front_porch_forum",NA,"Chittenden","Vermont",5737,"Project 1","no",1,43.773182,-72.905861
+"S001198",2021-07-22,"other_person",NA,"Essex Junction","Vermont",5452,"Project 2","no",1,44.538624,-73.050223
+"S001200",2021-05-21,"front_porch_forum",NA,"TINMOUTH","Vermont",NA,"ineligible","no",1,NA,NA
+"S001201",2021-05-23,"google",NA,"Burlington ","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001202",2021-05-23,"facebook",NA,"Underhill ","Vermont",5489,"ineligible","no",1,44.570909,-72.901598
+"S001203",2021-05-23,"facebook",NA,"Alstead","New Hampshire",3602,"ineligible","no",1,43.140832,-72.347568
+"S001204",2021-05-23,"front_porch_forum",NA,"Newbur","Vermont",5051,"ineligible","no",1,44.104485,-72.121743
+"S001205",2021-07-26,"flyer","bus stop in downtown Winooski","Winooski","Vermont",5404,"Project 3","yes",1,44.495587,-73.184857
+"S001206",2021-07-23,"craigslist",NA,"South Burlington","Vermont",5403,"Project 3","yes",1,44.444866,-73.173468
+"S001207",2021-07-25,"facebook",NA,"Cohoes","New York",12047,"Project 2","no",1,42.784054,-73.726219
+"S001208",2021-07-26,"facebook",NA,"Enosburg Falls","Vermont",5450,"Project 3","no",1,44.894578,-72.795246
+"S001209",2021-07-30,"flyer","bus stop in Winooski","Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"S001210",2021-08-01,"google",NA,"Youngsville ","Puerto Rico",16371,"Project 3","no",1,41.869947,-79.326122
+"S001211",2021-08-02,"flyer","Chittenden Clinic","Burlington","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S001212",2021-08-02,"metro_news",NA,"Burlington ","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S001213",2021-08-03,"front_porch_forum",NA,"Waterford ","Vermont",5819,"Project 3","no",1,44.404737,-71.983075
+"S001214",2021-08-04,"flyer","Speeder and Earl's coffeeshop","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001215",2021-08-04,"front_porch_forum",NA,"Greensboro","Vermont",5841,"ineligible","no",1,44.60767,-72.288602
+"S001216",2021-08-05,"facebook",NA,"Amityville ","New York",11701,"Project 3","no",1,40.682453,-73.414381
+"S001217",2021-08-05,"facebook",NA,"Chatham ","New York",12037,"Project 2","no",1,42.344725,-73.567126
+"S001218",2021-08-05,"neighborhood_news",NA,"South Hero","Vermont",5486,"Project 3","yes",1,44.642247,-73.30774
+"S001219",2021-08-12,"flyer","Asian Bistro in Winooski","Winooski","Vermont",5404,"Project 3","no",1,44.495587,-73.184857
+"S001220",2021-08-11,"other_person",NA,"essex","Vermont",5452,"Project 3","no",1,44.538624,-73.050223
+"S001221",2021-08-11,"front_porch_forum",NA,"Huntington ","Vermont",5461,"Project 1","no",1,44.332701,-73.087409
+"S001222",2021-08-16,"flyer","Starbucks on Church St in Burlington","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001223",2021-08-16,"other_person",NA,"Burlington","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S001224",2021-08-13,"facebook",NA,"Troy","New York",12180,"ineligible","no",1,42.748588,-73.599536
+"S001225",2021-08-16,"facebook",NA,"Hillsboro","New Hampshire",3244,"Project 3","no",1,43.128103,-71.91694
+"S001226",2021-08-16,"facebook",NA,"Brookfield","Vermont",5036,"Project 3","no",1,44.023908,-72.587891
+"S001227",2021-08-17,"facebook",NA,"Williston","Vermont",5495,"Project 2","no",1,44.429066,-73.096243
+"S001228",2021-08-18,"direct_mail",NA,"Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"S001229",2021-08-18,"direct_mail",NA,"South Burlington","Vermont",5403,"Project 2","yes",1,44.444866,-73.173468
+"S001230",2021-08-19,"direct_mail",NA,"South Burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"S001231",2021-08-18,"other_person",NA,"Essex Jct","Vermont",5452,"Project 3","no",1,44.538624,-73.050223
+"S001232",2021-08-18,"direct_mail","Mail box","South Burlington ","Vermont",5403,"Project 3","no",1,44.444866,-73.173468
+"S001233",2021-08-19,"craigslist",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"S001234",2021-08-19,"direct_mail",NA,"South Burlington","Vermont",5403,"Project 3","yes",1,44.444866,-73.173468
+"S001235",2021-08-20,"direct_mail",NA,"South Burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"S001236",2021-08-20,"direct_mail",NA,"South Burlington","Vermont",5403,"Project 2","no",1,44.444866,-73.173468
+"S001237",2021-08-20,"direct_mail",NA,"Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"S001238",2021-08-20,"direct_mail",NA,"Fairfax","Vermont",5454,"ineligible","no",1,44.710289,-73.028877
+"S001239",2021-08-19,"other_person",NA,"Winooski","Vermont",5404,"Project 2","no",1,44.495587,-73.184857
+"S001240",2021-08-19,"direct_mail",NA,"South Burlington ","Vermont",5403,"Project 1","no",1,44.444866,-73.173468
+"S001241",2021-08-20,"other_person",NA,"Essex","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S001242",2021-08-19,"google",NA,"Barre","Vermont",5641,"Project 1 and Project 3","yes",1,44.188842,-72.472172
+"S001243",2021-08-20,"facebook",NA,"Hudson ","New Hampshire",3051,"Project 3","yes",1,42.760508,-71.409494
+"S001244",2021-08-20,"direct_mail",NA,"South Burlington","Vermont",5403,"ineligible","yes",1,44.444866,-73.173468
+"S001245",2021-08-20,"direct_mail",NA,"Winooski","Vermont",5404,"Project 2","yes",1,44.495587,-73.184857
+"S001246",2021-08-23,"flyer","UVMMC","South Burlington","Vermont",5403,"Project 3","no",1,44.444866,-73.173468
+"S001247",2021-08-23,"direct_mail",NA,"South Burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"S001248",2021-08-21,"direct_mail",NA,"Jericho ","Vermont",5465,"Project 3","yes",1,44.464175,-72.951057
+"S001249",2021-08-22,"direct_mail",NA,"Winooski","Vermont",5404,"Project 3","no",1,44.495587,-73.184857
+"S001250",2021-08-22,"front_porch_forum",NA,"Barre","Vermont",5641,"Project 3","yes",1,44.188842,-72.472172
+"S001251",2021-08-23,"radio",NA,"Barre ","Vermont",5641,"Project 3","no",1,44.188842,-72.472172
+"S001252",2021-08-23,"direct_mail",NA,"Bristol","Vermont",5443,"ineligible","no",1,44.139443,-73.03993
+"S001253",2021-08-24,"direct_mail",NA,"Winooski","Vermont",5404,"Project 3","yes",1,44.495587,-73.184857
+"S001254",2021-08-24,"direct_mail",NA,"Essex","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S001255",2021-08-24,"direct_mail",NA,"Essex Junction","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S001256",2021-08-24,"direct_mail",NA,"South Burlington","Vermont",5403,"Project 3","no",1,44.444866,-73.173468
+"S001257",2021-08-23,"direct_mail",NA,"bristol","Vermont",5443,"Project 2","no",1,44.139443,-73.03993
+"S001258",2021-08-24,"direct_mail",NA,"Milton","Vermont",5468,"Project 3","no",1,44.657371,-73.144488
+"S001259",2021-08-24,"direct_mail",NA,"Essex Junction","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S001260",2021-08-25,"direct_mail",NA,"Essex Junction","Vermont",5452,"Project 2","no",1,44.538624,-73.050223
+"S001261",2021-08-24,"direct_mail",NA,"Essex Junction ","Vermont",5452,"Project 3","no",1,44.538624,-73.050223
+"S001262",2021-08-24,"direct_mail","Left in my mailbox","Essex jct","Vermont",5452,"Project 2","no",1,44.538624,-73.050223
+"S001263",2021-08-25,"direct_mail",NA,"Essex Junction","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S001264",2021-08-25,"direct_mail",NA,"Jericho","Vermont",5465,"ineligible","no",1,44.464175,-72.951057
+"S001265",2021-08-26,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001266",2021-08-26,"direct_mail",NA,"Essex Junction","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S001267",2021-08-26,"direct_mail",NA,"Essex Junction","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S001268",2021-08-26,"direct_mail",NA,"South Burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"S001269",2021-08-25,"front_porch_forum",NA,"Barre","Vermont",5641,"Project 1","no",1,44.188842,-72.472172
+"S001270",2021-08-25,"direct_mail",NA,"Williston","Vermont",5495,"Project 3","yes",1,44.429066,-73.096243
+"S001271",2021-08-26,"direct_mail",NA,"Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"S001272",2021-08-26,"direct_mail",NA,"Essex Junction","Vermont",5452,"Project 2","yes",1,44.538624,-73.050223
+"S001274",2021-08-30,"other_person",NA,"Burlington","Vermont",5401,"Project 2","yes",1,44.476621,-73.209998
+"S001276",2021-08-30,"other_person",NA,"Winooski","Vermont",5404,"Project 1","no",1,44.495587,-73.184857
+"S001277",2021-08-30,"direct_mail",NA,"Hinesburg","Vermont",5461,"ineligible","no",1,44.332701,-73.087409
+"S001278",2021-08-30,"other_person",NA,"Hinesburg","Vermont",5461,"ineligible","no",1,44.332701,-73.087409
+"S001280",2021-08-27,"direct_mail",NA,"Fairfax","Vermont",5454,"Project 3","no",1,44.710289,-73.028877
+"S001281",2021-08-27,"direct_mail",NA,"South Burlington ","Vermont",5403,"Project 3","no",1,44.444866,-73.173468
+"S001282",2021-08-27,"front_porch_forum",NA,"Barre","Vermont",5641,"Project 3","no",1,44.188842,-72.472172
+"S001283",2021-08-28,"direct_mail",NA,"Milton","Vermont",5468,"Project 2","no",1,44.657371,-73.144488
+"S001284",2021-08-31,"direct_mail",NA,"Essex Junction","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S001285",2021-08-28,"front_porch_forum",NA,"East Montpelier ","Vermont",5651,"Project 3","no",1,44.282307,-72.489262
+"S001286",2021-08-31,"direct_mail",NA,"Essex Junction","Vermont",5452,"Project 3","no",1,44.538624,-73.050223
+"S001287",2021-08-31,"direct_mail",NA,"South Burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"S001288",2021-08-31,"other_person",NA,"Barre","Vermont",5641,"Project 3","no",1,44.188842,-72.472172
+"S001289",2021-08-31,"direct_mail",NA,"Burlington","Vermont",5401,"Project 1 and Project 3","no",1,44.476621,-73.209998
+"S001290",2021-08-29,"direct_mail",NA,"Milton ","Vermont",5468,"Project 2","no",1,44.657371,-73.144488
+"S001291",2021-08-29,"direct_mail",NA,"milton","Vermont",5468,"Project 2","no",1,44.657371,-73.144488
+"S001292",2021-08-29,"direct_mail",NA,"Williston ","Vermont",5495,"Project 2","no",1,44.429066,-73.096243
+"S001293",2021-08-29,"direct_mail",NA,"Milton ","Vermont",5468,"Project 3","no",1,44.657371,-73.144488
+"S001294",2021-08-09,"direct_mail",NA,"Milton","Vermont",5468,"Project 3","yes",1,44.657371,-73.144488
+"S001295",2021-08-29,"front_porch_forum",NA,"Morrisville","Vermont",5661,"Project 3","no",1,44.532336,-72.620258
+"S001296",2021-08-30,"direct_mail",NA,"Milton ","Vermont",5468,"Project 2","no",1,44.657371,-73.144488
+"S001297",2021-08-30,"other_person",NA,"New york","New York",10035,"Project 2","no",1,40.795455,-73.929655
+"S001298",2021-08-30,"direct_mail",NA,"milton","Vermont",5468,"Project 2","no",1,44.657371,-73.144488
+"S001300",2021-08-31,"front_porch_forum",NA,"Morrisville","Vermont",5661,"Project 3","no",1,44.532336,-72.620258
+"S001301",2021-09-01,"direct_mail",NA,"Essex Junction","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001302",2021-09-01,"direct_mail",NA,"Essex Junction","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S001303",2021-09-01,"direct_mail",NA,"Essex Junction","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S001304",2021-08-31,"other_person",NA,"Burlington","Vermont",5401,"Project 2","no",1,44.476621,-73.209998
+"S001306",2021-09-01,"direct_mail","My home","Essex","Vermont",5452,"Project 3","no",1,44.538624,-73.050223
+"S001307",2021-09-02,"front_porch_forum",NA,"Hyde Park ","Vermont",5655,"Project 1 and Project 3","no",1,44.624262,-72.570417
+"S001308",2021-09-07,"direct_mail",NA,"Colchester","Vermont",5446,"Project 2","no",1,44.541259,-73.184415
+"S001309",2021-09-07,"direct_mail",NA,"Colchester","Vermont",5446,"Project 3","yes",1,44.541259,-73.184415
+"S001310",2021-09-03,"front_porch_forum",NA,"Morrisville","Vermont",5661,"Project 3","no",1,44.532336,-72.620258
+"S001311",2021-09-06,"direct_mail",NA,"Colchester ","Vermont",5447,"Project 2","no",1,44.932454,-72.701892
+"S001312",2021-09-07,"direct_mail",NA,"Richmond","Vermont",5477,"ineligible","no",1,44.416769,-72.962422
+"S001313",2021-09-07,"direct_mail",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"S001314",2021-09-09,"direct_mail",NA,"Milton","Vermont",5468,"Project 3","yes",1,44.657371,-73.144488
+"S001315",2021-09-09,"direct_mail",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001316",2021-09-09,"other_person",NA,"South Burlington","Vermont",5403,"ineligible","no",1,44.444866,-73.173468
+"S001318",2021-09-10,"direct_mail",NA,"Colchester","Vermont",5446,"Project 2","no",1,44.541259,-73.184415
+"S001319",2021-09-10,"direct_mail",NA,"Richmond","Vermont",5477,"ineligible","no",1,44.416769,-72.962422
+"S001320",2021-09-10,"direct_mail",NA,"South Burlington","Vermont",5403,"Project 3","yes",1,44.444866,-73.173468
+"S001321",2021-09-08,"direct_mail","My mailbox","N. Ferrisburgh","Vermont",5473,"Project 1 and Project 3","no",1,44.241936,-73.194663
+"S001322",2021-09-10,"front_porch_forum",NA,"Hyde Park ","Vermont",5655,"Project 3","no",1,44.624262,-72.570417
+"S001323",2021-10-12,"flyer","UVMMC","Essex Junction","Vermont",5452,"Project 2","no",1,44.538624,-73.050223
+"S001324",2021-09-20,"direct_mail",NA,"Middlebury","Vermont",5753,"Project 1 and Project 3","no",1,43.997783,-73.178295
+"S001326",2021-09-11,"facebook",NA,"Enfield ","New Hampshire",3748,"Project 3","no",1,43.589099,-72.132135
+"S001328",2021-09-14,"front_porch_forum",NA,"Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"S001329",2021-09-13,"front_porch_forum",NA,"Lyndon Center","Vermont",5850,"Project 3","yes",1,44.541247,-72.014699
+"S001330",2021-09-13,"direct_mail",NA,"Middlebury","Vermont",5753,"Project 2","no",1,43.997783,-73.178295
+"S001331",2021-09-13,"direct_mail",NA,"Middlebury ","Vermont",5753,"Project 2","no",1,43.997783,-73.178295
+"S001332",2021-09-14,"facebook",NA,"Bridgewater ","Vermont",5034,"Project 3","no",1,43.574514,-72.643229
+"S001333",2021-09-14,"direct_mail",NA,"Burlington","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S001334",2021-09-14,"front_porch_forum",NA,"Lyndonville","Vermont",5851,"Project 3","yes",1,44.557132,-72.08059
+"S001335",2021-09-16,"craigslist",NA,"Charlotte","Vermont",5445,"Project 2","yes",1,44.309955,-73.220978
+"S001336",2021-09-16,"flyer","Chittenden Clinic","Vergennes","Vermont",5491,"Project 2","no",1,44.111961,-73.310796
+"S001337",2021-09-16,"direct_mail",NA,"Middlebury","Vermont",5753,"Project 3","yes",1,43.997783,-73.178295
+"S001338",2021-09-17,"direct_mail",NA,"St. Albans","Vermont",5478,"ineligible","no",1,44.808422,-73.082507
+"S001339",2021-09-17,"flyer","Chittenden Clinic","Westford","Vermont",5494,"Project 2","yes",1,44.607422,-73.003642
+"S001340",2021-09-16,"direct_mail",NA,"Saint Albans","Vermont",5478,"Project 2","no",1,44.808422,-73.082507
+"S001341",2021-09-17,"front_porch_forum",NA,"Alburgh ","Vermont",5440,"Project 3","yes",1,44.957882,-73.291974
+"S001342",2021-09-20,"direct_mail",NA,"St. Albans","Vermont",5478,"Project 2","yes",1,44.808422,-73.082507
+"S001343",2021-09-17,"front_porch_forum",NA,"Lyndonville","Vermont",5851,"Project 2","no",1,44.557132,-72.08059
+"S001344",2021-09-17,"direct_mail",NA,"Colchester","Vermont",5446,"Project 1","yes",1,44.541259,-73.184415
+"S001345",2021-09-18,"other_person",NA,"johnson ","Vermont",5656,"Project 2","no",1,44.648124,-72.68884
+"S001346",2021-09-20,"direct_mail",NA,"St. Albans","Vermont",5478,"Project 3","no",1,44.808422,-73.082507
+"S001347",2021-09-19,"front_porch_forum",NA,"Derby Line","Vermont",5830,"Project 3","no",1,44.9721,-71.986969
+"S001348",2021-09-19,"google",NA,"Johnson city ","New York",13790,"Project 1","no",1,42.165361,-76.001942
+"S001349",2021-09-19,"craigslist",NA,"Barre","Vermont",5641,"Project 2","no",1,44.188842,-72.472172
+"S001350",2021-09-19,"direct_mail",NA,"Colchester","Vermont",5446,"Project 3","no",1,44.541259,-73.184415
+"S001351",2021-09-20,"direct_mail",NA,"Cornwall","Vermont",5753,"ineligible","no",1,43.997783,-73.178295
+"S001352",2021-09-21,"direct_mail",NA,"Sheldon","Vermont",5483,"Project 2","no",1,44.889912,-72.963139
+"S001354",2021-09-21,"google",NA,"Rochester","New York",14621,"Project 1","no",1,43.189939,-77.603649
+"S001355",2021-09-21,"direct_mail",NA,"Milton ","Vermont",5468,"Project 2","no",1,44.657371,-73.144488
+"S001356",2021-09-23,"direct_mail",NA,"St Albans ","Vermont",5478,"Project 2","no",1,44.808422,-73.082507
+"S001357",2021-09-24,"facebook",NA,"Coram","New York",11727,"Project 3","no",1,40.88206,-73.004009
+"S001358",2021-09-27,"radio",NA,"Grand Isle","Vermont",5458,"Project 3","no",1,44.717847,-73.307486
+"S001359",2021-09-28,"facebook",NA,"Laconia","New Hampshire",3246,"Project 3","no",1,43.576496,-71.482301
+"S001360",2021-09-28,"flyer","TJ Maxx in St. Albans","St. Albans","Vermont",5478,"Project 2","no",1,44.808422,-73.082507
+"S001362",2021-09-30,"flyer","Howard Center","Milton","Vermont",5468,"Project 2","no",1,44.657371,-73.144488
+"S001363",2021-10-04,"flyer","downtown bus station, Burlington","Essex","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S001364",2021-10-02,"flyer","Jolley ","Hinesburg","Vermont",5461,"Project 3","yes",1,44.332701,-73.087409
+"S001365",2021-10-03,"facebook",NA,"Binghamton","New York",13901,"Project 3","no",1,42.183203,-75.876048
+"S001366",2021-10-05,"bus_ad",NA,"N.Ferrisburgh","Vermont",5473,"Project 3","no",1,44.241936,-73.194663
+"S001367",2021-10-05,"other_person",NA,"Vergennes","Vermont",5491,"Project 1","no",1,44.111961,-73.310796
+"S001368",2021-10-05,"flyer","Curtis Lumber","Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001369",2021-10-05,"flyer","Shopping Bag (Burlington)","Burington","Vermont",5401,"Project 2","yes",1,44.476621,-73.209998
+"S001370",2021-10-08,"flyer","UHC","Colchester","Vermont",5446,"ineligible","no",1,44.541259,-73.184415
+"S001371",2021-10-08,"flyer","Red Panda, Burlington","Burlington","Vermont",5408,"ineligible","no",1,44.511852,-73.249611
+"S001372",2021-10-08,"other_person",NA,"Ferrisburgh ","Vermont",5355,"Project 2","no",1,43.019478,-72.812148
+"S001373",2021-10-10,"facebook",NA,"Rochester ","New York",14618,"Project 3","no",1,43.114542,-77.554976
+"S001374",2021-10-10,"other_person",NA,"Burlington","Vermont",5401,"Project 3","yes",1,44.476621,-73.209998
+"S001375",2021-10-11,"direct_mail",NA,"Hinesburg","Vermont",5461,"Project 2","no",1,44.332701,-73.087409
+"S001376",2021-10-11,"other_person",NA,"Barre","Vermont",5641,"Project 2","no",1,44.188842,-72.472172
+"S001378",2021-10-11,"other",NA,"Wyandanch","New York",11798,"Project 1","no",1,40.752599,-73.378743
+"S001379",2021-10-12,"craigslist",NA,"Essex Junction","Vermont",5452,"ineligible","no",1,44.538624,-73.050223
+"S001380",2021-10-12,"facebook",NA,"Albany ","New York",12203,"Project 2","no",1,42.681048,-73.84698
+"S001381",2021-10-13,"other_person",NA,"Alburgh","Vermont",5440,"Project 1 and Project 3","no",1,44.957882,-73.291974
+"S001382",2021-10-16,"flyer","Valley vista addiction treatment center","South Burlington ","Vermont",5403,"Project 1","no",1,44.444866,-73.173468
+"S001383",2021-10-19,"flyer","Chittenden Clinic","Winooski","Vermont",5404,"ineligible","no",1,44.495587,-73.184857
+"S001384",2021-10-19,"facebook",NA,"Greenwood Lake ","New York",10025,"Project 2","no",1,40.798601,-73.966622
+"S001385",2021-10-22,"other_person",NA,"Alburgh","Vermont",5440,"Project 3","no",1,44.957882,-73.291974
+"S001386",2021-10-22,"front_porch_forum",NA,"Burlington","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S001387",2021-10-23,"BuildClinical",NA,"Plattsburgh","New York",12901,"Project 2","no",1,44.70419,-73.471392
+"S001388",2021-10-23,"direct_mail",NA,"Mooers","New York",12958,"Project 2","no",1,44.960295,-73.571184
+"S001389",2021-10-24,"front_porch_forum",NA,"Burlington","Vermont",5401,"Project 3","no",1,44.476621,-73.209998
+"S001390",2021-10-25,"BuildClinical",NA,"Montpelier ","Vermont",5602,"Project 1","no",1,44.274953,-72.609475
+"S001391",2021-10-25,"BuildClinical",NA,"Burlington","Vermont",5408,"Project 2","no",1,44.511852,-73.249611
+"S001392",2021-10-25,"flyer",NA,"Burlington","Vermont",5401,"ineligible","no",1,44.476621,-73.209998
+"S001393",2021-10-25,"pt_in_other_studies",NA,"Shelburne","Vermont",5482,"Project 2","no",1,44.380662,-73.211006
+"S001394",2021-10-26,"direct_mail",NA,"St. Albans","Vermont",5478,"Project 2","no",1,44.808422,-73.082507
+"109",2021-06-04,"multiple",NA,"White River Jct","Vermont",5001,"ineligible","no",2,43.672188,-72.380193
+"171",2021-06-15,"multiple",NA,"Colchester","Vermont",5404,"ineligible","no",2,44.495587,-73.184857
+"176",2021-06-14,"multiple",NA,"Richford ","Vermont",5476,"ineligible","no",2,44.955228,-72.643138
+"203",2021-06-23,"multiple","Kountry Kart Deli","Winooski ","Vermont",5404,"ineligible","no",2,44.495587,-73.184857
+"206",2021-06-23,"multiple","uvm health science research facility","Burlington","Vermont",5068,"ineligible","no",3,43.780996,-72.547512
+"234",2021-06-28,"multiple",NA,"Los Angeles","California",90017,"ineligible","no",2,34.052913,-118.26434
+"249",2021-06-30,"multiple",NA,"Burlington","Vermont",5401,"ineligible","no",2,44.476621,-73.209998
+"251",2021-07-01,"multiple",NA,"Burlington","Vermont",5401,"ineligible","no",2,44.476621,-73.209998
+"256",2021-07-02,"multiple","friend gave me flyer ","Burlington","Vermont",5401,"ineligible","no",2,44.476621,-73.209998
+"299",2021-08-01,"multiple","Robe hospital","Dinsho","Idaho",94043,"ineligible","no",20,37.414028,-122.070679
+"307",2021-08-09,"multiple",NA,"Barton","Vermont",5822,"ineligible","no",2,44.751643,-72.140274
+"327",2021-08-19,"multiple",NA,"South Burlington ","Vermont",5403,"ineligible","no",2,44.444866,-73.173468
+"335",2021-08-21,"direct_mail","In mailbox","Winooski","Vermont",5404,"ineligible","no",2,44.495587,-73.184857
+"360",2021-08-25,"multiple",NA,"Essex Junction","Vermont",5452,"ineligible","no",2,44.538624,-73.050223
+"412",2021-09-06,"multiple",NA,"Burlington","Vermont",5401,"ineligible","no",2,44.476621,-73.209998
+"413",2021-09-06,"multiple",NA,"Burlington","Vermont",5401,"ineligible","no",2,44.476621,-73.209998
+"417",2021-09-08,"direct_mail","Mailbox ","Richmond","Vermont",5477,"ineligible","no",2,44.416769,-72.962422
+"420",2021-09-09,"multiple",NA,"Burlington ","Vermont",5408,"ineligible","no",2,44.511852,-73.249611
+"422",2021-09-09,"multiple",NA,"Cincinnati","Ohio",45219,"ineligible","no",2,39.127376,-84.513064
+"443",2021-09-15,"multiple","i don't know
+","laguna","Alaska",94043,"ineligible","no",5,37.414028,-122.070679
+"444",2021-09-15,"multiple",NA,"Burlington ","Vermont",5401,"ineligible","no",2,44.476621,-73.209998
+"448",2021-09-16,"multiple","It was a flyer in the newspaper","Burlington","Vermont",5401,"ineligible","no",2,44.476621,-73.209998
+"455",2021-09-17,"multiple","9 brown avenue, apt 2. Saint albans, vt. ","Saint albans ","Vermont",5478,"ineligible","no",2,44.808422,-73.082507
+"459",2021-09-18,"multiple",NA,"Middlebury","Vermont",5753,"ineligible","no",2,43.997783,-73.178295
+"490",2021-09-28,"multiple",NA,"Williston ","Vermont",5495,"ineligible","no",2,44.429066,-73.096243
+"506",2021-10-05,"multiple","802 BWS","Enosburg","Vermont",5450,"ineligible","no",3,44.894578,-72.795246
+"S000028",2020-10-25,"multiple",NA,"Rutland","Vermont",5701,"Project 2","yes",3,43.624577,-72.910204
+"S000057",2021-07-12,"multiple",NA,"Burlington","Vermont",5401,"Project 2","no",2,44.476621,-73.209998
+"S000150",2021-09-15,"multiple",NA,"Burlington ","Vermont",5401,"Project 2","yes",2,44.476621,-73.209998
+"S000227",2020-10-22,"multiple",NA,"Highgate Springs","Vermont",5460,"Project 1 and Project 3","no",2,NA,NA
+"S000276",2020-10-23,"multiple",NA,"Burlington","Vermont",5401,"Project 3","no",2,44.476621,-73.209998
+"S000280",2020-10-23,"multiple",NA,"Burlington ","Vermont",5401,"Project 2","no",2,44.476621,-73.209998
+"S000317",2020-10-23,"multiple",NA,"Keeseville ","New York",12944,"Project 2","no",2,44.433105,-73.533248
+"S000513",2020-11-09,"multiple",NA,"Burlington ","Vermont",5401,"Project 1","no",2,44.476621,-73.209998
+"S000537",2020-10-03,"multiple","Facebook ad","Rutland","Vermont",5701,"Project 1 and Project 3","no",2,43.624577,-72.910204
+"S000543",2020-11-27,"multiple",NA,"WOLCOTT","Vermont",5680,"Project 2","no",2,44.540596,-72.471939
+"S000592",2020-10-23,"multiple",NA,"Burlington","Vermont",5401,"ineligible","no",2,44.476621,-73.209998
+"S000602",2020-10-23,"multiple",NA,"Burlington ","Vermont",5401,"ineligible","no",2,44.476621,-73.209998
+"S000675",2020-10-30,"multiple",NA,"Winooski","Vermont",5404,"ineligible","no",2,44.495587,-73.184857
+"S000698",2021-03-08,"multiple",NA,"South Burlington ","Virginia",5403,"Project 3","no",2,44.444866,-73.173468
+"S000780",2020-11-18,"multiple",NA,"Burlington","Vermont",5401,"ineligible","no",3,44.476621,-73.209998
+"S000794",2020-11-27,"multiple","Instagram","Burlington ","Vermont",5401,"ineligible","no",2,44.476621,-73.209998
+"S000866",2021-03-04,"multiple",NA,"St albans ","Vermont",5478,"ineligible","no",2,44.808422,-73.082507
+"S000878",2021-03-08,"multiple","Davis Center","Burlington","Vermont",5401,"ineligible","no",2,44.476621,-73.209998
+"S000919",2021-03-27,"multiple",NA,"Burlington ","Vermont",5401,"ineligible","no",2,44.476621,-73.209998
+"S000946",2021-04-11,"multiple",NA,"Burlington","Vermont",5408,"Project 3","no",2,44.511852,-73.249611
+"S000982",2021-04-16,"multiple","I received a flyer for smokers ... went to the site and found this","Winooski ","Vermont",5404,"ineligible","no",2,44.495587,-73.184857
+"S001071",2021-05-06,"multiple",NA,"Bomoseen ","Vermont",5732,"ineligible","no",2,43.643813,-73.210774
+"S001108",2021-06-11,"multiple",NA,"Brownington","Vermont",5860,"Project 2","yes",2,44.80266,-72.103996
+"S001116",2021-06-14,"multiple",NA,"South Ryegatev","Vermont",5069,"Project 2","no",2,44.204072,-72.131204
+"S001119",2021-06-17,"multiple",NA,"Rutl6","Vermont",5701,"Project 2","no",2,43.624577,-72.910204
+"S001185",2021-05-20,"multiple",NA,"Montpelier","Vermont",5602,"ineligible","no",2,44.274953,-72.609475
+"S001196",2021-07-20,"multiple",NA,"Burlington","Vermont",5401,"Project 3","yes",2,44.476621,-73.209998
+"S001199",2021-07-22,"direct_mail","Got a flyer in the mailbox.","Burlington","Vermont",5401,"Project 3","yes",2,44.476621,-73.209998
+"S001273",2021-08-30,"multiple",NA,"Essex Junction","Vermont",5452,"ineligible","no",2,44.538624,-73.050223
+"S001275",2021-08-30,"multiple",NA,"Bristol","Vermont",5443,"ineligible","no",2,44.139443,-73.03993
+"S001279",2021-08-27,"multiple",NA,"Berlin","Vermont",5602,"Project 1 and Project 3","no",2,44.274953,-72.609475
+"S001299",2021-08-31,"multiple",NA,"Vergennes ","Vermont",5491,"Project 1 and Project 3","no",2,44.111961,-73.310796
+"S001305",2021-09-03,"direct_mail","The flier was inside my mailbox at my residence ","Colchester","Vermont",5446,"Project 1","yes",2,44.541259,-73.184415
+"S001317",2021-09-10,"multiple",NA,"St. Albans","Vermont",5478,"ineligible","no",2,44.808422,-73.082507
+"S001325",2021-09-10,"multiple",NA,"Burlington ","Vermont",5401,"Project 1","no",2,44.476621,-73.209998
+"S001327",2021-09-14,"multiple",NA,"Colchester","Vermont",5446,"Project 2","no",2,44.541259,-73.184415
+"S001361",2021-09-29,"multiple",NA,"Highgate","Vermont",5459,"Project 2","no",2,44.95006,-73.005367

@@ -1,0 +1,1602 @@
+  # TCORS functions
+
+build_rcon <- function(rc) {
+  # Wrapper around the redcapAPI::redcapConnection() using
+  # a .csv token sheet in the working directory.
+  url <- "https://redcap.med.uvm.edu/api/"
+  # import passwords document
+  pw <- read.csv("password.csv", stringsAsFactors = FALSE)
+  token <- NA
+  if (rc == "rc_pilot") {
+    token <- pw$password[2]
+  } else if (rc == "rc_proper") {
+    token <- pw$password[4]
+  } else if (rc == "ps_pilot_uvm") {
+    token <- pw$password[3]
+  } else if (rc == "ps_proper_uvm") {
+    token <- pw$password[5]
+  } else if (rc == "rc_p4") {
+    token <- pw$password[6]
+  } else if (rc == "ps_proper_brown") {
+    token <- pw$password[7]
+  } else if (rc == "ps_proper_jhu") {
+    token <- pw$password[8]
+  } else if (rc == "ps_p4_uvm") {
+    token <- pw$password[9]
+  }
+  redcapConnection(url = url, token = token)
+}
+
+# rc_df_compare <- download_rc_dataframe(rcon)
+download_rc_dataframe <- function(rcon, fields, events) {
+  # Wrapper around redcapAPI::exportRecords(). Returns dataframe
+  # with clean subject IDs.
+
+  df <- exportRecords(rcon,
+    fields = c("screen_id", fields), labels = FALSE, survey = FALSE,
+    dag = TRUE, events = events, form_complete_auto = FALSE
+  )
+  df <- df %>% filter(!grepl("-2", df$screen_id))
+  df <- df %>% filter(!grepl("test", df$screen_id))
+  df <- df %>% filter(grepl("X-", df$screen_id) |
+    grepl("Y-", df$screen_id) |
+    grepl("Z-", df$screen_id))
+  df$pi_prop <- ifelse(substr(df$screen_id, 4, 4) == 9, "pilot", "proper")
+  write.csv(df, "s3/rc_df.csv", row.names = FALSE)
+  df
+}
+
+
+download_ps <- function(rcon, fields, events, site, vars_to_keep) {
+  df <- exportRecords(rcon,
+    fields = fields, labels = FALSE, survey = FALSE,
+    dag = TRUE, events = events, form_complete_auto = FALSE,
+    factors = FALSE
+  )
+  df$site <- site
+  df <- df %>%
+    plyr::rename(c(
+      "recruit_3" = "daily_smoke", "recruit_3b" = "five_per_day", "recruit_4b" = "ecig", "recruit_5" = "nic_rep", "recruit_6" = "quit_med",
+      "recruit_7" = "quit_plans", "recruit_8" = "rolls_own",
+      "recruit_10" = "other_research", "recruit_10a" = "household", "recruit_14a" = "degree_program",
+      "recruit_15" = "opiate_maintained", "recruit_17a" = "opiate_pain_meds", "recruit_18" = "dep_anx",
+      "recruit_18a" = "dep_anx_txt", "recruit_11" = "gender", "recruit_12" = "pregnant", "recruit_3a" = "num_cigs",
+      "recruit_4d" = "other_tobacco", "recruit_15b" = "length_dose", "recruit_16ab_score" = "ab_score",
+      "recruit_16cd_score" = "cd_score", "recruit_14" = "ed_level", "recruit_13" = "age", "recruit_1___0" = "TV",
+      "recruit_1___1" = "radio", "recruit_1___2" = "metro_news", "recruit_1___3" = "neighborhood_news",
+      "recruit_1___4" = "flyer", "recruit_1a" = "other_explain", "recruit_1___5" = "facebook",
+      "recruit_1___6" = "craigslist", "recruit_1___7" = "bus_ad", "recruit_1___8" = "pt_in_other_studies",
+      "recruit_1___9" = "clin_trials_web", "recruit_1___10" = "direct_mail",
+      "recruit_1___11" = "other_person", "recruit_1___12" = "other", "recruit_1b" = "flyer_location",
+      "recruit_1___13" = "instagram", "recruit_1___14" = "google", "recruit_1___15" = "youtube",
+      "recruit_1___16" = "front_porch_forum", "recruit_1___17" = "reddit", "recruit_1___18" = "spotify",
+      "recruit_1___19" = "tiktok", "recruit_1___20" = "BuildClinical",
+      "recruit_15a" = "which_med", "recruit_16a" = "anxious", "recruit_16b" = "worrying",
+      "recruit_16c" = "little_pleasure", "recruit_16d" = "depress_feelings", "recruit_17" = "rx_pain_med"
+    )) %>%
+    select(all_of(vars_to_keep), all_of(ps_values), site)
+
+  df$recruit_date <- ymd(df$recruit_date)
+  df
+}
+
+pull_prescreen_data <- function(){
+  rcon_ps_uvm <- build_rcon("ps_proper_uvm")
+  rcon_ps_brown <- build_rcon("ps_proper_brown")
+  rcon_ps_jhu <- build_rcon("ps_proper_jhu")
+  
+  ps_df_uvm <- download_ps(rcon_ps_uvm, NULL, NULL, "uvm", c(all_of(vars_to_keep), uvm_only))
+  ps_df_brown <- download_ps(rcon_ps_brown, NULL, NULL, "brown", all_of(vars_to_keep))
+  ps_df_jhu <- download_ps(rcon_ps_jhu, NULL, NULL, "jhu", all_of(vars_to_keep))
+  
+  # straighten things out
+  ps_df_brown$BuildClinical <- NA
+  ps_df_jhu$BuildClinical <- NA
+  
+  ps_df <- rbind(ps_df_uvm, ps_df_brown, ps_df_jhu)
+}
+
+
+recode_facebook <- function(ps_df, start_date, end_date) {
+    ps_df$BuildClinical[ps_df$recruit_date >= start_date & 
+                          ps_df$recruit_date <= end_date & 
+                          ps_df$facebook == 1] <- 1
+    ps_df$facebook[ps_df$recruit_date >= start_date & 
+                          ps_df$recruit_date <= end_date] <- 0
+    ps_df
+}
+
+
+download_p4_df <- function(rcon, fields, events) {
+  # Wrapper around redcapAPI::exportRecords(). Returns dataframe
+  # with clean subject IDs.
+
+  df <- exportRecords(rcon,
+    fields = c("screen_id", fields), labels = FALSE, survey = FALSE,
+    dag = TRUE, events = events, form_complete_auto = FALSE
+  )
+  df <- df %>% filter(!grepl("-2", df$screen_id))
+  df <- df %>% filter(!grepl("test", df$screen_id))
+  df <- df %>% filter(!grepl("TEST", df$screen_id))
+  df <- df %>% filter(grepl("P-", df$screen_id))
+  df
+}
+
+
+clean_redcap_id <- function(df) {
+  df$redcap_id <- toupper(df$redcap_id)
+  df <- df %>%
+    filter(grepl("S", df$redcap_id))
+  df <- df %>% filter(!grepl("-", df$redcap_id))
+  df
+}
+
+
+pjt_ste <- function(df) {
+  # impose project and site values on a data frame
+  pjt <- substr(df$subjectid, 1, 1)
+  ste <- substr(df$subjectid, 3, 3)
+
+  df$project <- NA
+  df$project[pjt == "X"] <- "Project 1"
+  df$project[pjt == "Y"] <- "Project 2"
+  df$project[pjt == "Z"] <- "Project 3"
+
+  df$site <- NA
+  df$site[ste == "A"] <- "uvm"
+  df$site[ste == "B"] <- "brown"
+  df$site[ste == "C"] <- "jhu"
+  df$site <- factor(df$site, levels = c("uvm", "brown", "jhu"))
+
+  df
+}
+
+# make an estimate of UVM screenings scheduled
+est_scrn_sched <- function(rcon) {
+  scrn_sched <- exportRecords(rcon, fields = "recruit_date_screen")
+  scrn_sched <- scrn_sched %>%
+    select(recruit_date_screen) %>%
+    filter(!is.na(recruit_date_screen),
+           as.Date(recruit_date_screen) >= Sys.Date())
+  write.csv(scrn_sched, "s3/scrn_sched.csv", row.names = FALSE)
+}
+
+
+
+
+load_ivr <- function(direc) {
+  # load and clean IVR data externally
+  pw_file <- read.csv("password.csv", stringsAsFactors = FALSE)
+  user <- pw_file$username[1]
+  pw <- pw_file$password[1]
+  url <- paste("https://", user, ":", pw,
+    "@rd.telesage.com/tcorsstudy3/surveys.tsv",
+    sep = ""
+  )
+  df <- read.csv(url, header = TRUE, sep = "\t", na.strings = "")
+
+  # clean
+  colnames(df) <- tolower(colnames(df))
+  df$subjectid <- toupper(df$subjectid)
+  df$subjectid <- gsub("-", "", df$subjectid)
+  df$subjectid <- gsub("A", "-A", df$subjectid)
+  df$subjectid <- gsub("B", "-B", df$subjectid)
+  df$subjectid <- gsub("C", "-C", df$subjectid)
+
+  df <- pjt_ste(df)
+  df$pi_prop <- ifelse(substr(df$subjectid, 4, 4) == 9, "pilot", "proper")
+
+  # remove incomplete calls, ID info
+  df <- df %>%
+    filter(!is.na(complete)) %>%
+    select(-callerid)
+
+  # write record
+  write.table(df,
+    paste(direc, "ivr.tsv", sep = ""),
+    sep = "\t",
+    row.names = FALSE
+  )
+  df
+}
+
+ivr_timeseries <- function(ivr, sid) {
+  df <- ivr %>%
+    filter(subjectid == sid) %>%
+    select(
+      daynumber, daynumberbl2, cigs, studycigs, nonstudycigs,
+      ecig, studyecig, nonstudyecig, nstudypods,
+      nnonstudypods, calldate
+    )
+
+  colnames(df) <- str_replace_all(colnames(df), "study", "study_")
+  colnames(df) <- str_replace_all(colnames(df), "nstudy_pods", "study_pods")
+  colnames(df) <- str_replace_all(colnames(df), "nnonstudy_pods", "nonstudy_pods")
+
+  df %>%
+    rename("nonstudy_pods" = nnostudy_pods) %>%
+    select(
+      daynumber, daynumberbl2, study_cigs, nonstudy_cigs,
+      study_pods, nonstudy_pods, calldate
+    ) %>%
+    tidyr::pivot_longer(
+      -c(daynumber, daynumberbl2, calldate),
+      names_to = c("type", ".value"),
+      names_sep = "_"
+    )
+
+}
+
+impose_week <- function(df) {
+  df$week <- NA
+  df$week[df$daynumberEX < 1] <- "week0"
+  df$week[df$daynumberEX %in% 1:7] <- "week01"
+  df$week[df$daynumberEX %in% 8:14] <- "week02"
+  df$week[df$daynumberEX %in% 15:21] <- "week03"
+  df$week[df$daynumberEX %in% 22:28] <- "week04"
+  df$week[df$daynumberEX %in% 29:35] <- "week05"
+  df$week[df$daynumberEX %in% 36:42] <- "week06"
+  df$week[df$daynumberEX %in% 43:49] <- "week07"
+  df$week[df$daynumberEX %in% 50:56] <- "week08"
+  df$week[df$daynumberEX %in% 57:63] <- "week09"
+  df$week[df$daynumberEX %in% 64:70] <- "week10"
+  df$week[df$daynumberEX %in% 71:77] <- "week11"
+  df$week[df$daynumberEX %in% 78:84] <- "week12"
+  df$week[df$daynumberEX %in% 85:91] <- "week13"
+  df$week[df$daynumberEX %in% 92:98] <- "week14"
+  df$week[df$daynumberEX %in% 99:105] <- "week15"
+  df$week[df$daynumberEX %in% 106:112] <- "week16"
+  df$daynumberEX[df$daynumberEX < 1] <- NA
+  week_vars <- c()
+  for (i in 0:16) {
+    nme <- paste("week", i, sep = "")
+    week_vars <- c(week_vars, nme)
+  }
+
+  df$week <- factor(df$week, labels = week_vars)
+
+  df
+}
+
+pi_prop <- function(df) {
+  df %>%
+    mutate(
+      pi_prop = ifelse(
+        substr(subjectid, 4, 4) == 9, "pilot","proper"
+        )
+      )
+}
+
+# define "library" of REDCap fields ------------
+
+sl_values <- c(
+  "sl_condition", "sl_ecig_condition", "sl_juul_vuse",
+  "screen_project", "sl_status", "sl_baseline1_med",
+  "sl_baseline1_dose", "sl_ineligible", "screen_sex"
+)
+sl_ineligible_values <- "sl_ineligible___1"
+for (i in 2:34) {
+  lbl <- paste("sl_ineligible___", i, sep = "")
+  sl_ineligible_values <- c(sl_ineligible_values, lbl)
+}
+
+session_dates <- c(
+  "screen_date", "rescreen_date", "is1_date",
+  "is2_date", "iodd_date_session", "ievn_date", "iab_date"
+)
+co_values <- c(
+  "screen_id", "sl_condition", "sl_ecig_condition", "sl_juul_vuse",
+  "is1_co", "is2_co", "iodd_co", "ievn_co", "screen_phys_9"
+)
+time_values <- c(
+  "is1_lastcig_time", "is1_co_time", "is2_lastcig_time",
+  "is2_co_time", "iodd_lastcig_time", "iodd_co1_time",
+  "ievn_lastcig_time", "ievn_co_time"
+)
+
+sl_p4 <- c("screen_project", "sl_baseline1_dose", "sl_status", "date_s2")
+
+ps_values <- c(
+  "redcap_id", "elig_project_1",
+  "elig_project_2", "elig_project_3", "elig_project_none", "recruit_date",
+  "recruit_int_summ", "screen_status", "screen_subjectid"
+)
+
+full_list <- c(
+  "daily_smoke", "five_per_day", "nic_rep", "quit_med", "quit_plans", "rolls_own",
+  "other_research", "household", "degree_program", "opiate_maintained",
+  "opiate_pain_meds", "dep_anx", "dep_anx_txt", "gender", "pregnant",
+  "other_tobacco", "length_dose", "ab_score", "cd_score", "age"
+)
+gen_list <- c(
+  "daily_smoke", "five_per_day", "nic_rep", "quit_med", "quit_plans", "rolls_own",
+  "other_research", "household", "pregnant", "opiate_pain_meds", "other_tobacco", "age", "ecig"
+)
+boolean_vars <- c(
+  "daily_smoke", "five_per_day", "nic_rep", "quit_med", "quit_plans", "rolls_own",
+  "other_research", "household", "degree_program", "opiate_maintained",
+  "opiate_pain_meds", "dep_anx", "dep_anx_txt", "gender", "pregnant"
+)
+
+integer_vars <- c("num_cigs", "other_tobacco", "length_dose", "ab_score", "cd_score")
+
+categorical_vars <- c("ed_level")
+
+source_vars <- c(
+  "TV", "radio", "metro_news", "neighborhood_news", "flyer", "facebook",
+  "craigslist", "bus_ad", "pt_in_other_studies", "clin_trials_web",
+  "direct_mail", "other_person", "other", "instagram", "google",
+  "front_porch_forum", "reddit", "youtube", "tiktok", "spotify"
+)
+
+uvm_only <- "BuildClinical"
+
+# uvm_only_source <- c(
+#   
+# )
+
+vars_to_keep <- c(
+  full_list, gen_list, boolean_vars, integer_vars,
+  categorical_vars, source_vars
+)
+
+# session names
+odd_weeks <- c(
+  "week_1_arm_1", "week_3_arm_1", "week_5_arm_1", "week_7_arm_1",
+  "week_9_arm_1", "week_11_arm_1", "week_13_arm_1", "week_15_arm_1"
+)
+even_weeks <- c(
+  "week_2_arm_1", "week_4_arm_1", "week_6_arm_1", "week_8_arm_1",
+  "week_10_arm_1", "week_12_arm_1", "week_14_arm_1", "week_16_arm_1"
+)
+
+session_dates <-c(
+  "screen_date", "rescreen_date", "is1_date", "is2_date",
+  "iodd_date_session", "ievn_date"
+)
+
+sessions <- c("screening", "baseline_1", "baseline_2")
+for (i in 1:16) {
+  tmp <- paste("week_", i, sep = "")
+  sessions <- c(sessions, tmp)
+}
+
+sites <- c("uvm", "brown", "jhu")
+projects <- c("uvm", "brown", "jhu")
+
+# app functions --------------------
+
+screening_inel <- function(rc_df, direc) {
+  summary_df <- rc_df %>%
+    select(
+      sl_ineligible_values, redcap_data_access_group,
+      screen_project, pi_prop
+    ) %>%
+    plyr::rename(c(
+      "sl_ineligible___1" = "did_not_consent",
+      "sl_ineligible___2" = "illiterate",
+      "sl_ineligible___3" = "daily_ecig_user",
+      "sl_ineligible___4" = "other_research",
+      "sl_ineligible___5" = "low_o2_saturation",
+      "sl_ineligible___6" = "over_44",
+      "sl_ineligible___7" = "under_21",
+      "sl_ineligible___8" = "low_cpd",
+      "sl_ineligible___9" = "low_co",
+      "sl_ineligible___10" = "high_co",
+      "sl_ineligible___11" = "cessation_aids",
+      "sl_ineligible___12" = "quit_treatment",
+      "sl_ineligible___13" = "quit_plans",
+      "sl_ineligible___14" = "quit_last_month",
+      "sl_ineligible___15" = "other_tobacco_use",
+      "sl_ineligible___16" = "rolls_own",
+      "sl_ineligible___17" = "suicidal_ideation",
+      "sl_ineligible___18" = "suicide_attempt",
+      "sl_ineligible___19" = "psychosis",
+      "sl_ineligible___20" = "mania",
+      "sl_ineligible___21" = "no_psych_disorder",
+      "sl_ineligible___22" = "pregnant",
+      "sl_ineligible___23" = "failed_tox_screen",
+      "sl_ineligible___24" = "failed_bal_screen",
+      "sl_ineligible___25" = "binge_drinking",
+      "sl_ineligible___26" = "bp_out_of_range",
+      "sl_ineligible___27" = "hr_out_of_range",
+      "sl_ineligible___28" = "rx_pain_meds",
+      "sl_ineligible___29" = "unstable_om_txt",
+      "sl_ineligible___30" = "opted_out",
+      "sl_ineligible___31" = "lmp_ineligible",
+      "sl_ineligible___32" = "education_too_high",
+      "sl_ineligible___33" = "living_with_pt",
+      "sl_ineligible___34" = "covid19",
+      "screen_project" = "project",
+      "redcap_data_access_group" = "site"
+    )) %>%
+    tidyr::pivot_longer(cols = -c(site, project, pi_prop)) %>%
+    mutate(numeric = ifelse(value == "Checked", 1, 0)) %>%
+    filter(numeric == 1) %>%
+    group_by(name, project, site, pi_prop) %>%
+    count(numeric)
+
+  write.csv(summary_df, paste(direc, "screening_inel.csv", sep = ""),
+    row.names = FALSE
+  )
+  summary_df
+}
+
+clean_prescreen_df <- function(ps_df, min_date) {
+  filter_str <- "-|_|copy|incomplete|empty"
+  ps_df %>% 
+    filter(!stringr::str_detect(redcap_id, filter_str)) %>%
+    rowwise() %>%
+    filter(
+      !is.na(sum(elig_project_1, elig_project_2, elig_project_3))
+    ) %>%
+    ungroup() %>%
+    filter(
+      recruit_date > min_date & recruit_date <= Sys.Date()
+    )
+}
+
+
+
+summarize_prescreen <- function(df, min_date) {
+  # aggregate each day, then return cumulative sum
+  
+  df <- clean_prescreen_df(df, min_date)
+  summary <- df %>%
+    group_by(site, recruit_date) %>%
+    arrange(recruit_date) %>%
+    summarize_at(
+      .vars = vars(
+        elig_project_1, elig_project_2,
+        elig_project_3, elig_project_none
+      ),
+      .funs = sum
+    ) %>%
+    rename(
+      "project_1" = elig_project_1,
+      "project_2" = elig_project_2,
+      "project_3" = elig_project_3,
+      "ineligible" = elig_project_none
+    ) %>%
+    mutate_at(
+      .vars = vars(
+        project_1, project_2, project_3, ineligible
+      ),
+      .funs = cumsum
+    )
+
+  totals <- df %>%
+    group_by(site) %>%
+    count(recruit_date) %>%
+    rename("total" = n) %>%
+    mutate(total = cumsum(total))
+  
+  summary <- merge(totals, summary)
+
+  summary <- summary %>%
+    select(
+      site, recruit_date, total, project_1,
+      project_2, project_3, ineligible
+    ) %>%
+    group_by(site)
+    
+  summary$site <- factor(summary$site, levels = c("uvm", "brown", "jhu"))
+  
+  current <- summary %>%
+    group_by(site) %>%
+    filter(recruit_date == max(recruit_date)) %>%
+    select(-recruit_date)
+  
+  list(summary, current)
+}
+
+count_rct_flow <- function(ps_df, full_list, sites, min_date) {
+  # filter for valid prescreens
+  # RECOMMEND HARD-CODING SITES
+
+  ps_df <- ps_df %>% filter(site == "uvm")
+  ps <- ps_df
+  
+  # filter unique
+  
+  ps_unique <- clean_prescreen_df(ps_df, min_date)
+  # extract prescreen summary information
+  rct_summary <- ps_unique %>%
+    count(recruit_int_summ)
+  rct_summary$recruit_int_summ <- factor(
+    rct_summary$recruit_int_summ, levels = c(4, 3, 1, 2, 5)
+  )
+ rct_summary <- rct_summary[order(rct_summary$recruit_int_summ),]
+ 
+  # extract screening summary
+  scrn_summary <- ps_unique %>%
+    count(screen_status)
+  scrn_summary$screen_status <- factor(
+    scrn_summary$screen_status, levels = c(1, 3, 2)
+  )
+  scrn_summary <- scrn_summary[order(scrn_summary$screen_status),]
+  
+  # extract post-screening status
+  full_list <- pjt_ste(full_list)
+  full_list <- pi_prop(full_list)
+  enroll_status <- full_list %>%
+    filter(site %in% sites) %>%
+    filter(pi_prop == "proper") %>%
+    count(sl_status)
+  
+  if (!"Screening 1 Complete" %in% enroll_status$sl_status) {
+    df <- data.frame(sl_status = "Screening 1 Complete", n = 0)
+    enroll_status <- rbind(enroll_status, df)
+  } 
+  if (!"Under LMP Review" %in% enroll_status$sl_status) {
+    df <- data.frame(sl_status = "Under LMP Review", n = 0)
+    enroll_status <- rbind(enroll_status, df)
+  }
+  enroll_status$sl_status <- factor(
+    enroll_status$sl_status,
+    levels = c(
+      "Screening Ineligible", "Under LMP Review", "Screening 1 Complete","Complete",
+      "In Progress", "Withdrawn - Pre-Product", "Withdrawn - Post-Product"
+      )
+  )
+  
+  enroll_status <- enroll_status[order(enroll_status$sl_status),]
+  
+  list(nrow(ps), nrow(ps_unique), rct_summary, scrn_summary, enroll_status)
+}
+
+
+ps_ineligible_recode <- function(ps_df, direc) {
+  df <- ps_df %>%
+    select(!source_vars) %>%
+    filter(
+      elig_project_none == 1,
+      !grepl("_2", ps_df$redcap_id),
+      !is.na(recruit_date)
+    )
+  # substr(ps_df$redcap_id, 1, 1) == "S",
+  df$daily_smoke <- recode(df$daily_smoke, "0" = 1, "1" = 0)
+  # df$five_per_day <- recode(df$five_per_day, '0' = 1, '1' = 0)
+  df$gender <- recode(df$gender, "0" = 1, "1" = 0)
+  df$dep_anx <- recode(df$dep_anx, "0" = 1, "1" = 0)
+  df$dep_anx_txt <- recode(df$dep_anx_txt, "0" = 1, "1" = 0)
+
+  df[is.na(df)] <- 0
+
+  df <- df %>%
+    mutate(age_exclude_gen = ifelse(age < 21 | age > 70, 1, 0)) %>%
+    mutate(other_tobacco = ifelse(other_tobacco > 0, 1, 0)) %>%
+    mutate(five_per_day = ifelse(num_cigs < 5, 1, 0)) %>%
+    mutate(ecig_value = ecig) %>%
+    mutate(ecig = ifelse(ecig > 5, 1, 0)) %>%
+    mutate(exclude_gen = ifelse(
+      daily_smoke == 1 | five_per_day == 1 | nic_rep == 1 | quit_med == 1 |
+        quit_plans == 1 | rolls_own == 1 | other_research == 1 | household == 1 |
+        pregnant == 1 | opiate_pain_meds == 1 | other_tobacco == 1 | age == 1 | ecig == 1, 1, 0
+    ))
+
+  write.csv(df,
+    paste(direc, "df_ps_inel.csv", sep = ""),
+    row.names = FALSE
+  )
+  df
+}
+
+
+
+ps_inel_generic <- function(df_inel, direc) {
+  df <- df_inel %>%
+    filter(exclude_gen == 1) %>%
+    select(all_of(gen_list), age_exclude_gen, site, -age) %>%
+    group_by(site) %>%
+    summarize_all(.funs = sum)
+
+  write.csv(df,
+    paste(direc, "df_ps_gen.csv", sep = ""),
+    row.names = FALSE
+  )
+  df
+}
+
+
+
+ps_inel_specific <- function(df_inel, direc) {
+  df <- df_inel %>%
+    filter(exclude_gen == 0) %>%
+    select(-c(
+      all_of(gen_list), redcap_id, elig_project_1, elig_project_2, elig_project_3,
+      elig_project_none
+    ), age) %>%
+    mutate(p1_age = ifelse(age > 44, 1, 0)) %>%
+    mutate(p1_ed = ifelse(ed_level > 4, 1, 0)) %>%
+    mutate(length_dose = ifelse(length_dose < 30, 1, 0)) %>%
+    mutate(ab_score = ifelse(ab_score < 3, 1, 0)) %>%
+    mutate(cd_score = ifelse(cd_score < 3, 1, 0)) %>%
+    mutate(p1_reasons = ifelse((degree_program + gender + p1_age + p1_ed) >= 1,
+      1, 0
+    )) %>%
+    mutate(p2_reasons = ifelse((opiate_maintained + length_dose) >= 1,
+      1, 0
+    )) %>%
+    mutate(p3_reasons = ifelse((dep_anx + dep_anx_txt + ab_score + cd_score) >= 1,
+      1, 0
+    )) %>%
+    select(p1_reasons, p2_reasons, p3_reasons, site) %>%
+    group_by(site) %>%
+    summarize_all(.funs = sum)
+
+  write.csv(df,
+    paste(direc, "df_ps_spec.csv", sep = ""),
+    row.names = FALSE
+  )
+  df
+}
+
+ps_inel_one <- function(df_ps_inel, direc) {
+  df <- df_ps_inel %>%
+    filter(elig_project_none == 1) %>%
+    select(-c(
+      elig_project_1, elig_project_2, elig_project_3,
+      elig_project_none, redcap_id, exclude_gen, screen_subjectid
+    )) %>%
+    mutate(length_dose = ifelse(length_dose < 30, 1, 0)) %>%
+    mutate(five_per_day = ifelse(num_cigs < 5, 1, 0)) %>%
+    mutate(p1_age = ifelse(age > 44, 1, 0)) %>%
+    mutate(p1_ed = ifelse(ed_level > 4, 1, 0)) %>%
+    mutate(length_dose = ifelse(length_dose < 30, 1, 0)) %>%
+    mutate(ab_score = ifelse(ab_score < 3, 1, 0)) %>%
+    mutate(cd_score = ifelse(cd_score < 3, 1, 0)) %>%
+    mutate(p1_reasons = ifelse((degree_program + gender + p1_age + p1_ed) >= 1, 1, 0)) %>%
+    mutate(p2_reasons = length_dose) %>%
+    mutate(p3_reasons = ifelse((dep_anx + dep_anx_txt + ab_score + cd_score) == 4, 1, 0)) %>%
+    mutate(p_specific = p1_reasons + p2_reasons + p3_reasons) %>%
+    mutate(p_specific = ifelse(p_specific == 3, 1, 0)) %>%
+    select(-c(
+      age, num_cigs, ed_level, opiate_maintained, dep_anx, dep_anx_txt, gender,
+      length_dose, ab_score, cd_score, degree_program, p1_reasons,
+      p2_reasons, p3_reasons, ecig_value, p1_age, p1_ed, recruit_date
+    )) %>%
+    rowwise() %>%
+    mutate(n_reasons = sum(c_across(cols = -c(site)))) %>%
+    ungroup() %>%
+    group_by(site) %>%
+    filter(n_reasons == 1) %>%
+    select(-c(n_reasons)) %>%
+    summarise_all(.funs = sum)
+
+  write.csv(df,
+    paste(direc, "df_ps_inel_one.csv", sep = ""),
+    row.names = FALSE
+  )
+  df
+}
+
+
+plot_ps_ineligibility <- function(df) {
+  df <- df %>%
+    tidyr::pivot_longer(cols = -site)
+
+  ggplot(df, aes(x = name, y = value)) +
+    geom_col(aes(fill = site)) +
+    theme_classic(base_size = 15) +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(x = "")
+}
+
+plot_screening_ineligibility <- function(df) {
+  ggplot(df, aes(x = name, y = n)) +
+    geom_col(aes(fill = project)) +
+    theme_classic(base_size = 15) +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(x = "") +
+    facet_wrap(~site)
+  
+}
+
+
+
+get_current_enrollment <- function(df) {
+  # take dataframe with values from Study 3
+  # session log, return tibble with
+  # site-project summary information
+  df <- df %>%
+    rename(
+      "project" = screen_project,
+      "site" = redcap_data_access_group,
+      "status" = sl_status
+    )
+
+  # if they're not explicitly something else, they're pending
+  # screening approval......let's hope.....
+  df$status[df$status == ""] <- NA
+
+  df$randomized <- ifelse(!is.na(df$baseline_2_interviewer_complete), 1, 0)
+
+  df$pi_prop <- ifelse(substr(df$screen_id, 4, 4) == 9, "pilot", "proper")
+
+  enrollment <- df %>%
+    select(project, site, status, pi_prop) %>%
+    group_by(project, site, pi_prop) %>%
+    count(status)
+
+  enrollment$site <- tolower(enrollment$site)
+  enrollment$project[enrollment$project == ""] <- NA
+  enrollment <- enrollment %>% filter(!is.na(project))
+
+  enrollment <- enrollment %>%
+    tidyr::pivot_wider(
+      id_cols = c(project, site, pi_prop),
+      names_from = status,
+      values_from = n
+    )
+  # ### FIXES ERROR BY ADDING BLANK COLUMNS
+
+  if (!"Withdrawn - Pre-Product" %in% names(enrollment)) {
+    enrollment$withdrawn__preproduct <- 0
+  }
+  if (!"Withdrawn - Post-Product" %in% names(enrollment)) {
+    enrollment$withdrawn__postproduct <- 0
+  }
+  if (!"Complete" %in% names(enrollment)) {
+    enrollment$complete <- 0
+  }
+  if (!"Under LMP Review" %in% names(enrollment)) {
+    enrollment$`Under LMP Review` <- 0
+  }
+  if (!"In Progress" %in% names(enrollment)) {
+    enrollment$in_progress <- 0
+  }
+  if (!"Screening 1 Complete" %in% names(enrollment)) {
+    enrollment$screening_1_complete <- 0
+  }
+
+  randomized <- df %>%
+    rename("subjectid" = screen_id) %>%
+    select(subjectid, randomized, pi_prop)
+  randomized <- pjt_ste(randomized)
+
+  randomized <- randomized %>%
+    group_by(project, site, pi_prop) %>%
+    summarise(randomized = sum(randomized, na.rm = TRUE))
+
+  enrollment <- merge(enrollment, randomized, all.x = TRUE)
+  names(enrollment) <- tolower(names(enrollment))
+  names(enrollment) <- str_replace_all(names(enrollment), "-", "")
+  names(enrollment) <- str_replace_all(names(enrollment), " ", "_")
+  
+  enrollment$randomized[is.na(enrollment$randomized)] <- 0
+
+  # calculate total screenings
+  enrollment[is.na(enrollment)] <- 0
+  enrollment <- enrollment %>%
+    mutate(total_screenings = screening_ineligible + screening_1_complete +
+      in_progress + withdrawn__preproduct +
+      withdrawn__postproduct + complete +
+      under_lmp_review) %>%
+    select(
+      project, site, total_screenings, screening_1_complete, under_lmp_review,
+      screening_ineligible, in_progress, withdrawn__preproduct,
+      withdrawn__postproduct, randomized, complete, pi_prop
+    )
+
+  enrollment
+}
+
+exec_summary <- function(ip_list, current_enrollment, exec_by_site) {
+  rand <- pjt_ste(ip_list)
+  rand <- pi_prop(rand) %>%
+    group_by(project, site, pi_prop) %>%
+    count(is2_date) %>%
+    tidyr::drop_na() %>%
+    select(-is2_date) %>%
+    rename("received_product" = n)
+  
+  df <- left_join(current_enrollment, rand, by = c("project", "site", "pi_prop"))
+  df <- df %>%
+    mutate(
+      experimental = ifelse(is.na(received_product), 0, received_product),
+      baseline = in_progress - experimental,
+      screening = screening_1_complete + under_lmp_review
+      ) %>%
+    # rename("screening" = screening_1_complete) %>%
+    select(
+      project, site, screening, baseline, experimental, complete, pi_prop
+    )
+  
+  # by-site toggle
+  if (!exec_by_site) {
+    df %>%
+      group_by(project, pi_prop) %>%
+      summarize(across(.cols = -site, .fns = sum, na.rm = TRUE)) %>%
+      ungroup()
+      
+  } else {df}
+  
+}
+
+attrition <- function(current_enrollment, att_by_site) {
+  
+  #TODO: clean this nonsense up...
+  
+  c <- current_enrollment %>%
+    select(project, site, randomized, withdrawn__postproduct, pi_prop)
+  
+  if (att_by_site) {
+    c <- c %>% group_by(project, site, pi_prop) %>%
+      mutate(percent_of_randomized = round(
+      withdrawn__postproduct / randomized, digits = 4) * 100
+      ) %>%
+      ungroup() %>%
+      select(
+        project, site, randomized, withdrawn__postproduct, 
+        percent_of_randomized, pi_prop
+      ) 
+    colnames(c) <- c(
+      "project", "site",
+      "randomized",
+      "withdrawn\npost-product",
+      "% of randomized",
+      "pi_prop"
+    )
+  } else {
+    c <- c %>% 
+      select(-site) %>%
+      group_by(project, pi_prop) %>%
+      summarise(across(everything(), sum)) %>%
+      mutate(percent_of_randomized = round(
+        withdrawn__postproduct / randomized, digits = 4) * 100
+      ) %>%
+      ungroup() %>%
+      select(
+        project, randomized, withdrawn__postproduct, 
+        percent_of_randomized, pi_prop
+      ) 
+    colnames(c) <- c(
+      "project",
+      "randomized",
+      "withdrawn\npost-product",
+      "% of randomized",
+      "pi_prop"
+    )
+  }
+  
+  c
+}
+
+build_sex_table <- function(rc_df, full_subject_list, sex_by_site) {
+  
+  # limit to randomized only
+  rand_df <- full_subject_list %>% filter(is2_date == "randomized")
+  
+  sex_df <- rc_df %>%
+    rename("subjectid" = screen_id) %>%
+    filter(subjectid %in% rand_df$subjectid) %>%
+    pi_prop() %>%
+    filter(redcap_event_name == "screening_arm_1") %>%
+    select(project = screen_project, 
+           site = redcap_data_access_group,
+           screen_sex, pi_prop
+    )
+  
+  if (sex_by_site) {
+    sex_df <- sex_df %>%
+      group_by(project, site, pi_prop) %>%
+      count(screen_sex)
+  } else {
+    sex_df <- sex_df %>%
+      group_by(project, pi_prop) %>%
+      count(screen_sex)
+  }
+  sex_df %>%
+    tidyr::pivot_wider(
+      names_from = screen_sex,
+      values_from = n
+    ) %>%
+    mutate(
+      `% Female` = round(Female / sum(Female, Male, na.rm = TRUE), 4) * 100
+    )
+
+}
+
+append_enrollment <- function(current_enrollment_df, direc) {
+  # add today's date to current enrollment, append
+  # enrollment history
+  current_enrollment_df$date <- Sys.time()
+  write.table(current_enrollment_df,
+    file = paste("../enrollment_history/", direc, "enrollment_history.tsv", sep = ""),
+    append = TRUE,
+    row.names = FALSE, col.names = FALSE,
+    sep = "\t"
+  )
+}
+
+append_prescreen <- function(ps_df, direc) {
+  ps_df$date <- Sys.time()
+  write.table(ps_df,
+    file = paste("../enrollment_history/", direc, "ps_history.tsv", sep = ""),
+    append = TRUE,
+    row.names = FALSE, col.names = FALSE,
+    sep = "\t"
+  )
+}
+
+
+
+load_enrollment_history <- function(direc) {
+  # load report from enrollment_history.tsv
+  # return full df
+  df <- read.table(paste("../enrollment_history/", direc, "enrollment_history.tsv", sep = ""),
+    sep = "\t",
+    stringsAsFactors = FALSE,
+    header = TRUE
+  )
+  df$date <- ymd_hms(df$date)
+  df
+}
+
+
+# load_prescreen_history <- function(direc) {
+#   df <- read.table(paste("../enrollment_history/", direc, "ps_history.tsv", sep = ""),
+#     sep = "\t",
+#     stringsAsFactors = FALSE,
+#     header = TRUE
+#   )
+#   df$date <- ymd_hms(df$date)
+#   df
+# }
+
+load_prescreen_history <- function(direc) {
+  filename <- paste(direc, "prescreen_history.csv", sep = "")
+  df <- read.csv(filename, stringsAsFactors = FALSE)
+  df$recruit_date <- ymd(df$recruit_date)
+  df
+}
+
+
+assemble_rct_source <- function(ps_df, source_vars, min_date) {
+  
+  # Return sum and cumulative sum of prescreen counts for each source_vars by 
+  # date
+  
+  ps_df %>%
+    select(
+      site, recruit_date, all_of(source_vars), screen_status,
+      elig_project_1, elig_project_2, elig_project_3) %>%
+    mutate(
+      recruit_date = as.Date(recruit_date),
+      screen_status = ifelse(
+        screen_status != 3 | is.na(screen_status), FALSE, TRUE
+      ),
+      project = ifelse(
+        elig_project_1 == 1 & elig_project_3 == 1,
+        "Projects 1 and 3", "none"
+      ),
+      project = ifelse(
+        elig_project_1 == 1 & elig_project_3 == 0, "Project 1", project),
+      project = ifelse(elig_project_2 == 1, "Project 2", project),
+      project = ifelse(
+        elig_project_3 == 1 & elig_project_1 == 0, "Project 3", project
+      )) %>%
+    select(-c(elig_project_1, elig_project_2, elig_project_3)) %>%
+    filter(recruit_date < Sys.Date() & recruit_date > min_date) %>%
+    group_by(recruit_date, site, screen_status, project) %>%
+    summarize_all(~ sum(., na.rm = TRUE)) %>%
+    tidyr::pivot_longer(cols = -c(
+      recruit_date, site, screen_status, project
+    )) %>%
+    group_by(site, name) %>%
+    mutate(cs = cumsum(value)) %>%
+    ungroup()
+}
+
+
+rct_source_table <- function(rct_source) {
+  rct_source %>%
+    group_by(screen_status, project, name) %>%
+    summarize(count = sum(value, na.rm = TRUE)) %>%
+    tidyr::pivot_wider(
+      names_prefix = "screened_",
+      names_from = screen_status,
+      values_from = count
+    ) %>%
+    rename("screened" = `screened_TRUE`,
+           "not_screened"= `screened_FALSE`,
+           "source" = name) %>%
+    mutate(total_prescreens = screened + not_screened) %>%
+    arrange(-total_prescreens) %>%
+    select(source, total_prescreens, everything()) %>%
+    mutate(
+      retention = paste(round((
+        screened / total_prescreens
+        ) * 100, 2), "%", sep = "")) %>%
+    mutate(
+      screened = paste(
+        screened, "/", total_prescreens, " (", retention, ")", sep = ""
+        )
+    ) %>%
+    select(-c(total_prescreens, not_screened, retention)) %>%
+    tidyr::pivot_wider(
+      names_from = project, 
+      values_from = screened
+    ) %>%
+    select(source, `Project 1`, `Project 2`, `Project 3`, `Projects 1 and 3`)
+}
+
+rct_source_alluvial <- function(rc_df, ps_df, show_screened) {
+  
+  rc <- rc_df %>% 
+    filter(redcap_event_name == "screening_arm_1") %>%
+    select(screen_id, screen_project, sl_status)
+  ps <- ps_df %>% select(all_of(source_vars), screen_subjectid, site)
+  
+  df <- rc %>% 
+    full_join(ps, by = c("screen_id" = "screen_subjectid")) %>%
+    # filter(nchar(screen_id) == 6) %>%
+    mutate(screened = ifelse(!is.na(screen_project), "screened", "not_screened")) %>%
+    select(-c(screen_id, sl_status)) %>%
+    tidyr::pivot_longer(
+      cols = -c(screen_project, screened, site),
+      names_to = "source") %>%
+    group_by(screen_project, source, screened, site) %>%
+    summarize(number_screened = sum(value, na.rm = TRUE)) %>%
+    arrange(-number_screened) %>%
+    filter(number_screened > 0)
+  
+  if (!show_screened) {
+    df_plot <- df %>%
+      mutate(screen_project = ifelse(is.na(screen_project), "not_screened", screen_project))
+  } else {
+    df_plot <- df %>%
+      filter(!is.na(screen_project))
+  }
+  
+  ggplot(df_plot, aes(y = number_screened, axis1 = source, axis2 = screen_project)) +
+    geom_alluvium(aes(fill = source), show.legend = FALSE, na.rm = TRUE) +
+    geom_stratum(width = 3/12, alpha = .01) +
+    geom_label(stat = "stratum",
+               aes(label = after_stat(stratum)),
+               size = 5) +
+    scale_x_discrete(limits = c("source", "screen_project"), expand = c(0, -.75)) +
+    # scale_fill_brewer(palette = "Paired") +
+    labs(title = "Screenings Attended by Source",
+         y = "participants")
+}
+
+
+
+in_progress_list <- function(rc_df, direc) {
+  # return lists of in-progress and all participants
+
+  df <- rc_df %>%
+    select(screen_id, sl_status) %>%
+    tidyr::drop_na()
+  
+  rand <- rc_df %>%
+    select(screen_id, is2_date) %>%
+    mutate(is2_date = ifelse(!is.na(is2_date), "randomized", NA)) %>%
+    tidyr::drop_na()
+  
+  df <- left_join(df, rand, by = "screen_id") %>%
+    rename("subjectid" = screen_id)
+
+  df_ip <- df %>%
+    filter(sl_status == "In Progress")
+  
+  write.csv(df_ip,
+    paste(direc, "in_progress_list.csv", sep = ""),
+    row.names = FALSE
+  )
+  
+  write.csv(df,
+    paste(direc, "full_list.csv", sep = ""),
+    row.names = FALSE
+  )
+  df_ip
+}
+
+session_dates_list <- function(session_dates) {
+  session_dates %>%
+    group_by(subjectid) %>%
+    filter(date == max(date)) %>%
+    mutate(problem = ifelse(
+      Sys.Date() - as.Date(date) >= 14,
+      TRUE, FALSE)) %>%
+    mutate(date = format(date, '%Y-%m-%d'))
+}
+
+
+summarize_enrollment <- function(enrollment_history) {
+  # summarizes current enrollment, returns
+  # summzrized df
+  df <- enrollment_history %>%
+    distinct() %>%
+    filter(date == max(date)) %>%
+    select(-date)
+
+  colnames(df) <- c(
+    "project", "site",
+    "total\nscreenings",
+    "screening_1\ncomplete",
+    "pending\napproval",
+    "ineligible\nscreenings",
+    "in\nprogress",
+    "withdrawn\npre-product",
+    "withdrawn\npost-product",
+    "randomized\n(received product)", "complete", "pi_prop"
+  )
+  df
+}
+
+
+ivr_stats <- function(df) {
+  # summarize interesting IVR statistics
+  df %>%
+    summarise(
+      study_packs = sum(studycigs, na.rm = TRUE) / 20,
+      ub_packs = sum(nonstudycigs, na.rm = TRUE) / 20,
+      study_pods = sum(nstudypods, na.rm = TRUE),
+      ub_pods = sum(nnonstudypods, na.rm = TRUE)
+    )
+}
+
+ivr_summary <- function(ivr) {
+  ivr %>%
+    group_by(subjectid, project, site, pi_prop) %>%
+    summarise(
+      studycigs = mean(studycigs, na.rm = TRUE),
+      nonstudycigs = mean(nonstudycigs, na.rm = TRUE)
+    ) %>%
+    mutate(adherence = studycigs / sum(studycigs, nonstudycigs, na.rm = TRUE)) %>%
+    mutate(nonadherent = adherence < .5)
+}
+
+
+load_logfile <- function() {
+  read.table("logfile.tsv",
+    header = TRUE, sep = "\t",
+    stringsAsFactors = FALSE
+  )
+}
+
+randomization_needed <- function(current_enrollment, start_date, max_date,
+                                 goal_p1_p3, goal_p2, start) {
+  max_date <- ymd(max_date)
+  min_date <- ymd(start_date)
+  # enroll_difference <- goal_p1_p3 - min_enroll
+  x_seq <- seq(min_date, max_date, by = "day")
+  p1_p3_seq <- seq(start, goal_p1_p3, length.out = length(x_seq))
+  p2_seq <- seq(start, goal_p2, length.out = length(x_seq))
+  
+  enrollment_goal <- data.frame(date = x_seq, p1_p3_target = p1_p3_seq,
+                                p2_target = p2_seq)
+  
+  df <- current_enrollment %>%
+    filter(pi_prop != "pilot" &
+             site %in% sites) %>%
+    group_by(project) %>%
+    summarise(randomized = sum(randomized))
+  
+  enrollment_goal %>%
+    filter(date == Sys.Date()) %>%
+    mutate(p1_target = round(p1_p3_target),
+           p1_actual = df$randomized[df$project == "Project 1"],
+           p2_target = round(p2_target),
+           p2_actual = df$randomized[df$project == "Project 2"],
+           p3_target = round(p1_p3_target),
+           p3_actual = df$randomized[df$project == "Project 3"]) %>%
+    select(-c(date, p1_p3_target)) %>%
+    tidyr::pivot_longer(everything(),
+                        names_to = c("project", "x"),
+                        names_sep = "_",
+                        values_to = "value") %>%
+    tidyr::pivot_wider(names_from = "x", values_from = "value") %>%
+    arrange(project) %>%
+    mutate(project = recode(project, p1 = "Project 1", p2 = "Project 2", p3 = "Project 3")) %>%
+    mutate(diff = actual - target)
+
+}
+
+rand_rate <- function(rc_df, start_date) {
+  df <- rc_df %>%
+    mutate(bl2_date = as.Date(is2_date)) %>%
+    rename("subjectid" = screen_id) %>%
+    filter(redcap_event_name == "baseline_2_arm_1",
+           !is.na(bl2_date),
+           bl2_date >= start_date) %>%
+    select(subjectid, bl2_date)
+  df <- pjt_ste(df)
+  df <- pi_prop(df) %>% filter(pi_prop == "proper")
+  
+  byweek <- df %>%
+    mutate(yearweek = format(bl2_date, "%U/%Y")) %>%
+    group_by(project, yearweek) %>%
+    count(bl2_date) %>%
+    mutate(per_week = sum(n)) %>%
+    ungroup()
+  
+  rand_rate <- byweek %>%
+    group_by(project) %>%
+    summarize(per_wk = mean(per_week))
+  
+  p <- byweek %>%
+    group_by(bl2_date, project) %>%
+    summarize(avg_per_week = mean(per_week)) %>%
+    ggplot(aes(x = bl2_date, y = avg_per_week, color = project)) +
+    geom_line() +
+    ylim(0, 15) +
+    labs(
+        x = "",
+        color = "",
+        y = 'Avg. Rand. Per Week',
+        title = "Randomization Rate Per Week")
+  
+  list(rand_rate, p)
+}
+
+s2_rand_rate <- function(s2_bl2_dates) {
+  s2_bl2_dates %>%
+    mutate(yearweek = format(as.Date(date), "%U/%Y")) %>%
+    group_by(project, yearweek) %>%
+    count(date) %>%
+    mutate(per_week = sum(n)) %>%
+    group_by(project) %>%
+    summarize(per_wk = mean(per_week)) %>%
+    tidyr::drop_na()
+}
+
+# plotting functions -------------
+# df <- enrollment_history
+plot_enrollment <- function(enrollment_history) {
+  # pivot longer for plotting
+  df <- enrollment_history %>%
+    rename("datetime" = date) %>%
+    select(-c(withdrawn__postproduct, withdrawn__preproduct, screening_1_complete)) %>%
+    mutate(date = as.Date(datetime)) %>%
+    group_by(date) %>%
+    filter(datetime == max(datetime)) %>%
+    select(-c(under_lmp_review, screening_ineligible)) %>%
+    rename("received_product" = randomized) %>%
+    tidyr::pivot_longer(
+      cols = -c(project, site, date, datetime, pi_prop),
+      names_to = "variable",
+      values_to = "value"
+    )
+
+  df_sum <- df %>%
+    group_by(project, date, variable, pi_prop) %>%
+    summarise(value = sum(value))
+
+  ggplotly(ggplot(df_sum, aes(x = date, y = value)) +
+    # geom_point(aes(color = project)) +
+    geom_line(aes(color = project), alpha = 0.75) +
+    theme_classic(base_size = 13) +
+    theme(
+      strip.background = element_blank(),
+      axis.text.x = element_text(
+        angle = 45, vjust = 0.5, hjust = 1
+      )
+    ) +
+    facet_wrap(~variable,
+      scales = "free_y",
+      drop = FALSE, strip.position = "bottom"
+    ) +
+    labs(x = "", y = ""))
+}
+
+plot_prescreen <- function(ps_history, inc_comp_date, checkCompDate, date_range) {
+  df <- ps_history %>%
+    # rename("datetime" = date) %>%
+    # mutate(date = as.Date(datetime)) %>%
+    # group_by(date) %>%
+    # filter(datetime == max(datetime)) %>%
+    tidyr::pivot_longer(
+      cols = -c(site, recruit_date),
+      names_to = "variable",
+      values_to = "value"
+    ) 
+    # filter(recruit_date >= date_range[1] & recruit_date <= date_range[2])
+  
+  df$site <- factor(df$site, levels = c("uvm", "brown", "jhu"))
+  p <- ggplot(df, aes(x = recruit_date, y = value)) +
+    geom_line(aes(color = variable)) +
+    facet_wrap(~site) +
+    theme_classic(base_size = 13) +
+    theme(
+      strip.background = element_blank(),
+      axis.text.x = element_text(
+        angle = 45, vjust = 0.5, hjust = 1
+      )
+    ) +
+    labs(
+      x = "",
+      y = "",
+      color = ""
+    )
+  
+  if (checkCompDate) {
+    p <- p + geom_vline(
+      aes(xintercept = as.numeric(inc_comp_date)),
+      linetype = "dashed"
+    )
+  }
+  
+  ggplotly(p)
+}
+
+rct_source_long <- function(rct_source) {
+  df <- rct_source %>%
+    rename("datetime" = date) %>%
+    mutate(date = as.Date(datetime)) %>%
+    group_by(date) %>%
+    filter(datetime == max(datetime)) %>%
+    tidyr::pivot_longer(
+      cols = -c(site, date, datetime),
+      names_to = "variable",
+      values_to = "value"
+    )
+
+  df$site <- factor(df$site, levels = c("uvm", "brown", "jhu"))
+  df
+}
+
+
+plot_rct_source <- function(rct_source) {
+  rct_source %>%
+    group_by(site) %>%
+    filter(recruit_date == max(recruit_date)) %>%
+    ungroup() %>%
+    mutate(perc = (cs / sum(cs, na.rm = TRUE)) * 100) %>%
+    ggplot(aes(x = name, y = perc, fill = site)) +
+    geom_col() +
+    theme(axis.text.x = element_text(
+      angle = 45, vjust = 0.75, hjust = 1
+    )) +
+    labs(
+      x = "",
+      y = "Percent of Prescreens"
+    )
+}
+
+plot_rct_source_ts <- function(rct_source, inc_comp_date, checkCompDate, date_range) {
+  p <- rct_source %>%
+    group_by(name) %>%
+    # filter(recruit_date >= date_range[1] & recruit_date <= date_range[2]) %>%
+    mutate(cs = cumsum(value)) %>%
+    ggplot(aes(x = recruit_date, y = cs, color = name)) +
+    geom_line() +
+    theme_classic(base_size = 13) +
+    labs(
+      x = "",
+      y = "",
+      color = "",
+      title = "Number of Prescreens Over Time by Source"
+    )
+  
+  if (checkCompDate) {
+    p <- p + geom_vline(
+      aes(xintercept = as.numeric(inc_comp_date)),
+      linetype = "dashed"
+    )
+  }
+  ggplotly(p)
+}
+
+get_session_dates <- function(rc_df) {
+  # gather session dates and CO values for session distribution and 
+  # last session list, as well as CO tracking. if there's a rescreen,
+  # use that instead of screening
+  session_dates <- rc_df %>%
+    select(
+      screen_id, redcap_event_name, screen_date, rescreen_date, sl_condition, sl_ecig_condition,
+      is1_date, is2_date, iodd_date_session, ievn_date, sl_status, pi_prop, is1_co, is2_co, iodd_co,
+      ievn_co, screen_phys_9
+    ) %>%
+    group_by(screen_id) %>%
+    tidyr::fill(sl_status, sl_condition, sl_ecig_condition) %>%
+    ungroup() %>%
+    mutate(screen_date = ifelse(!is.na(rescreen_date), rescreen_date, screen_date)) %>%
+    tidyr::unite(col = "date", -c(
+      screen_id, redcap_event_name, sl_condition, sl_ecig_condition, rescreen_date,
+      sl_status, pi_prop, is1_co, is2_co, iodd_co, ievn_co, screen_phys_9), na.rm = TRUE) %>%
+    tidyr::unite(col = "co", c(is1_co, is2_co, iodd_co, ievn_co, screen_phys_9), na.rm = TRUE) %>%
+    mutate(date = ymd(ifelse(date == "" | date > as.Date("2025-01-01"), NA, date))) %>%
+    mutate(redcap_event_name = str_remove_all(redcap_event_name, "_arm_1")) %>%
+    select(-rescreen_date) %>%
+    rename(
+      "session" = redcap_event_name,
+      "subjectid" = screen_id
+    ) %>%
+    tidyr::drop_na(date) %>%
+    group_by(subjectid) %>%
+    filter(
+      !sl_status %in% c(
+        "Screening Ineligible", "Withdrawn - Pre-Product",
+        "Withdrawn - Post-Product"
+      )
+    )
+  session_dates$session <- factor(session_dates$session, levels = sessions)
+  pjt_ste(session_dates)
+}
+
+
+
+plot_session_distribution <- function(session_dates) {
+    session_dates %>% 
+      filter(sl_status != "Complete") %>%
+      ggplot(aes(x = session, fill = project)) +
+      geom_bar() +
+      theme_classic(base_size = 15) +
+      theme(axis.text.x = element_text(
+        angle = 45, vjust = 0.75, hjust = 1
+      )) +
+      theme(legend.position = "top") +
+      labs(
+        title = "Current Distribution of Participants",
+        subtitle = "Last Session Completed",
+        fill = ""
+      )
+}
+
+plot_complete <- function(session_dates) {
+  complete_goal <- 772
+  session_dates %>%
+    filter(sl_status == "Complete") %>%
+    ggplot(aes(x = session, fill = project)) +
+    geom_bar() +
+    geom_hline(aes(yintercept = complete_goal), linetype = "dashed") +
+    ylim(0, complete_goal) +
+    theme_classic(base_size = 15) +
+    theme(axis.text.x = element_blank()) +
+    labs(title = "Complete",
+         fill = "",
+         y = "",
+         x = "")
+}
+
+
+plot_randomization_goal <- function(enrollment_history, min_date, max_date,
+                                    min_enroll, max_enroll) {
+  max_date <- ymd(max_date)
+  min_date <- ymd(min_date)
+  enroll_difference <- max_enroll - min_enroll
+
+  # create sequence of dates and enrollment per day based on
+  # goal and date inputs
+  x_seq <- seq(min_date, max_date, by = "day")
+  y_seq <- seq(min_enroll, max_enroll, length.out = length(x_seq))
+  enrollment_goal <- data.frame(date = x_seq, target = y_seq)
+  
+  goal_lab <- paste("Goal = ", max_enroll)
+
+  enrollment_history <- enrollment_history %>% 
+    filter(pi_prop != "pilot") %>%
+    group_by(date, project) %>%
+    summarize(randomized = sum(randomized, na.rm = TRUE))
+  # plot current enrollment against goal
+  p <- ggplot(enrollment_goal, aes(date, target)) +
+    geom_line(linetype = "dashed") +
+    geom_line(
+      data = enrollment_history,
+      aes(
+        x = as.Date(date), y = randomized,
+        color = project
+      )
+    ) +
+    geom_hline(aes(yintercept = max_enroll),
+      linetype = "dotted"
+    ) +
+    ylim(0, max_enroll + 10) +
+    labs(
+      y = "Randomized",
+      color = ""
+    ) +
+    theme(legend.position = "top")
+  p +   annotate(
+    "text", x = min_date + 150, y = max_enroll + 5, label = goal_lab
+  )
+}
+
+
+plot_cig_adherence <- function(df) {
+  # scatter plot of avg study and nonstudy cpd
+  xmax <- max(df$studycigs, na.rm = TRUE) + 10
+  ggplot(df, aes(x = studycigs, y = nonstudycigs)) +
+    geom_point(aes(color = project, shape = project), size = 3) +
+    geom_label(
+      data = df %>% filter(nonadherent == TRUE),
+      aes(studycigs, nonstudycigs, label = subjectid)
+    ) +
+    xlim(0, xmax) +
+    ylim(0, xmax) +
+    geom_abline(slope = 1, linetype = "dashed") +
+    labs(
+      x = "Avg. Study CPD",
+      y = "Avg. UB CPD"
+    ) +
+    theme(legend.position = "top")
+}
+
+plot_ivr_timeseries <- function(df_long, ivr, sid, use_loess, show_threshold) {
+  ivr_filter <- ivr %>% filter(subjectid == sid)
+  bl_cpd <- mean(ivr_filter$cigs, na.rm = TRUE)
+
+  df_long <- df_long %>%
+    filter(daynumber >= daynumberbl2) %>%
+    mutate(calldate = mdy(calldate))
+  
+  min_calldate <- min(df_long$calldate)
+  
+  coeff <- .1
+   p <- ggplot(df_long, aes(calldate)) +
+    geom_hline(aes(yintercept = bl_cpd),
+               linetype = "solid", alpha = 0.5
+    ) +
+    annotate("text", x = min_calldate + 10, y = bl_cpd + 1,
+             label = "Baseline CPD"
+    ) +
+    scale_y_continuous(
+      name = "Cigarettes Per Day",
+      sec.axis = sec_axis(trans = ~.*coeff, name = "Pods Per Day")
+    ) +
+    labs(
+      x = "",
+      color = "",
+      caption = "Solid Lines: Cigarettes \n Dotted Lines: e-Cigarette Pods",
+      title = "Estimated Usage Rates"
+    ) +
+     theme(legend.position = "top")
+  
+  if (show_threshold) {
+    p <- p + 
+      geom_hline(aes(yintercept = 1.5 * bl_cpd)) +
+      geom_hline(aes(yintercept = 2.0 * bl_cpd)) +
+      annotate("text", 
+               x = min_calldate + 10, y = 1.5 * bl_cpd + 1,
+               label = "1.5x Baseline CPD"
+      ) +
+      annotate("text", 
+               x = min_calldate + 10, y = 2 * bl_cpd + 1,
+               label = "2x Baseline CPD"
+      )
+  }
+
+  # use smoothing vs raw
+  if (use_loess) {
+    p + geom_smooth(aes(y = cigs, color = type),
+                        method = "loess",
+                        formula = "y ~ x", na.rm = TRUE, se = FALSE
+    ) +
+      geom_smooth(aes(y = pods/coeff, color = type),
+                  method = "loess",
+                  formula = "y ~ x", na.rm = TRUE, se = FALSE,
+                  linetype = "dotted") 
+  } else {
+    p +
+      geom_point(aes(y = cigs, color = type)) +
+      geom_point(aes(y = pods/coeff, color = type), shape = 4) +
+      labs(subtitle = "points = cigarettes, x = pods")
+  }
+}
+
+plot_co <- function(sid, co_values, date_min, date_max, use_loess) {
+  p <- co_values %>% 
+    filter(subjectid == sid) %>%
+    mutate(co = as.numeric(co)) %>%
+    ggplot(aes(x = date, y = co)) +
+    xlim(date_min, date_max) +
+    geom_point() +
+    labs(y = "Expired Breath CO (ppm)",
+         x = "")
+  
+  # use smoothing vs raw
+  if (use_loess) {
+    p + geom_smooth(method = "loess",
+                    formula = "y ~ x", 
+                    na.rm = TRUE, se = FALSE)
+  } else {
+    p
+  }
+}
+
+
+

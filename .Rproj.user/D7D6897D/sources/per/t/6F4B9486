@@ -1,0 +1,26 @@
+{
+    "id": "6F4B9486",
+    "path": "~/Dropbox/vcbh/development/tcors_enrollment_cron/enrollment_report/functions.R",
+    "project_path": null,
+    "type": "r_source",
+    "hash": "3179676110",
+    "contents": "",
+    "dirty": false,
+    "created": 1635351430928.0,
+    "source_on_save": false,
+    "relative_order": 7,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "99,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1635352050,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1635352050,
+    "read_only": false,
+    "read_only_alternatives": []
+}
