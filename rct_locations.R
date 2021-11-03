@@ -1,7 +1,6 @@
 # Make API call from REDCap datasets to gather prescreen location information
 # Tony Barrows 2021-09-28
 
-
 library(dplyr)
 library(redcapAPI)
 library(ggplot2)
@@ -18,6 +17,75 @@ build_rcon <- function(rc){
   rcon <- redcapConnection(url = url, token = token)
   
   return(rcon)
+}
+
+download_rc_dataframe <- function(rcon, fields = NULL, events = NULL, study = "s3"){
+  # Download dataframe -----------------
+  df <- exportRecords(rcon, fields = c("screen_id", fields), labels = FALSE, survey = FALSE,
+                      dag = TRUE, events = events, form_complete_auto = FALSE, 
+                      dates = FALSE, factors = FALSE)
+  df <- df %>% 
+    filter(!grepl("-2", df$screen_id) & nchar(screen_id) == 6)
+  
+  if (study == "s3"){
+    df %>% filter(
+      grepl("X-", df$screen_id) |
+        grepl("Y-", df$screen_id) |
+        grepl("Z-", df$screen_id)
+    )
+  } else if (study == "s2") {
+    df %>% filter(
+      grepl("J-", df$screen_id) |
+        grepl("K-", df$screen_id) |
+        grepl("L-", df$screen_id)
+    )
+  }
+}
+
+pjt_ste <- function(df){
+  # impose project and site values on a data frame
+  pjt <- substr(df$screen_id, 1, 1)
+  ste <- substr(df$screen_id, 3, 3)
+  
+  df$project <- NA
+  df$project[pjt == "X"] <- "Project 1"
+  df$project[pjt == "Y"] <- "Project 2"
+  df$project[pjt == "Z"] <- "Project 3"
+  df$project[pjt == "J"] <- "Project 1"
+  df$project[pjt == "K"] <- "Project 2"
+  df$project[pjt == "L"] <- "Project 3"
+  
+  df$site <- NA
+  df$site[ste == "A"] <- "uvm"
+  df$site[ste == "B"] <- "brown"
+  df$site[ste == "C"] <- "jhu"
+  df$site <- factor(df$site, levels = c("uvm", "brown", "jhu"))
+  
+  return(df)
+}
+
+pi_prop <- function(df) {
+  df$pi_prop <- ifelse(substr(df$screen_id, 4, 4) == 9, "pilot", "proper")
+  df
+}
+
+pull_status <- function(rcon) {
+  fields <- c("sl_status", "is2_date")
+  events <- c("screening_arm_1", "baseline_2_arm_1")
+  
+  df <- download_rc_dataframe(rcon, fields = fields, events = events)
+  df %>%
+    group_by(screen_id) %>%
+    tidyr::fill(is2_date, .direction = "updown") %>%
+    filter(redcap_event_name == "screening_arm_1") %>%
+    mutate(
+      baseline2_date = as.Date(is2_date),
+      sl_status = redcapFactorFlip(sl_status)
+    ) %>%
+    pjt_ste() %>%
+    pi_prop() %>%
+    select(screen_id, sl_status, baseline2_date, project, site, pi_prop) %>%
+    ungroup()
 }
 
 download_ps <- function(rcon, fields = NULL, events = NULL) {
@@ -175,7 +243,6 @@ gather_ps_data <- function(ps_data) {
       elig_project_2,
       elig_project_3,
       elig_project_none,
-      screen_subjectid, 
       redcap_data_access_group,
       email_id,
       phone_id,
@@ -238,6 +305,22 @@ recode_flyer <- function(ps_location) {
       )
 }
 
+merge_trial_data <- function(ps_location) {
+  status <- pull_status(build_rcon("rc_proper"))
+  ps_location %>%
+    left_join(status, by = c("screen_subjectid" = "screen_id")) %>%
+    mutate(
+      randomized = ifelse(!is.na(baseline2_date), "randomized", "not randomized"),
+      complete = ifelse(sl_status == "Complete", "complete", "not complete"),
+      complete = ifelse(is.na(complete), "not complete", complete),
+      screened = ifelse(screened == "yes", "screened", "not screened"),
+      rand_proj = ifelse(
+        randomized == "randomized",
+        paste("rand:", project),
+        randomized)
+    )
+}
+
 
 # main -----
 
@@ -256,6 +339,8 @@ did_not_merge <- ps_location %>%
   filter(is.na(LAT) & !is.na(zip_id)) %>%
   select(recruit_date, ps_proj_eligible, source, screened, zip_id, city_id, state_id)
 
+# impose trial data
+ps_location <- merge_trial_data(ps_location)
 
 
 

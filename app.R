@@ -6,10 +6,12 @@ library(shinyWidgets)
 library(dplyr)
 library(plotly)
 library(DT)
+library(ggplot2)
+library(ggalluvial)
 
 ## plotting parameters
 
-theme_set(theme_classic())
+theme_set(theme_classic(base_size = 15))
 
 
 ps_location <- read.csv("./out/ps_locations.csv")
@@ -106,6 +108,60 @@ rct_rate <- function(ps_location) {
 }
 
 
+rct_flow <- function(ps_location, ps_proj_list, filter_low_n, filter_screened, 
+                     source_list, date_range_list) {
+    
+    # n_colors <-  nrow(distinct(df %>% ungroup() %>% select(ps_proj_eligible)))
+    n_colors <- 5
+    colors <- RColorBrewer::brewer.pal(n_colors, "Dark2")
+    
+    df <- ps_location %>%
+        filter(ps_proj_eligible %in% ps_proj_list,
+               source %in% source_list,
+               recruit_date >= date_range_list[[1]],
+               recruit_date <= date_range_list[[2]]) %>%
+        group_by(source, ps_proj_eligible, screened,
+                 rand_proj, randomized, complete, sl_status) %>%
+        count() 
+    
+    if (filter_low_n) {
+        df <- df %>%
+            group_by(source) %>%
+            mutate(source_sum = sum(n)) %>%
+            filter(source_sum > 5) %>%
+            select(-source_sum)
+    }
+    if (filter_screened) {
+        df <- df %>%
+            filter(screened == "screened")
+    }
+    
+
+    ggplot(df, aes(y = n,
+                   axis1 = source,
+                   axis2 = ps_proj_eligible,
+                   axis3 = rand_proj,
+                   axis4 = sl_status)) +
+        geom_alluvium(aes(fill = ps_proj_eligible)) +
+        geom_stratum(width = 1/4, color = "black", alpha = .5) +
+        geom_label(stat = "stratum",
+                   aes(label = after_stat(stratum)),
+                   alpha = .75) +
+        theme(axis.ticks.x = element_blank(),
+              axis.text.x = element_blank(),
+              axis.line.x = element_blank(),
+              legend.position = "top") +
+        labs(fill = "") +
+        scale_fill_manual(values = c(
+            "ineligible" = colors[1],
+            "Project 1" = colors[2],
+            "Project 1 and Project 3" = colors[3],
+            "Project 2" = colors[4],
+            "Project 3" = colors[5]
+        ))
+}
+
+
 
 rct_cost <- function(overall_cost, ps_location,filter_screen, source_list) {
     df <- ps_location %>%
@@ -186,13 +242,15 @@ ui <- fluidPage(
                     "Project 1" = "Project 1",
                     "Project 2" = "Project 2",
                     "Project 3" = "Project 3",
-                    "Projects 1 and 3" = "Project 1 and Project 3"
+                    "Projects 1 and 3" = "Project 1 and Project 3",
+                    "ineligible" = "ineligible"
                 ),
                 selected = c(
                     "Project 1", 
                     "Project 2", 
                     "Project 3", 
-                    "Project 1 and Project 3"
+                    "Project 1 and Project 3",
+                    "ineligible"
                 )
             ),
             materialSwitch(
@@ -222,6 +280,14 @@ ui <- fluidPage(
     
         mainPanel(
            tabsetPanel(type = "tabs",
+                       tabPanel("Recruitment Flow",
+                                br(),
+                                plotOutput("rct_flow_plot",
+                                           height = "1000px"),
+                                br(),
+                                checkboxInput("filter_low_n",
+                                              label = "Filter n < 5",
+                                              value = FALSE)),
                        tabPanel("Recruitment Rates",
                                 br(),
                                 plotlyOutput("rct_rate"),
@@ -260,6 +326,17 @@ server <- function(input, output) {
     
     output$last_updated <- renderText({
         paste("Last Updated", as.character(last_update))
+    })
+    
+    output$rct_flow_plot <- renderPlot({
+        rct_flow(
+            ps_location,
+            proj(),
+            input$filter_low_n,
+            input$switchScreened,
+            sources(),
+            date_range()
+        )
     })
     
     output$rct_rate <- renderPlotly({
