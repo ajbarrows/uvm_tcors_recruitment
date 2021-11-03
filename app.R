@@ -11,7 +11,7 @@ library(ggalluvial)
 
 ## plotting parameters
 
-theme_set(theme_classic(base_size = 15))
+theme_set(theme_classic(base_size = 18))
 
 
 ps_location <- read.csv("./out/ps_locations.csv")
@@ -147,11 +147,14 @@ rct_flow <- function(ps_location, ps_proj_list, filter_low_n, filter_screened,
         geom_label(stat = "stratum",
                    aes(label = after_stat(stratum)),
                    alpha = .75) +
-        theme(axis.ticks.x = element_blank(),
-              axis.text.x = element_blank(),
-              axis.line.x = element_blank(),
-              legend.position = "top") +
-        labs(fill = "") +
+        theme(legend.position = "top",) +
+        labs(fill = "Prescreen Project") +
+        scale_x_discrete(
+            limits = c(
+            "Source", "Prescreen Project", "Randomized Project", "Enrollment Status"
+            ),
+            expand = c(0.06,0.06)
+        ) +
         scale_fill_manual(values = c(
             "ineligible" = colors[1],
             "Project 1" = colors[2],
