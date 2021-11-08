@@ -140,7 +140,7 @@ download_ps_data <- function() {
     "redcap_id", "recruit_identinfo_id", "recruit_date", 
     "elig_project_1", "elig_project_2", "elig_project_3",
     "elig_project_none", "screen_subjectid", "recruit_1",
-    "recruit_1b"
+    "recruit_1b", "recruit_int_summ"
   )
   
   id_fields <- c(
@@ -155,8 +155,50 @@ download_ps_data <- function() {
   ps_share(df_id, df_ps)
 }
 
+download_ps_p4 <- function() {
+  rcon_ps_p4 <- build_rcon("rc_prescreen_p4")
+  # rcon_id_p4 <- build_rcon("rd_id_info_p4")
+  
+  ps_fields <- c(
+    "redcap_id", "recruit_identinfo_id", "recruit_date",
+    "recruit_int_summ", "recruit_1",
+    "recruit_3", "recruit_4", "recruit_4a", "recruit_5",
+    "recruit_6", "recruit_7", "recruit_7a", "recruit_8",
+    "recruit_9", "recruit_10", "recruit_11", "recruit_12",
+    "recruit_13", "recruit_14", "recruit_15"
+  )
+  
+  df_ps <- download_ps(rcon_ps_p4, fields = ps_fields)
+  
+  df_ps %>%
+    mutate(elig_project_4 = ifelse(
+      recruit_3 == 1 & 
+        (recruit_4 == 0 |
+        (recruit_4 == 1 & recruit_4a < 10)) &
+        recruit_5 == 0 & 
+        recruit_6 == 0 &
+        recruit_7a == 0 & 
+        (recruit_8 == 0 | recruit_8 == 7777) &
+        recruit_9 == 0 &
+        recruit_10 == 0 &
+        (recruit_11 > 17 & recruit_11 < 45) &
+        recruit_12 == 1 &
+        recruit_13 == 1 & 
+        recruit_14 < 26 & 
+        recruit_15 %in% 1:4,
+      1, 0
+      )) %>%
+    select(redcap_id, recruit_identinfo_id, recruit_date,
+           recruit_int_summ, starts_with("recruit_1___"))
+  
+  # df %>%
+  #   select(redcap_id, recruit_int_summ, elig_project_4) %>%
+  #   mutate(recruit_int_summ = redcapFactorFlip(recruit_int_summ)) %>%
+  #   write.csv("./out/p4_check.csv", row.names = FALSE)
+}
 
-rename_source <- function(only_one) {
+
+rename_source <- function(only_one, n_val) {
   only_one <- only_one %>%
     plyr::rename(
       c(
@@ -186,8 +228,8 @@ rename_source <- function(only_one) {
   
   # wrangle data to take values of column names
   
-  w1 <- which(only_one[,1:ncol(only_one)-1] == 1, arr.ind = TRUE)
-  w0 <- which(only_one[,1:ncol(only_one)-1] == 0, arr.ind = TRUE)
+  w1 <- which(only_one[,1:(ncol(only_one)-n_val)] == 1, arr.ind = TRUE)
+  w0 <- which(only_one[,1:(ncol(only_one)-n_val)] == 0, arr.ind = TRUE)
   only_one[w1] <- names(only_one)[w1[,"col"]]
   only_one[w0] <- NA
   
@@ -260,7 +302,7 @@ gather_ps_data <- function(ps_data) {
   only_one <- ps_data %>%
     filter(num_sources == 1)
   
-  only_one <- rename_source(only_one)
+  only_one <- rename_source(only_one, n_val = 9)
   
   # manual replace list:
   
@@ -280,6 +322,21 @@ gather_ps_data <- function(ps_data) {
     ))
   
   list(only_one, more_than_one)
+}
+
+gather_p4 <- function(p4_data) {
+  df <- p4_data %>% 
+    mutate(num_sources = rowSums(across(starts_with("recruit_1")), na.rm = TRUE))
+  
+  only_one <- df %>% filter(num_sources == 1)
+  only_one <- rename_source(only_one, n_val = 1)
+  
+  more_than_one <- df %>% 
+    filter(num_sources > 1) %>%
+    select(!starts_with("recruit_1___"))
+  more_than_one$source <- "multiple"
+  
+  rbind(only_one, more_than_one)
 }
 
 join_crosswalk <- function(ps_sub) {
@@ -314,6 +371,20 @@ merge_trial_data <- function(ps_location) {
       complete = ifelse(sl_status == "Complete", "complete", "not complete"),
       complete = ifelse(is.na(complete), "not complete", complete),
       screened = ifelse(screened == "yes", "screened", "not screened"),
+      recruit_int_summ = recode(
+        recruit_int_summ,
+        "1" = "screening_scheduled",
+        "2" = "waiting_list",
+        "3" = "screening_declined",
+        "4" = "ineligible",
+        "5" = "lost_contact",
+        .default = NA_character_
+        ),
+      recruit_int_summ = ifelse(
+        ps_proj_eligible == "ineligible",
+        "ineligible",
+        recruit_int_summ
+        ),
       rand_proj = ifelse(
         randomized == "randomized",
         paste("rand:", project),
@@ -323,7 +394,6 @@ merge_trial_data <- function(ps_location) {
 
 
 # main -----
-
 ps_data <- download_ps_data() # API call
 ps_data <- ps_data %>% recode_facebook(as.Date("2021-10-22"), Sys.Date())
 p <- gather_ps_data(ps_data)
@@ -341,6 +411,18 @@ did_not_merge <- ps_location %>%
 
 # impose trial data
 ps_location <- merge_trial_data(ps_location)
+
+# p4 ------
+
+p4_data <- download_ps_p4()
+# p4_data %>% recode_facebook(as.Date("2021-10-22"), Sys.Date())
+p4_data$recruit_1___20 <- NA
+
+p4 <- gather_p4(p4_data)
+# TODO # "recruit_int_summ" issue
+
+
+
 
 
 

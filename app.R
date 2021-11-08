@@ -120,7 +120,7 @@ rct_flow <- function(ps_location, ps_proj_list, filter_low_n, filter_screened,
                source %in% source_list,
                recruit_date >= date_range_list[[1]],
                recruit_date <= date_range_list[[2]]) %>%
-        group_by(source, ps_proj_eligible, screened,
+        group_by(source, ps_proj_eligible, screened, recruit_int_summ,
                  rand_proj, randomized, complete, sl_status) %>%
         count() 
     
@@ -140,18 +140,20 @@ rct_flow <- function(ps_location, ps_proj_list, filter_low_n, filter_screened,
     ggplot(df, aes(y = n,
                    axis1 = source,
                    axis2 = ps_proj_eligible,
-                   axis3 = rand_proj,
-                   axis4 = sl_status)) +
+                   axis3 = recruit_int_summ,
+                   axis4 = rand_proj,
+                   axis5 = sl_status)) +
         geom_alluvium(aes(fill = ps_proj_eligible)) +
         geom_stratum(width = 1/4, color = "black", alpha = .5) +
         geom_label(stat = "stratum",
                    aes(label = after_stat(stratum)),
-                   alpha = .75) +
+                   alpha = .75,
+                   size = 5) +
         theme(legend.position = "top",) +
         labs(fill = "Prescreen Project") +
         scale_x_discrete(
             limits = c(
-            "Source", "Prescreen Project", "Randomized Project", "Enrollment Status"
+            "Source", "Prescreen Project", "Prescreen Status", "Randomized Project", "Enrollment Status"
             ),
             expand = c(0.06,0.06)
         ) +
