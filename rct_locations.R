@@ -20,7 +20,9 @@ build_rcon <- function(rc){
 }
 
 download_rc_dataframe <- function(rcon, fields = NULL, events = NULL, study = "s3"){
-  # Download dataframe -----------------
+  # Make REDCap API call. Clean subject IDs according to study indication. If study = NULL,
+  # no cleaning will take place.
+  
   df <- exportRecords(rcon, fields = c("screen_id", fields), labels = FALSE, survey = FALSE,
                       dag = TRUE, events = events, form_complete_auto = FALSE, 
                       dates = FALSE, factors = FALSE)
@@ -39,6 +41,8 @@ download_rc_dataframe <- function(rcon, fields = NULL, events = NULL, study = "s
         grepl("K-", df$screen_id) |
         grepl("L-", df$screen_id)
     )
+  } else {
+    df
   }
 }
 
@@ -65,11 +69,16 @@ pjt_ste <- function(df){
 }
 
 pi_prop <- function(df) {
+  # impose pilot/proper designation on a data frame
+  
   df$pi_prop <- ifelse(substr(df$screen_id, 4, 4) == 9, "pilot", "proper")
   df
 }
 
 pull_status <- function(rcon) {
+  # return tidy data frame from the TCORS Study 3 "session log" enrollment
+  # status
+  
   fields <- c("sl_status", "is2_date")
   events <- c("screening_arm_1", "baseline_2_arm_1")
   
@@ -88,36 +97,24 @@ pull_status <- function(rcon) {
     ungroup()
 }
 
-download_ps <- function(rcon, fields = NULL, events = NULL) {
-  exportRecords(
-    rcon, fields = fields, labels = FALSE, survey = FALSE,
-    dag = TRUE, events = events, form_complete_auto = FALSE,
-    factors = FALSE
-  )
-}
 
-clean_ps <- function(ps_df) {
-  filter_str <- "-|_|copy|incomplete|empty"
+clean_ps <- function(ps_df, start_date = as.Date("2020-10-01")) {
+  # Filter out pre-screen records flagged as duplicate, error, or 
+  # having a date outside of the acceptable range.
+  
+  filter_str <- "-|_|copy|incomplete|empty|TEST|test"
   
   ps_df %>%
     filter(
       !stringr::str_detect(redcap_id, filter_str),
       !is.na(recruit_date),
-      as.Date(recruit_date) > as.Date("2020-10-01")
+      as.Date(recruit_date) > start_date
     )
 }
 
-recode_facebook <- function(ps_df, start_date, end_date) {
-  ps_df$recruit_1___20[ps_df$recruit_date >= start_date & 
-                        ps_df$recruit_date <= end_date & 
-                        ps_df$recruit_1___5 == 1] <- 1
-  ps_df$recruit_1___5[ps_df$recruit_date >= start_date & 
-                   ps_df$recruit_date <= end_date] <- 0
-  ps_df
-}
 
 ps_share <- function(df_id, df_ps) {
-  # merge identifying information with data 
+  # merge identifying information with pre-screen data 
   id <- df_id
   # arrange to spec
   df_ps_sub <- df_ps %>%
@@ -131,8 +128,18 @@ ps_share <- function(df_id, df_ps) {
   return(df)
 }
 
+download_ps <- function(rcon, fields = NULL, events = NULL) {
+  # Make REDCap API call to recruitment projects. 
+  exportRecords(
+    rcon, fields = fields, labels = FALSE, survey = FALSE,
+    dag = TRUE, events = events, form_complete_auto = FALSE,
+    factors = FALSE
+  )
+}
 
 download_ps_data <- function() {
+  # Produce merged pre-screen dataframe
+  
   rcon_ps <- build_rcon("rc_prescreen_uvm")
   rcon_id <- build_rcon("rc_id_info_uvm")
   
@@ -155,47 +162,7 @@ download_ps_data <- function() {
   ps_share(df_id, df_ps)
 }
 
-download_ps_p4 <- function() {
-  rcon_ps_p4 <- build_rcon("rc_prescreen_p4")
-  # rcon_id_p4 <- build_rcon("rd_id_info_p4")
-  
-  ps_fields <- c(
-    "redcap_id", "recruit_identinfo_id", "recruit_date",
-    "recruit_int_summ", "recruit_1",
-    "recruit_3", "recruit_4", "recruit_4a", "recruit_5",
-    "recruit_6", "recruit_7", "recruit_7a", "recruit_8",
-    "recruit_9", "recruit_10", "recruit_11", "recruit_12",
-    "recruit_13", "recruit_14", "recruit_15"
-  )
-  
-  df_ps <- download_ps(rcon_ps_p4, fields = ps_fields)
-  
-  df_ps %>%
-    mutate(elig_project_4 = ifelse(
-      recruit_3 == 1 & 
-        (recruit_4 == 0 |
-        (recruit_4 == 1 & recruit_4a < 10)) &
-        recruit_5 == 0 & 
-        recruit_6 == 0 &
-        recruit_7a == 0 & 
-        (recruit_8 == 0 | recruit_8 == 7777) &
-        recruit_9 == 0 &
-        recruit_10 == 0 &
-        (recruit_11 > 17 & recruit_11 < 45) &
-        recruit_12 == 1 &
-        recruit_13 == 1 & 
-        recruit_14 < 26 & 
-        recruit_15 %in% 1:4,
-      1, 0
-      )) %>%
-    select(redcap_id, recruit_identinfo_id, recruit_date,
-           recruit_int_summ, starts_with("recruit_1___"))
-  
-  # df %>%
-  #   select(redcap_id, recruit_int_summ, elig_project_4) %>%
-  #   mutate(recruit_int_summ = redcapFactorFlip(recruit_int_summ)) %>%
-  #   write.csv("./out/p4_check.csv", row.names = FALSE)
-}
+
 
 
 rename_source <- function(only_one, n_val) {
@@ -324,20 +291,7 @@ gather_ps_data <- function(ps_data) {
   list(only_one, more_than_one)
 }
 
-gather_p4 <- function(p4_data) {
-  df <- p4_data %>% 
-    mutate(num_sources = rowSums(across(starts_with("recruit_1")), na.rm = TRUE))
-  
-  only_one <- df %>% filter(num_sources == 1)
-  only_one <- rename_source(only_one, n_val = 1)
-  
-  more_than_one <- df %>% 
-    filter(num_sources > 1) %>%
-    select(!starts_with("recruit_1___"))
-  more_than_one$source <- "multiple"
-  
-  rbind(only_one, more_than_one)
-}
+
 
 join_crosswalk <- function(ps_sub) {
   ps_sub %>%
@@ -361,6 +315,23 @@ recode_flyer <- function(ps_location) {
       source)
       )
 }
+
+recode_buildclinical <- function(ps_location, start_date = as.Date("2021-10-22")) {
+  # BuildClinical took over digital recruitment for the TCORS
+  # main trial on 10/22/2021
+  
+  ps_location %>%
+    mutate(
+      source = ifelse(
+        as.Date(recruit_date) >= start_date &
+          (source == "facebook" | source == "instagram" | source == "google"),
+        "BuildClinical",
+        source
+      )
+    )
+}
+
+
 
 merge_trial_data <- function(ps_location) {
   status <- pull_status(build_rcon("rc_proper"))
@@ -392,10 +363,83 @@ merge_trial_data <- function(ps_location) {
     )
 }
 
+# P4 functions -----------
+
+download_ps_p4 <- function() {
+  # Project 4's REDCap project is structured differently, 
+  # which requires a different approach. 
+  
+  rcon_ps_p4 <- build_rcon("rc_prescreen_p4")
+  # rcon_id_p4 <- build_rcon("rd_id_info_p4")
+  
+  ps_fields <- c(
+    "redcap_id", "recruit_identinfo_id", "recruit_date",
+    "recruit_int_summ", "recruit_1",
+    "recruit_3", "recruit_4", "recruit_4a", "recruit_5",
+    "recruit_6", "recruit_7", "recruit_7a", "recruit_8",
+    "recruit_9", "recruit_10", "recruit_11", "recruit_12",
+    "recruit_13", "recruit_14", "recruit_15"
+  )
+  
+  df_ps <- download_ps(rcon_ps_p4, fields = ps_fields)
+  
+  df_ps %>%
+    mutate(elig_project_4 = ifelse(
+      recruit_3 == 1 & 
+        (recruit_4 == 0 |
+           (recruit_4 == 1 & recruit_4a < 10)) &
+        recruit_5 == 0 & 
+        recruit_6 == 0 &
+        recruit_7a == 0 & 
+        (recruit_8 == 0 | recruit_8 == 7777) &
+        recruit_9 == 0 &
+        recruit_10 == 0 &
+        (recruit_11 > 17 & recruit_11 < 45) &
+        recruit_12 == 1 &
+        recruit_13 == 1 & 
+        recruit_14 < 26 & 
+        recruit_15 %in% 1:4,
+      "Project 4", "ineligible"
+    ),
+    recruit_int_summ = recode(
+      as.character(recruit_int_summ),
+      "1" = "screening_scheduled",
+      "2" = "waiting_list",
+      "3" = "screening_declined",
+      "4" = "ineligible",
+      "5" = "lost_contact",
+      .default = NA_character_
+    )
+    ) %>%
+    select(
+      redcap_id, recruit_identinfo_id, recruit_date,
+       recruit_int_summ, elig_project_4, starts_with("recruit_1___")
+    )
+}
+  
+
+gather_p4 <- function(p4_data) {
+  df <- p4_data %>% 
+    mutate(num_sources = rowSums(across(starts_with("recruit_1")), na.rm = TRUE))
+  
+  only_one <- df %>% 
+    filter(num_sources == 1) %>%
+    select(-recruit_int_summ, recruit_int_summ)
+  
+  only_one <- rename_source(only_one, n_val = 2)
+  
+  more_than_one <- df %>% 
+    filter(num_sources > 1) %>%
+    select(!starts_with("recruit_1___"))
+  more_than_one$source <- "multiple"
+  
+  rbind(only_one, more_than_one)
+}
+
 
 # main -----
 ps_data <- download_ps_data() # API call
-ps_data <- ps_data %>% recode_facebook(as.Date("2021-10-22"), Sys.Date())
+# ps_data <- ps_data %>% recode_facebook(as.Date("2021-10-22"), Sys.Date())
 p <- gather_ps_data(ps_data)
 ps_sub_one <- p[[1]]
 ps_sub_multi <- p[[2]]
@@ -412,23 +456,47 @@ did_not_merge <- ps_location %>%
 # impose trial data
 ps_location <- merge_trial_data(ps_location)
 
+# recode BuildClinical sources
+ps_location <- recode_buildclinical(ps_location)
+
+
+# TODO function
+plot_main <- ps_location %>%
+  select(
+    redcap_id, recruit_date, source, recruit_int_summ,
+    ps_proj_eligible, screened, sl_status,
+    randomized, complete, rand_proj
+    )
+         
 # p4 ------
 
 p4_data <- download_ps_p4()
-# p4_data %>% recode_facebook(as.Date("2021-10-22"), Sys.Date())
-p4_data$recruit_1___20 <- NA
 
+p4_data <- clean_ps(p4_data, start_date = as.Date("2019-01-01"))
 p4 <- gather_p4(p4_data)
-# TODO # "recruit_int_summ" issue
+p4 <- recode_buildclinical(p4)
+
+plot_p4 <- p4 %>%
+  select(
+    redcap_id, recruit_date, source, recruit_int_summ,
+    ps_proj_eligible = elig_project_4
+  ) %>%
+  mutate(
+    screened = NA,
+    sl_status = NA,
+    randomized = NA, 
+    complete = NA,
+    rand_proj = NA
+  )
 
 
-
-
-
+# TODO sort of works but not really
+plot_df <- rbind(plot_main, plot_p4)
 
 # write to disk
 write.csv(ps_location, "./out/ps_locations.csv", row.names = FALSE)
 write.csv(did_not_merge, "./out/no_location_data.csv", row.names = FALSE)
+write.csv(plot_df, "./out/plot_df.csv", row.names = FALSE)
 
 # timestamp
 write.table(Sys.Date(), "./out/lastupdate.txt", row.names = FALSE, col.names = FALSE)

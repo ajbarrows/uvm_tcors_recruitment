@@ -13,7 +13,7 @@ library(ggalluvial)
 
 theme_set(theme_classic(base_size = 15))
 
-
+plot_df <- read.csv("./out/plot_df.csv")
 ps_location <- read.csv("./out/ps_locations.csv")
 no_location_data <- read.csv("./out/no_location_data.csv")
 
@@ -107,7 +107,7 @@ rct_rate <- function(ps_location) {
 
 
 rct_flow <-
-    function(ps_location,
+    function(plot_df,
              ps_proj_list,
              filter_low_n,
              filter_screened,
@@ -115,10 +115,10 @@ rct_flow <-
              date_range_list,
              remove_source) {
         # n_colors <-  nrow(distinct(df %>% ungroup() %>% select(ps_proj_eligible)))
-        n_colors <- 5
+        n_colors <- 6
         colors <- RColorBrewer::brewer.pal(n_colors, "Dark2")
         
-        df <- ps_location %>%
+        df <- plot_df %>%
             filter(
                 ps_proj_eligible %in% ps_proj_list,
                 source %in% source_list,
@@ -211,7 +211,8 @@ rct_flow <-
                     "Project 1" = colors[2],
                     "Project 1 and Project 3" = colors[3],
                     "Project 2" = colors[4],
-                    "Project 3" = colors[5]
+                    "Project 3" = colors[5],
+                    "Project 4" = colors[6]
                 )
             )
     }
@@ -301,6 +302,7 @@ ui <- fluidPage(
                     "Project 2" = "Project 2",
                     "Project 3" = "Project 3",
                     "Projects 1 and 3" = "Project 1 and Project 3",
+                    "Project 4" = "Project 4",
                     "ineligible" = "ineligible"
                 ),
                 selected = c(
