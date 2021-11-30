@@ -147,7 +147,7 @@ download_ps_data <- function() {
     "redcap_id", "recruit_identinfo_id", "recruit_date", 
     "elig_project_1", "elig_project_2", "elig_project_3",
     "elig_project_none", "screen_subjectid", "recruit_1",
-    "recruit_1b", "recruit_int_summ"
+    "recruit_1b", "recruit_int_summ", "screen_status"
   )
   
   id_fields <- c(
@@ -356,6 +356,13 @@ merge_trial_data <- function(ps_location) {
         "ineligible",
         recruit_int_summ
         ),
+      screen_status = recode(
+        screen_status,
+        "1" = "declined_consent",
+        "2" = "no-show",
+        "3" = "screened",
+        .default = NA_character_
+      ),
       rand_proj = ifelse(
         randomized == "randomized",
         paste("rand:", project),

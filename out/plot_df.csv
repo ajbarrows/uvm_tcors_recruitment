@@ -1,5 +1,4 @@
 "redcap_id","recruit_date","source","recruit_int_summ","ps_proj_eligible","screened","sl_status","randomized","complete","rand_proj"
-"65",2021-05-23,"craigslist","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "67",2021-05-24,"other_person","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "69",2021-05-25,"other","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "70",2021-05-25,"facebook","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
@@ -254,21 +253,59 @@
 "556",2021-10-31,"BuildClinical","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "557",2021-10-31,"craigslist","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "559",2021-11-01,"front_porch_forum","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
-"560",2021-11-05,"front_porch_forum",NA,"Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"561",2021-11-05,"front_porch_forum","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"564",2021-11-08,"neighborhood_news","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"567",2021-11-10,"BuildClinical","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"568",2021-11-10,"BuildClinical","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"570",2021-11-10,"TV","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"571",2021-11-10,"BuildClinical","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"577",2021-11-15,"clin_trials_web","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"579",2021-11-15,"front_porch_forum","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"582",2021-11-03,"BuildClinical","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"584",2021-11-16,"front_porch_forum","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"586",2021-11-17,"front_porch_forum","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"589",2021-11-18,"front_porch_forum","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"590",2021-11-18,"front_porch_forum","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"591",2021-11-18,"other_person","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"595",2021-11-22,"BuildClinical","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"596",2021-11-22,"front_porch_forum","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"597",2021-11-22,"front_porch_forum","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"599",2021-11-24,"front_porch_forum","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"600",2021-11-24,"front_porch_forum","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"601",2021-11-25,"front_porch_forum","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"602",2021-11-29,"BuildClinical","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"603",2021-11-29,"BuildClinical",NA,"Project 1","not screened",NA,"not randomized","not complete","not randomized"
+"605",2021-11-29,"direct_mail","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"606",2021-11-29,"BuildClinical",NA,"Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"607",2021-11-29,"BuildClinical",NA,"Project 1 and Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"608",2021-11-29,"BuildClinical",NA,"Project 1 and Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"609",2021-11-29,"BuildClinical",NA,"Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"610",2021-11-29,"BuildClinical",NA,"Project 1 and Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"611",2021-11-29,"BuildClinical","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"612",2021-11-29,"other",NA,"Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"613",2021-11-29,"BuildClinical","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"614",2021-11-29,"BuildClinical",NA,"Project 1","not screened",NA,"not randomized","not complete","not randomized"
+"615",2021-11-29,"BuildClinical",NA,"Project 1","not screened",NA,"not randomized","not complete","not randomized"
+"616",2021-11-29,"BuildClinical","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"617",2021-11-30,"BuildClinical",NA,"Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"618",2021-11-30,"BuildClinical",NA,"Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"619",2021-11-30,"BuildClinical",NA,"Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"620",2021-11-30,"flyer",NA,"Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"623",2021-11-30,"other_person","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S000002",2020-10-19,"pt_in_other_studies","screening_scheduled","Project 2","screened","Complete","randomized","complete","rand: Project 2"
 "S000015",2020-10-23,"facebook","screening_scheduled","Project 1 and Project 3","screened","Complete","randomized","complete","rand: Project 1"
 "S000019",2020-10-23,"pt_in_other_studies","screening_scheduled","Project 3","screened","Screening Ineligible","not randomized","not complete","not randomized"
 "S000037",2020-10-20,"facebook","screening_scheduled","Project 1 and Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S000062",2021-05-21,"facebook","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S000071",2021-06-24,"front_porch_forum","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
-"S000073",2021-10-26,"front_porch_forum","waiting_list","Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"S000073",2021-10-26,"front_porch_forum","lost_contact","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S000082",2020-10-17,"other_person","screening_scheduled","Project 1","screened",NA,"not randomized","not complete","not randomized"
 "S000089",2020-11-03,"facebook","screening_scheduled","Project 3","screened","Screening Ineligible","not randomized","not complete","not randomized"
 "S000100",2021-07-15,"front_porch_forum","screening_scheduled","Project 1 and Project 3","screened","Screening Ineligible","not randomized","not complete","not randomized"
 "S000104",2021-05-17,"facebook","lost_contact","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S000108",2021-09-14,"other_person","screening_scheduled","Project 1 and Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S000118",2021-02-12,"other_person","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
-"S000121",2021-06-03,"craigslist","screening_scheduled","Project 2","screened","In Progress","randomized","not complete","rand: Project 2"
+"S000121",2021-06-03,"craigslist","screening_scheduled","Project 2","screened","Complete","randomized","complete","rand: Project 2"
 "S000126",2020-10-26,"other","screening_scheduled","Project 1 and Project 3","screened","Complete","randomized","complete","rand: Project 1"
 "S000134",2021-03-08,"other_person","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S000136",2021-06-29,"facebook","screening_scheduled","Project 3","not screened",NA,"not randomized","not complete","not randomized"
@@ -392,7 +429,7 @@
 "S000285",2020-10-23,"other","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S000286",2020-10-23,"other","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S000287",2020-10-23,"pt_in_other_studies","screening_scheduled","Project 1","screened","Complete","randomized","complete","rand: Project 1"
-"S000288",2020-10-30,"pt_in_other_studies","screening_declined","Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"S000288",2021-11-15,"other_person","ineligible","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S000289",2020-11-03,"pt_in_other_studies","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S000290",2020-10-23,"other","ineligible","Project 1 and Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S000291",2020-11-04,"pt_in_other_studies","waiting_list","Project 2","not screened",NA,"not randomized","not complete","not randomized"
@@ -416,13 +453,13 @@
 "S000309",2020-11-05,"other_person","screening_scheduled","Project 1","screened","Withdrawn - Pre-Product","not randomized","not complete","not randomized"
 "S000310",2020-11-06,"pt_in_other_studies","screening_scheduled","Project 1","screened","Withdrawn - Post-Product","randomized","not complete","rand: Project 1"
 "S000311",2020-11-06,"pt_in_other_studies","screening_scheduled","Project 3","screened","Withdrawn - Post-Product","randomized","not complete","rand: Project 3"
-"S000312",2020-11-09,"flyer","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"S000312",2020-11-09,"flyer","waiting_list","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S000313",2020-11-09,"pt_in_other_studies","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S000314",2020-10-23,"facebook","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S000315",2020-10-23,"other","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S000316",2020-11-09,"flyer","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S000318",2020-10-23,"pt_in_other_studies","screening_scheduled","Project 1","screened","Complete","randomized","complete","rand: Project 1"
-"S000319",2020-10-23,"facebook","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"S000319",2021-11-12,"BuildClinical","waiting_list","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S000320",2020-10-23,"other_person","lost_contact","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S000321",2020-10-23,"facebook","lost_contact","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S000322",2020-10-23,"other","screening_scheduled","Project 3","screened","Complete","randomized","complete","rand: Project 3"
@@ -511,7 +548,6 @@
 "S000416",2020-11-01,"facebook","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S000417",2020-11-01,"facebook","screening_scheduled","Project 3","screened","Complete","randomized","complete","rand: Project 3"
 "S000418",2020-11-01,"facebook","ineligible","Project 3","not screened",NA,"not randomized","not complete","not randomized"
-"S000419",2020-11-01,"facebook","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S000420",2020-11-03,"facebook","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S000421",2020-11-03,"other","lost_contact","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S000422",2020-11-03,"craigslist","ineligible","Project 3","not screened",NA,"not randomized","not complete","not randomized"
@@ -664,7 +700,7 @@
 "S000577",2021-02-18,"facebook","screening_declined","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S000578",2021-02-18,"facebook","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S000579",2021-02-19,"craigslist","screening_scheduled","Project 1","not screened",NA,"not randomized","not complete","not randomized"
-"S000580",2021-10-25,"BuildClinical","waiting_list","Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"S000580",2021-10-25,"BuildClinical","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S000581",2021-02-19,"other_person","ineligible","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S000582",2021-02-19,"facebook","screening_declined","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S000583",2020-10-23,"pt_in_other_studies","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
@@ -674,7 +710,7 @@
 "S000587",2021-02-24,"facebook","screening_scheduled","Project 1 and Project 3","screened","Screening Ineligible","not randomized","not complete","not randomized"
 "S000588",2021-02-23,"facebook","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S000589",2021-02-23,"facebook","screening_declined","Project 2","not screened",NA,"not randomized","not complete","not randomized"
-"S000590",2021-10-28,"BuildClinical","waiting_list","Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"S000590",2021-10-28,"BuildClinical","lost_contact","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S000591",2021-02-25,"facebook","screening_scheduled","Project 3","screened","Complete","randomized","complete","rand: Project 3"
 "S000593",2020-10-23,"facebook","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S000594",2020-10-23,"other","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
@@ -707,9 +743,6 @@
 "S000622",2020-10-24,"direct_mail","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S000623",2020-10-24,"facebook","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S000624",2020-10-24,"pt_in_other_studies","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
-"561",2021-11-05,"front_porch_forum","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
-"562",2021-11-06,"neighborhood_news",NA,"Project 3","not screened",NA,"not randomized","not complete","not randomized"
-"563",2021-11-06,"BuildClinical",NA,"Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S000625",2020-10-24,"other","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S000626",2020-10-25,"direct_mail","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S000627",2020-10-25,"other","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
@@ -1088,7 +1121,7 @@
 "S001017",2021-05-03,"front_porch_forum","lost_contact","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001018",2021-05-04,"facebook","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001019",2021-05-04,"front_porch_forum","screening_scheduled","Project 1 and Project 3","screened","Screening Ineligible","not randomized","not complete","not randomized"
-"S001020",2021-04-30,"front_porch_forum","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"S001020",2021-11-14,"front_porch_forum","screening_scheduled","Project 3","screened","In Progress","not randomized","not complete","not randomized"
 "S001021",2021-05-01,"facebook","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S001022",2021-05-04,"facebook","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S001023",2021-05-04,"front_porch_forum","screening_declined","Project 1 and Project 3","not screened",NA,"not randomized","not complete","not randomized"
@@ -1168,11 +1201,11 @@
 "S001101",2021-06-10,"other","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001102",2021-06-10,"facebook","screening_declined","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001103",2021-06-11,"front_porch_forum","lost_contact","Project 3","not screened",NA,"not randomized","not complete","not randomized"
-"S001104",2021-06-10,"front_porch_forum","screening_scheduled","Project 1 and Project 3","screened","In Progress","randomized","not complete","rand: Project 1"
+"S001104",2021-06-10,"front_porch_forum","screening_scheduled","Project 1 and Project 3","screened","Withdrawn - Post-Product","randomized","not complete","rand: Project 1"
 "S001105",2021-06-11,"facebook","screening_scheduled","Project 1 and Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001106",2021-06-11,"facebook","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001107",2021-06-11,"front_porch_forum","waiting_list","Project 3","not screened",NA,"not randomized","not complete","not randomized"
-"S001109",2021-06-11,"facebook","lost_contact","Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"S001109",2021-11-06,"neighborhood_news","screening_scheduled","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001110",2021-06-11,"other_person","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001111",2021-06-11,"google","ineligible","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001112",2021-06-13,"facebook","lost_contact","Project 3","not screened",NA,"not randomized","not complete","not randomized"
@@ -1224,7 +1257,7 @@
 "S001160",2021-05-16,"facebook","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S001161",2021-07-01,"other_person","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001162",2021-07-03,"facebook","screening_declined","Project 3","not screened",NA,"not randomized","not complete","not randomized"
-"S001163",2021-07-03,"front_porch_forum","screening_scheduled","Project 3","screened","In Progress","randomized","not complete","rand: Project 3"
+"S001163",2021-07-03,"front_porch_forum","screening_scheduled","Project 3","screened","Complete","randomized","complete","rand: Project 3"
 "S001164",2021-07-04,"clin_trials_web","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001165",2021-07-06,"clin_trials_web","screening_scheduled","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001166",2021-07-06,"direct_mail","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
@@ -1244,7 +1277,7 @@
 "S001180",2021-07-10,"front_porch_forum","screening_scheduled","Project 3","screened","Screening Ineligible","not randomized","not complete","not randomized"
 "S001181",2021-05-19,"facebook","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S001182",2021-05-20,"facebook","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
-"S001183",2021-07-12,"front_porch_forum","lost_contact","Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"S001183",2021-11-21,"front_porch_forum","waiting_list","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001184",2021-07-15,"direct_mail","screening_scheduled","Project 3","screened","Screening Ineligible","not randomized","not complete","not randomized"
 "S001186",2021-05-21,"facebook","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S001187",2021-05-21,"facebook","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
@@ -1286,7 +1319,7 @@
 "S001226",2021-08-16,"facebook","screening_declined","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001227",2021-08-17,"facebook","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001228",2021-08-18,"direct_mail","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
-"S001229",2021-08-18,"direct_mail","screening_scheduled","Project 2","screened","In Progress","not randomized","not complete","not randomized"
+"S001229",2021-08-18,"direct_mail","screening_scheduled","Project 2","screened","In Progress","randomized","not complete","rand: Project 2"
 "S001230",2021-08-19,"direct_mail","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S001231",2021-08-18,"other_person","lost_contact","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001232",2021-08-18,"direct_mail","lost_contact","Project 3","not screened",NA,"not randomized","not complete","not randomized"
@@ -1337,7 +1370,7 @@
 "S001280",2021-08-27,"direct_mail","lost_contact","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001281",2021-08-27,"direct_mail","screening_scheduled","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001282",2021-08-27,"front_porch_forum","screening_scheduled","Project 3","not screened",NA,"not randomized","not complete","not randomized"
-"S001283",2021-08-28,"direct_mail","screening_scheduled","Project 2","screened","In Progress","not randomized","not complete","not randomized"
+"S001283",2021-08-28,"direct_mail","screening_scheduled","Project 2","screened","In Progress","randomized","not complete","rand: Project 2"
 "S001284",2021-08-31,"direct_mail","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S001285",2021-08-28,"front_porch_forum","screening_scheduled","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001286",2021-08-31,"direct_mail","screening_declined","Project 3","not screened",NA,"not randomized","not complete","not randomized"
@@ -1378,20 +1411,20 @@
 "S001324",2021-09-20,"direct_mail","lost_contact","Project 1 and Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001326",2021-09-11,"facebook","screening_declined","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001328",2021-09-14,"front_porch_forum","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
-"S001329",2021-09-13,"front_porch_forum","screening_scheduled","Project 3","screened","In Progress","not randomized","not complete","not randomized"
+"S001329",2021-09-13,"front_porch_forum","screening_scheduled","Project 3","screened","In Progress","randomized","not complete","rand: Project 3"
 "S001330",2021-09-13,"direct_mail","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001331",2021-09-13,"direct_mail","ineligible","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001332",2021-09-14,"facebook","screening_declined","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001333",2021-09-14,"direct_mail","screening_scheduled","Project 3","screened","In Progress","randomized","not complete","rand: Project 3"
-"S001334",2021-09-14,"front_porch_forum","screening_scheduled","Project 3","screened","In Progress","not randomized","not complete","not randomized"
-"S001335",2021-09-16,"craigslist","screening_scheduled","Project 2","screened","In Progress","not randomized","not complete","not randomized"
-"S001336",2021-09-16,"flyer","waiting_list","Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"S001334",2021-09-14,"front_porch_forum","screening_scheduled","Project 3","screened","Withdrawn - Pre-Product","not randomized","not complete","not randomized"
+"S001335",2021-09-16,"craigslist","screening_scheduled","Project 2","screened","In Progress","randomized","not complete","rand: Project 2"
+"S001336",2021-09-16,"flyer","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001337",2021-09-16,"direct_mail","screening_scheduled","Project 3","screened","In Progress","randomized","not complete","rand: Project 3"
 "S001338",2021-09-17,"direct_mail","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S001339",2021-09-17,"flyer","screening_scheduled","Project 2","screened","In Progress","randomized","not complete","rand: Project 2"
 "S001340",2021-09-16,"direct_mail","ineligible","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001341",2021-09-17,"front_porch_forum","screening_scheduled","Project 3","screened","Screening Ineligible","not randomized","not complete","not randomized"
-"S001342",2021-09-20,"direct_mail","screening_scheduled","Project 2","screened","In Progress","not randomized","not complete","not randomized"
+"S001342",2021-09-20,"direct_mail","screening_scheduled","Project 2","screened","In Progress","randomized","not complete","rand: Project 2"
 "S001343",2021-09-17,"front_porch_forum","screening_declined","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001344",2021-09-17,"direct_mail","screening_scheduled","Project 1","screened","Screening Ineligible","not randomized","not complete","not randomized"
 "S001345",2021-09-18,"other_person","waiting_list","Project 2","not screened",NA,"not randomized","not complete","not randomized"
@@ -1408,8 +1441,8 @@
 "S001357",2021-09-24,"facebook","lost_contact","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001358",2021-09-27,"radio","screening_declined","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001359",2021-09-28,"facebook","screening_scheduled","Project 3","not screened",NA,"not randomized","not complete","not randomized"
-"S001360",2021-09-28,"flyer","waiting_list","Project 2","not screened",NA,"not randomized","not complete","not randomized"
-"S001362",2021-09-30,"flyer","screening_scheduled","Project 2","screened","Screening 1 Complete","not randomized","not complete","not randomized"
+"S001360",2021-09-28,"flyer","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"S001362",2021-09-30,"flyer","screening_scheduled","Project 2","screened","In Progress","not randomized","not complete","not randomized"
 "S001363",2021-10-04,"flyer","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S001364",2021-10-02,"flyer","screening_scheduled","Project 3","screened","Screening Ineligible","not randomized","not complete","not randomized"
 "S001365",2021-10-03,"facebook","screening_declined","Project 3","not screened",NA,"not randomized","not complete","not randomized"
@@ -1417,13 +1450,14 @@
 "S001367",2021-10-05,"other_person","screening_scheduled","Project 1","not screened",NA,"not randomized","not complete","not randomized"
 "S001368",2021-10-05,"flyer","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S001369",2021-10-05,"flyer","waiting_list","Project 2","screened","Screening Ineligible","not randomized","not complete","not randomized"
-"S001370",2021-10-08,"flyer","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"S001370",2021-11-16,"flyer","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S001371",2021-10-08,"flyer","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S001372",2021-10-08,"other_person","screening_declined","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001373",2021-10-10,"facebook","screening_declined","Project 3","not screened",NA,"not randomized","not complete","not randomized"
-"S001374",2021-10-10,"other_person","screening_scheduled","Project 3","screened","In Progress","not randomized","not complete","not randomized"
+"S001374",2021-10-10,"other_person","screening_scheduled","Project 3","screened","In Progress","randomized","not complete","rand: Project 3"
 "S001375",2021-10-11,"direct_mail","screening_declined","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001376",2021-10-11,"other_person","ineligible","Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"S001377",2021-11-16,"other_person","screening_scheduled","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001378",2021-10-11,"other","lost_contact","Project 1","not screened",NA,"not randomized","not complete","not randomized"
 "S001379",2021-10-12,"craigslist","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S001380",2021-10-12,"facebook","screening_declined","Project 2","not screened",NA,"not randomized","not complete","not randomized"
@@ -1433,27 +1467,44 @@
 "S001384",2021-10-19,"facebook","screening_declined","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001385",2021-10-22,"other_person","waiting_list","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001386",2021-10-22,"front_porch_forum","screening_declined","Project 3","not screened",NA,"not randomized","not complete","not randomized"
-"S001387",2021-10-23,"BuildClinical","screening_declined","Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"S001387",2021-11-16,"BuildClinical","waiting_list","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001388",2021-10-23,"direct_mail","screening_declined","Project 2","not screened",NA,"not randomized","not complete","not randomized"
-"S001389",2021-10-24,"front_porch_forum","waiting_list","Project 3","not screened",NA,"not randomized","not complete","not randomized"
-"S001390",2021-10-25,"BuildClinical","screening_scheduled","Project 1","screened","Screening 1 Complete","not randomized","not complete","not randomized"
-"S001391",2021-10-25,"BuildClinical","waiting_list","Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"S001389",2021-10-24,"front_porch_forum","lost_contact","Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"S001390",2021-10-25,"BuildClinical","screening_scheduled","Project 1","screened","Screening Ineligible","not randomized","not complete","not randomized"
+"S001391",2021-10-25,"BuildClinical","screening_scheduled","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001392",2021-10-25,"flyer","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S001393",2021-10-25,"pt_in_other_studies","waiting_list","Project 2","not screened",NA,"not randomized","not complete","not randomized"
-"S001394",2021-10-26,"direct_mail","waiting_list","Project 2","not screened",NA,"not randomized","not complete","not randomized"
-"S001395",2021-10-28,"BuildClinical","waiting_list","Project 2","not screened",NA,"not randomized","not complete","not randomized"
-"S001396",2021-10-28,"front_porch_forum","screening_scheduled","Project 3","not screened",NA,"not randomized","not complete","not randomized"
-"S001397",2021-10-29,"front_porch_forum","screening_scheduled","Project 3","not screened",NA,"not randomized","not complete","not randomized"
-"S001398",2021-11-01,"front_porch_forum","waiting_list","Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"S001394",2021-10-26,"direct_mail","screening_scheduled","Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"S001395",2021-10-28,"BuildClinical","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"S001396",2021-10-28,"front_porch_forum","screening_scheduled","Project 3","screened","Screening Ineligible","not randomized","not complete","not randomized"
+"S001397",2021-10-29,"front_porch_forum","screening_scheduled","Project 3","screened","Screening Ineligible","not randomized","not complete","not randomized"
+"S001398",2021-11-01,"front_porch_forum","screening_declined","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001399",2021-11-01,"BuildClinical","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S001400",2021-11-01,"BuildClinical","screening_scheduled","Project 3","not screened",NA,"not randomized","not complete","not randomized"
-"S001401",2021-11-02,"flyer","screening_scheduled","Project 3","screened","Screening 1 Complete","not randomized","not complete","not randomized"
-"S001402",2021-11-02,"BuildClinical","screening_scheduled","Project 3","not screened",NA,"not randomized","not complete","not randomized"
-"S001403",2021-11-01,"BuildClinical","waiting_list","Project 3","not screened",NA,"not randomized","not complete","not randomized"
-"S001404",2021-11-02,"front_porch_forum","waiting_list","Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"S001401",2021-11-02,"flyer","screening_scheduled","Project 3","screened","Screening Ineligible","not randomized","not complete","not randomized"
+"S001402",2021-11-02,"BuildClinical","screening_scheduled","Project 3","screened","Screening Ineligible","not randomized","not complete","not randomized"
+"S001403",2021-11-01,"BuildClinical","lost_contact","Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"S001404",2021-11-02,"front_porch_forum","screening_scheduled","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001405",2021-11-02,"BuildClinical","waiting_list","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001406",2021-11-02,"BuildClinical","screening_scheduled","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S001407",2021-11-04,"flyer","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"S001408",2021-11-05,"front_porch_forum","waiting_list","Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"S001409",2021-11-06,"BuildClinical","waiting_list","Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"S001410",2021-11-10,"BuildClinical","screening_scheduled","Project 3","screened","Screening Ineligible","not randomized","not complete","not randomized"
+"S001412",2021-11-01,"BuildClinical","lost_contact","Project 1 and Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"S001413",2021-11-10,"BuildClinical","screening_scheduled","Project 1","not screened",NA,"not randomized","not complete","not randomized"
+"S001414",2021-11-10,"BuildClinical","screening_scheduled","Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"S001415",2021-11-14,"other_person","screening_scheduled","Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"S001416",2021-11-15,"front_porch_forum","screening_scheduled","Project 3","screened","Screening Ineligible","not randomized","not complete","not randomized"
+"S001417",2021-11-16,"flyer","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"S001418",2021-11-18,"flyer","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"S001419",2021-11-15,"front_porch_forum","waiting_list","Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"S001421",2021-11-16,"front_porch_forum","waiting_list","Project 1 and Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"S001422",2021-11-17,"front_porch_forum","screening_declined","Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"S001423",2021-11-17,"front_porch_forum","waiting_list","Project 1 and Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"S001424",2021-11-23,"flyer","waiting_list","Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"S001425",2021-11-20,"BuildClinical","waiting_list","Project 1 and Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"S001426",2021-05-23,"craigslist","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "109",2021-06-04,"multiple","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "171",2021-06-15,"multiple","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "176",2021-06-14,"multiple","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
@@ -1480,6 +1531,9 @@
 "459",2021-09-18,"multiple","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "490",2021-09-28,"multiple","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "506",2021-10-05,"multiple","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"604",2021-11-29,"multiple","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"621",2021-11-30,"multiple","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
+"622",2021-11-30,"multiple","ineligible","ineligible","not screened",NA,"not randomized","not complete","not randomized"
 "S000028",2020-10-25,"multiple","screening_scheduled","Project 2","screened","Complete","randomized","complete","rand: Project 2"
 "S000057",2021-07-12,"multiple","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S000150",2021-09-15,"multiple","waiting_list","Project 2","screened","Screening Ineligible","not randomized","not complete","not randomized"
@@ -1487,6 +1541,7 @@
 "S000276",2020-10-23,"multiple","screening_scheduled","Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S000280",2020-10-23,"multiple","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S000317",2020-10-23,"multiple","ineligible","Project 2","not screened",NA,"not randomized","not complete","not randomized"
+"S000419",2021-11-20,"multiple","waiting_list","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S000513",2020-11-09,"multiple","screening_scheduled","Project 1","not screened",NA,"not randomized","not complete","not randomized"
 "S000537",2020-10-03,"multiple","screening_declined","Project 1 and Project 3","not screened",NA,"not randomized","not complete","not randomized"
 "S000543",2020-11-27,"multiple","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
@@ -1517,66 +1572,69 @@
 "S001325",2021-09-10,"multiple","lost_contact","Project 1","not screened",NA,"not randomized","not complete","not randomized"
 "S001327",2021-09-14,"multiple","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
 "S001361",2021-09-29,"multiple","lost_contact","Project 2","not screened",NA,"not randomized","not complete","not randomized"
-"7",2019-12-25,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"10",2020-01-05,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"11",2020-05-22,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"15",2020-10-27,"craigslist","4","ineligible",NA,NA,NA,NA,NA
-"16",2021-01-23,"other","4","ineligible",NA,NA,NA,NA,NA
-"17",2021-03-16,"other","4","ineligible",NA,NA,NA,NA,NA
-"18",2021-03-17,"pt_in_other_studies","4","ineligible",NA,NA,NA,NA,NA
-"19",2021-03-17,"other","4","ineligible",NA,NA,NA,NA,NA
-"20",2021-03-17,"direct_mail","4","ineligible",NA,NA,NA,NA,NA
-"21",2021-03-17,"direct_mail","4","ineligible",NA,NA,NA,NA,NA
-"22",2021-03-17,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"23",2021-03-17,"pt_in_other_studies","4","ineligible",NA,NA,NA,NA,NA
-"24",2021-03-24,"other","4","ineligible",NA,NA,NA,NA,NA
-"26",2021-04-06,"youtube","4","ineligible",NA,NA,NA,NA,NA
-"27",2021-04-06,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"28",2021-04-08,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"30",2021-04-13,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"31",2021-04-16,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"32",2021-04-17,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"33",2021-04-18,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"34",2021-04-18,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"35",2021-04-21,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"36",2021-04-21,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"37",2021-04-24,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"38",2021-04-25,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"39",2021-04-25,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"40",2021-04-25,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"41",2021-04-26,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"42",2021-04-30,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"43",2021-05-02,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"44",2021-05-03,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"45",2021-05-07,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"46",2021-05-08,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"47",2021-05-10,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"48",2021-05-11,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"49",2021-05-13,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"50",2021-05-20,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"51",2021-06-02,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"52",2021-06-10,"other_person","4","ineligible",NA,NA,NA,NA,NA
-"53",2021-06-28,"other","4","ineligible",NA,NA,NA,NA,NA
-"54",2021-06-30,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"56",2021-07-04,"TV","4","ineligible",NA,NA,NA,NA,NA
-"57",2021-07-12,"youtube","4","ineligible",NA,NA,NA,NA,NA
-"59",2021-07-27,"other","4","ineligible",NA,NA,NA,NA,NA
-"60",2021-08-08,"instagram","4","ineligible",NA,NA,NA,NA,NA
-"61",2021-08-10,"google","4","ineligible",NA,NA,NA,NA,NA
-"63",2021-08-22,"other","4","ineligible",NA,NA,NA,NA,NA
-"R001",2019-08-20,"pt_in_other_studies","1",NA,NA,NA,NA,NA,NA
+"S001411",2021-11-10,"multiple","screening_scheduled","Project 3","not screened",NA,"not randomized","not complete","not randomized"
+"S001420",2021-11-16,"multiple","screening_scheduled","Project 1","not screened",NA,"not randomized","not complete","not randomized"
+"7",2019-12-25,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"10",2020-01-05,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"11",2020-05-22,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"15",2020-10-27,"craigslist","ineligible","ineligible",NA,NA,NA,NA,NA
+"16",2021-01-23,"other","ineligible","ineligible",NA,NA,NA,NA,NA
+"17",2021-03-16,"other","ineligible","ineligible",NA,NA,NA,NA,NA
+"18",2021-03-17,"pt_in_other_studies","ineligible","ineligible",NA,NA,NA,NA,NA
+"19",2021-03-17,"other","ineligible","ineligible",NA,NA,NA,NA,NA
+"20",2021-03-17,"direct_mail","ineligible","ineligible",NA,NA,NA,NA,NA
+"21",2021-03-17,"direct_mail","ineligible","ineligible",NA,NA,NA,NA,NA
+"22",2021-03-17,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"23",2021-03-17,"pt_in_other_studies","ineligible","ineligible",NA,NA,NA,NA,NA
+"24",2021-03-24,"other","ineligible","ineligible",NA,NA,NA,NA,NA
+"26",2021-04-06,"youtube","ineligible","ineligible",NA,NA,NA,NA,NA
+"27",2021-04-06,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"28",2021-04-08,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"30",2021-04-13,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"31",2021-04-16,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"32",2021-04-17,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"33",2021-04-18,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"34",2021-04-18,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"35",2021-04-21,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"36",2021-04-21,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"37",2021-04-24,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"38",2021-04-25,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"39",2021-04-25,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"40",2021-04-25,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"41",2021-04-26,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"42",2021-04-30,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"43",2021-05-02,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"44",2021-05-03,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"45",2021-05-07,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"46",2021-05-08,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"47",2021-05-10,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"48",2021-05-11,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"49",2021-05-13,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"50",2021-05-20,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"51",2021-06-02,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"52",2021-06-10,"other_person","ineligible","ineligible",NA,NA,NA,NA,NA
+"53",2021-06-28,"other","ineligible","ineligible",NA,NA,NA,NA,NA
+"54",2021-06-30,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"56",2021-07-04,"TV","ineligible","ineligible",NA,NA,NA,NA,NA
+"57",2021-07-12,"youtube","ineligible","ineligible",NA,NA,NA,NA,NA
+"59",2021-07-27,"other","ineligible","ineligible",NA,NA,NA,NA,NA
+"60",2021-08-08,"instagram","ineligible","ineligible",NA,NA,NA,NA,NA
+"61",2021-08-10,"google","ineligible","ineligible",NA,NA,NA,NA,NA
+"63",2021-08-22,"other","ineligible","ineligible",NA,NA,NA,NA,NA
+"65",2021-11-28,"other_person",NA,"ineligible",NA,NA,NA,NA,NA
+"R001",2019-08-20,"pt_in_other_studies","screening_scheduled",NA,NA,NA,NA,NA,NA
 "R002",2019-09-16,"other_person",NA,"ineligible",NA,NA,NA,NA,NA
-"R003",2019-12-06,"facebook","1",NA,NA,NA,NA,NA,NA
-"R004",2019-12-06,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"R005",2019-12-13,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"R007",2019-12-16,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"R008",2019-12-25,"facebook","4","ineligible",NA,NA,NA,NA,NA
-"R009",2019-12-30,"facebook","4","ineligible",NA,NA,NA,NA,NA
+"R003",2019-12-06,"facebook","screening_scheduled",NA,NA,NA,NA,NA,NA
+"R004",2019-12-06,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"R005",2019-12-13,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"R007",2019-12-16,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"R008",2019-12-25,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
+"R009",2019-12-30,"facebook","ineligible","ineligible",NA,NA,NA,NA,NA
 "R010",2020-02-04,"flyer",NA,"Project 4",NA,NA,NA,NA,NA
 "R011",2020-02-16,"facebook",NA,"Project 4",NA,NA,NA,NA,NA
-"R012",2021-02-27,"facebook","5","Project 4",NA,NA,NA,NA,NA
-"29",2021-04-11,"multiple","4","ineligible",NA,NA,NA,NA,NA
-"58",2021-07-21,"multiple","4","ineligible",NA,NA,NA,NA,NA
-"62",2021-08-14,"multiple","4","ineligible",NA,NA,NA,NA,NA
-"64",2021-09-06,"multiple","4","ineligible",NA,NA,NA,NA,NA
-"R006",2019-12-15,"multiple","4","ineligible",NA,NA,NA,NA,NA
+"R012",2021-02-27,"facebook","lost_contact","Project 4",NA,NA,NA,NA,NA
+"29",2021-04-11,"multiple","ineligible","ineligible",NA,NA,NA,NA,NA
+"58",2021-07-21,"multiple","ineligible","ineligible",NA,NA,NA,NA,NA
+"62",2021-08-14,"multiple","ineligible","ineligible",NA,NA,NA,NA,NA
+"64",2021-09-06,"multiple","ineligible","ineligible",NA,NA,NA,NA,NA
+"R006",2019-12-15,"multiple","ineligible","ineligible",NA,NA,NA,NA,NA

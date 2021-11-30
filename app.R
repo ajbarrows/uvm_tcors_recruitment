@@ -105,6 +105,115 @@ rct_rate <- function(ps_location) {
     list(rate, accrual)
 }
 
+rct_rate_table <- function(ps_location) {
+    t <- ps_location %>%
+        mutate(recruit_date = as.Date(recruit_date)) %>%
+        group_by(recruit_date, source, screened, screen_status, sl_status, ps_proj_eligible, recruit_int_summ, randomized) %>%
+        count() %>%
+        ungroup()
+    
+    n_ps <- ps_location %>%
+        group_by(source) %>%
+        count(name = "n_prescreens")
+    
+    ps_result <- t %>%
+        select(recruit_date, source, recruit_int_summ, n) %>%
+        mutate(recruit_int_summ = factor(
+            recruit_int_summ, levels = c(
+                "screening_scheduled",
+                "waiting_list",
+                "screening_declined",
+                "ineligible",
+                "lost_contact"
+            )
+        )) %>%
+        tidyr::complete(recruit_int_summ) %>%
+        tidyr::pivot_wider(
+            names_from = recruit_int_summ, 
+            values_from = n,
+            values_fill = 0,
+            values_fn = sum
+        ) %>%
+        rowwise() %>%
+        mutate(waiting_list = sum(waiting_list, `NA`)) %>%
+        select(-`NA`)
+    
+    screen_status <- t %>%
+        select(recruit_date, source, screen_status, n) %>%
+        mutate(screen_status = factor(
+            screen_status, levels = c(
+                "declined_consent",
+                "no-show",
+                "screened")
+        )) %>%
+        tidyr::drop_na() %>%
+        tidyr::complete(screen_status) %>%
+        tidyr::pivot_wider(
+            names_from = screen_status,
+            values_from = n,
+            values_fill = 0,
+            values_fn = sum
+        )
+    
+        # TODO make factors explicit
+    sl_status <- t %>%
+        select(recruit_date, source, sl_status, n) %>%
+        # mutate(sl_status = factor(
+        #     sl_status, levels = levels(t$sl_status)
+        # )) %>%
+        tidyr::drop_na() %>%
+        tidyr::complete(sl_status) %>%
+        tidyr::pivot_wider(
+            names_from = sl_status,
+            values_from = n,
+            values_fill = 0,
+            values_fn = sum
+        )
+    
+    randomized <- t %>%
+        select(recruit_date, source, randomized, ps_proj_eligible, n) %>%
+        filter(randomized == "randomized") %>%
+        select(-randomized) %>%
+        rename("randomized" = n)
+    
+   tmp <- full_join(ps_result, sl_status)
+   tmp <- full_join(tmp, randomized)
+   tab <- full_join(tmp, screen_status)
+   
+
+       
+   tab <- tab %>%
+       group_by(source) %>%
+       summarize(across(.cols = -c(recruit_date, ps_proj_eligible), .fns = sum, na.rm = TRUE)) %>%
+       ungroup() %>%
+       full_join(n_ps, by = "source") %>%
+       rowwise()
+   
+   tab %>%
+       select(
+           source, 
+           `total\nprescreens` = n_prescreens,
+           `prescreen\nineligible` = ineligible,
+           `screening\ndeclined` = screening_declined,
+           `awaiting\nresponse` = waiting_list,
+           `lost\ncontact` = lost_contact,
+           `no-show`,
+           `declined\nconsent` = declined_consent,
+           `screening\nineligible` = `Screening Ineligible`,
+           randomized
+       ) %>%
+       mutate(
+           across(.cols = -c(source, `total\nprescreens`),
+                     ~ paste(.x, " (", round(.x/`total\nprescreens` * 100), "%)", sep =  ""))
+             ) %>%
+       filter(!is.na(source)) %>%
+       datatable(rownames = FALSE,
+                 options = list(
+                     columnDefs = list(list(className = 'dt-center', targets = "_all"))
+                 ))
+        
+}
+
 
 rct_flow <-
     function(plot_df,
@@ -269,12 +378,7 @@ rct_source <- c(
     "Front Porch Forum" = "front_porch_forum",
     "Flyer" = "flyer",
     "Direct Mail" = "direct_mail",
-    "Neighborhood Newspaper" = "neighborhood_news",
-    "Metro Newspaper" = "metro_news",
-    "Television" = "TV",
-    "Radio" = "radio",
     "Participated in Other Studies" = "pt_in_other_studies",
-    "Bus Advertisement" = "bus_ad",
     "BuildClinical" = "BuildClinical",
     "Other" = "other",
     "Multiple Sources" = "multiple"
@@ -338,6 +442,15 @@ ui <- fluidPage(
             tabsetPanel(
                 type = "tabs",
                 tabPanel(
+                    "Recruitment Rates",
+                    br(),
+                    dataTableOutput("rct_rate_table"),
+                    # br(),
+                    # plotlyOutput("rct_rate"),
+                    # br(),
+                    # plotlyOutput("rct_accrual")
+                ),
+                tabPanel(
                     "Recruitment Flow",
                     br(),
                     plotOutput("rct_flow_plot",
@@ -349,13 +462,6 @@ ui <- fluidPage(
                     checkboxInput("remove_source",
                                   label = "Remove Source",
                                   value = FALSE)
-                ),
-                tabPanel(
-                    "Recruitment Rates",
-                    br(),
-                    plotlyOutput("rct_rate"),
-                    br(),
-                    plotlyOutput("rct_accrual")
                 ),
                 tabPanel(
                     "Map",
@@ -439,6 +545,17 @@ server <- function(input, output) {
         
         rct_rate(df)[[2]] %>%
             ggplotly()
+    })
+    
+    output$rct_rate_table <- renderDataTable({
+        df <- ps_location %>%
+            filter(
+                ps_proj_eligible %in% proj(),
+                source %in% sources(),
+                recruit_date >= date_range()[[1]],
+                recruit_date <= date_range()[[2]]
+            )
+        rct_rate_table(df)
     })
     
     
