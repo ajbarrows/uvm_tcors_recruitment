@@ -192,8 +192,8 @@ rct_rate_table <- function(ps_location) {
    tab %>%
        select(
            source, 
-           `total\nprescreens` = n_prescreens,
-           `prescreen\nineligible` = ineligible,
+           `total\nprescreens*` = n_prescreens,
+           `prescreen\nineligible**` = ineligible,
            `screening\ndeclined` = screening_declined,
            `awaiting\nresponse` = waiting_list,
            `lost\ncontact` = lost_contact,
@@ -203,8 +203,8 @@ rct_rate_table <- function(ps_location) {
            randomized
        ) %>%
        mutate(
-           across(.cols = -c(source, `total\nprescreens`),
-                     ~ paste(.x, " (", round(.x/`total\nprescreens` * 100), "%)", sep =  ""))
+           across(.cols = -c(source, `total\nprescreens*`),
+                     ~ paste(.x, " (", round(.x/`total\nprescreens*` * 100), "%)", sep =  ""))
              ) %>%
        filter(!is.na(source)) %>%
        datatable(rownames = FALSE,
@@ -328,44 +328,44 @@ rct_flow <-
 
 
 
-rct_cost <-
-    function(overall_cost,
-             ps_location,
-             filter_screen,
-             source_list) {
-        df <- ps_location %>%
-            filter(source %in% source_list) %>%
-            left_join(overall_cost, by = "source") %>%
-            select(source, screened, amount_spent) %>%
-            group_by(source, amount_spent) %>%
-            mutate(amount_spent = ifelse(is.na(amount_spent), 0, amount_spent))
-        
-        if (filter_screen) {
-            df <- df %>%
-                filter(screened == "yes")
-        }
-        
-        
-        scrn <- df %>%
-            filter(screened == "yes") %>%
-            count(name = "n_screenings") %>%
-            mutate(cost_per_screening = amount_spent / n_screenings) %>%
-            ungroup() %>%
-            select(source, n_screenings, cost_per_screening)
-        
-        ps <- df %>%
-            count(name = "n_prescreens") %>%
-            mutate(cost_per_prescreen = amount_spent / n_prescreens)
-        
-        merge(ps, scrn, all = TRUE) %>%
-            arrange(-amount_spent) %>%
-            datatable(rownames = FALSE) %>%
-            formatCurrency(columns = c(
-                "amount_spent",
-                "cost_per_prescreen",
-                "cost_per_screening"
-            ))
-    }
+# rct_cost <-
+#     function(overall_cost,
+#              ps_location,
+#              filter_screen,
+#              source_list) {
+#         df <- ps_location %>%
+#             filter(source %in% source_list) %>%
+#             left_join(overall_cost, by = "source") %>%
+#             select(source, screened, amount_spent) %>%
+#             group_by(source, amount_spent) %>%
+#             mutate(amount_spent = ifelse(is.na(amount_spent), 0, amount_spent))
+#         
+#         if (filter_screen) {
+#             df <- df %>%
+#                 filter(screened == "yes")
+#         }
+#         
+#         
+#         scrn <- df %>%
+#             filter(screened == "yes") %>%
+#             count(name = "n_screenings") %>%
+#             mutate(cost_per_screening = amount_spent / n_screenings) %>%
+#             ungroup() %>%
+#             select(source, n_screenings, cost_per_screening)
+#         
+#         ps <- df %>%
+#             count(name = "n_prescreens") %>%
+#             mutate(cost_per_prescreen = amount_spent / n_prescreens)
+#         
+#         merge(ps, scrn, all = TRUE) %>%
+#             arrange(-amount_spent) %>%
+#             datatable(rownames = FALSE) %>%
+#             formatCurrency(columns = c(
+#                 "amount_spent",
+#                 "cost_per_prescreen",
+#                 "cost_per_screening"
+#             ))
+#     }
 
 rct_source <- c(
     "craigslist" = "craigslist",
@@ -424,7 +424,7 @@ ui <- fluidPage(
                 "pickSource",
                 label = "Recruitment Source",
                 choices = rct_source,
-                selected = rct_source,
+                selected = c("BuildClinical", "direct_mail", "facebook"),
                 options = pickerOptions(actionsBox = TRUE),
                 multiple = TRUE
             ),
@@ -445,10 +445,8 @@ ui <- fluidPage(
                     "Recruitment Rates",
                     br(),
                     dataTableOutput("rct_rate_table"),
-                    # br(),
-                    # plotlyOutput("rct_rate"),
-                    # br(),
-                    # plotlyOutput("rct_accrual")
+                    h5("* All percents refer to % of total prescreens."),
+                    h5("** Interviewer-determined. May differ from initial eligibility determination.")
                 ),
                 tabPanel(
                     "Recruitment Flow",
@@ -470,9 +468,6 @@ ui <- fluidPage(
                     br(),
                     dataTableOutput("counting_table")
                 ),
-                # tabPanel("Cost Effectiveness",
-                #          br(),
-                #          dataTableOutput("rct_cost_table")),
                 tabPanel(
                     "Direct Mail Breakdown",
                     br(),
@@ -513,40 +508,40 @@ server <- function(input, output) {
         )
     })
     
-    output$rct_rate <- renderPlotly({
-        df <- ps_location %>%
-            filter(
-                ps_proj_eligible %in% proj(),
-                source %in% sources(),
-                recruit_date >= date_range()[[1]],
-                recruit_date <= date_range()[[2]]
-            )
-        if (input$switchScreened) {
-            df <- df %>% filter(screened == "yes")
-        }
-        
-        rct_rate(df)[[1]] %>%
-            ggplotly()
-    })
+    # output$rct_rate <- renderPlotly({
+    #     df <- ps_location %>%
+    #         filter(
+    #             ps_proj_eligible %in% proj(),
+    #             source %in% sources(),
+    #             recruit_date >= date_range()[[1]],
+    #             recruit_date <= date_range()[[2]]
+    #         )
+    #     if (input$switchScreened) {
+    #         df <- df %>% filter(screened == "yes")
+    #     }
+    #     
+    #     rct_rate(df)[[1]] %>%
+    #         ggplotly()
+    # })
     
-    output$rct_accrual <- renderPlotly({
-        df <- ps_location %>%
-            filter(
-                ps_proj_eligible %in% proj(),
-                source %in% sources(),
-                recruit_date >= date_range()[[1]],
-                recruit_date <= date_range()[[2]]
-            )
-        
-        if (input$switchScreened) {
-            df <- df %>% filter(screened == "yes")
-        }
-        
-        
-        rct_rate(df)[[2]] %>%
-            ggplotly()
-    })
-    
+    # output$rct_accrual <- renderPlotly({
+    #     df <- ps_location %>%
+    #         filter(
+    #             ps_proj_eligible %in% proj(),
+    #             source %in% sources(),
+    #             recruit_date >= date_range()[[1]],
+    #             recruit_date <= date_range()[[2]]
+    #         )
+    #     
+    #     if (input$switchScreened) {
+    #         df <- df %>% filter(screened == "yes")
+    #     }
+    #     
+    #     
+    #     rct_rate(df)[[2]] %>%
+    #         ggplotly()
+    # })
+    # 
     output$rct_rate_table <- renderDataTable({
         df <- ps_location %>%
             filter(
@@ -619,24 +614,27 @@ server <- function(input, output) {
                 recruit_date <= date_range()[[2]]
             )  %>%
             mutate(city_id = stringr::str_trim(city_id)) %>%
-            group_by(zip_id) %>%
-            count() %>%
+            group_by(city = city_id, zip = zip_id) %>%
+            count(name = "n_prescreens") %>%
             ungroup() %>%
-            mutate("%" = round(n / sum(n) * 100)) %>%
-            arrange(-n) %>%
-            filter()
+            mutate(
+                "% of prescreens" = round(n_prescreens / sum(n_prescreens) * 100),
+                zip = ifelse(nchar(zip) == 4, paste("0", zip, sep = ""), zip)
+                ) %>%
+            arrange(-n_prescreens)
+        
         datatable(df,
                   rownames = FALSE,
                   options = list(pageLength = 10))
     })
     
-    output$rct_cost_table <- renderDataTable({
-        rct_cost(overall_cost,
-                 ps_location,
-                 input$switchScreened,
-                 sources())
-    })
-    
+    # output$rct_cost_table <- renderDataTable({
+    #     rct_cost(overall_cost,
+    #              ps_location,
+    #              input$switchScreened,
+    #              sources())
+    # })
+    # 
     output$mailer_cost_table <- renderDataTable({
         mailer_breakdown(mailer_cost,
                          ps_location,
