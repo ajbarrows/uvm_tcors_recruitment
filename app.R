@@ -13,6 +13,8 @@ library(ggalluvial)
 
 theme_set(theme_classic(base_size = 15))
 
+# import data
+
 plot_df <- read.csv("./out/plot_df.csv")
 ps_location <- read.csv("./out/ps_locations.csv")
 no_location_data <- read.csv("./out/no_location_data.csv")
@@ -21,6 +23,36 @@ mailer_cost <- read.csv("./data/mailer_cost.csv")
 overall_cost <- read.csv("./data/overall_cost.csv")
 
 last_update <- read.table("./out/lastupdate.txt")$V1
+
+# functions --------
+
+mailer_response <- function(ps_location, mailer_cost) {
+    
+    # we don't know exactly when the mailers are sent, we only get
+    # an "order finalized" date
+    date_pad <- 14
+    
+    df <- mailer_cost %>%
+       left_join(ps_location, by = "zip_id") %>%
+       filter(source == "direct_mail") %>%
+       group_by(recruit_date, date_sent, location = city, zip = zip_id) %>%
+       count() %>%
+       mutate(date_recode = lubridate::mdy(date_sent) - date_pad)
+   
+   ggplot(df, aes(x = as.Date(recruit_date), y = n)) +
+       geom_point() +
+       geom_vline(
+           aes(xintercept = date_recode),
+           linetype = "dashed") +
+       geom_label(aes(x = date_recode, y = max(n) - 2, label = date_recode)) +
+       facet_wrap(~ location) +
+       theme(axis.text.x = element_text(angle = 45, hjust= 1)) +
+       labs(
+           x = "",
+           y = "Prescreens"
+       )
+}
+
 
 mailer_breakdown <-
     function(mailer_cost,
@@ -32,6 +64,10 @@ mailer_breakdown <-
             left_join(ps_location, by = "zip_id") %>%
             filter(source == "direct_mail") %>%
             filter(ps_proj_eligible %in% project_select) %>%
+            mutate(
+                enrolled = ifelse(sl_status %in% c("Complete", "In Progress"), "enrolled", "not_enrolled"),
+                enrolled = factor(enrolled, levels = c("enrolled", "not_enrolled"))
+            )  %>%
             group_by(zip_id, location = city, volume)
         
         if (filter_screen) {
@@ -39,49 +75,70 @@ mailer_breakdown <-
                 filter(screened == "screened")
         }
         
+        # 
+        # df %>%
+        #     mutate(
+        #         enrolled = ifelse(sl_status %in% c("Complete", "In Progress"), "enrolled", "not_enrolled"),
+        #         enrolled = factor(enrolled, levels = c("enrolled", "not_enrolled"))
+        #     ) %>%
+        #     count(enrolled, .drop = FALSE) %>%
+        #     filter(enrolled == "enrolled")
+            
+        
         scrn <- df %>%
             filter(screened == "screened") %>%
-            count(name = "n_screenings") %>%
-            mutate(screening_rate = paste(round(n_screenings / volume * 100, 2), "%", sep = "")) %>%
+            count(name = "screenings") %>%
             ungroup() %>%
-            select(zip_id, n_screenings, screening_rate)
+            select(zip_id, screenings)
         
         ps <- df %>%
-            count(name = "n_prescreens") %>%
-            mutate(prescreen_rate = paste(round(n_prescreens / volume * 100, 2), "%", sep = ""))
+            count(name = "prescreens")
+        
+        enrolled <- df %>%
+            filter(enrolled == "enrolled") %>%
+            count(enrolled, name = "enrolled")
         
         full_join(ps, scrn, by = "zip_id") %>%
+            left_join(enrolled, by = c("zip_id", "location", "volume")) %>%
+            rename("zip" = zip_id) %>%
+            mutate(zip = ifelse(nchar(zip) == 4, paste("0", zip, sep = ""), zip)) %>%
+            mutate(across(everything(), .fns = ~tidyr::replace_na(., 0))) %>%
             datatable(rownames = FALSE,
                       options = list(
                           columnDefs = list(list(className = 'dt-center', targets = "_all"))
                       ))
     }
 
-mailer_effectiveness <-
-    function(mailer_cost,
-             ps_location,
-             project_select,
-             filter_screen) {
-        cost <- mailer_cost %>%
-            summarize(across(
-                .cols = c(volume, cost),
-                .fns = sum,
-                na.rm = TRUE
-            ))
-        
-        if (filter_screen) {
-            ps_location <- ps_location %>%
-                filter(screened == "yes")
-        }
-        
-        ps_location %>%
-            filter(source == "direct_mail",
-                   ps_proj_eligible %in% project_select) %>%
-            group_by(ps_proj_eligible, screened) %>%
-            count() %>%
-            mutate(volume = cost$volume,
-                   "effectiveness (%)" = round(n / volume * 100, 2))
-    }
+mailer_overall <- function(ps_location, mailer_cost) {
+    df <- mailer_cost %>%
+        left_join(ps_location, by = "zip_id") %>%
+        filter(source == "direct_mail") %>%
+        mutate(
+            enrolled = ifelse(sl_status %in% c("Complete", "In Progress"), "enrolled", "not_enrolled"),
+            enrolled = factor(enrolled, levels = c("enrolled", "not_enrolled"))
+        )
+    
+    ps <- df %>% count(name = "prescreens")
+    screened <- df %>% filter(screened == "screened") %>% count(name = "screened")
+    enrolled <- df %>% filter(enrolled == "enrolled") %>% count(name = "enrolled")
+    
+    totals <- df %>% select(volume, cost) %>% 
+        distinct() %>% 
+        summarize(across(everything(), sum))
+    
+    cbind(totals, ps, screened, enrolled) %>%
+        mutate(volume = as.integer(volume)) %>%
+        datatable(
+            rownames = FALSE,
+            options = list(
+                columnDefs = list(list(className = 'dt-center', targets = "_all")),
+                dom = 't'
+            )
+        ) %>%
+        formatCurrency(columns = "cost")
+}
+
+
 
 
 rct_rate <- function(ps_location) {
@@ -330,46 +387,6 @@ rct_flow <-
     }
 
 
-
-# rct_cost <-
-#     function(overall_cost,
-#              ps_location,
-#              filter_screen,
-#              source_list) {
-#         df <- ps_location %>%
-#             filter(source %in% source_list) %>%
-#             left_join(overall_cost, by = "source") %>%
-#             select(source, screened, amount_spent) %>%
-#             group_by(source, amount_spent) %>%
-#             mutate(amount_spent = ifelse(is.na(amount_spent), 0, amount_spent))
-#         
-#         if (filter_screen) {
-#             df <- df %>%
-#                 filter(screened == "yes")
-#         }
-#         
-#         
-#         scrn <- df %>%
-#             filter(screened == "yes") %>%
-#             count(name = "n_screenings") %>%
-#             mutate(cost_per_screening = amount_spent / n_screenings) %>%
-#             ungroup() %>%
-#             select(source, n_screenings, cost_per_screening)
-#         
-#         ps <- df %>%
-#             count(name = "n_prescreens") %>%
-#             mutate(cost_per_prescreen = amount_spent / n_prescreens)
-#         
-#         merge(ps, scrn, all = TRUE) %>%
-#             arrange(-amount_spent) %>%
-#             datatable(rownames = FALSE) %>%
-#             formatCurrency(columns = c(
-#                 "amount_spent",
-#                 "cost_per_prescreen",
-#                 "cost_per_screening"
-#             ))
-#     }
-
 rct_source <- c(
     "craigslist" = "craigslist",
     "Referral" = "other_person",
@@ -476,7 +493,17 @@ ui <- fluidPage(
                     br(),
                     dataTableOutput("mailer_cost_table"),
                     br(),
-                    tableOutput("mail_effectiveness")
+                    br(),
+                    h4("Totals"),
+                    dataTableOutput("mailer_total_table"),
+                    br(),
+                    br()
+                ),
+                tabPanel(
+                    "Mailer Response",
+                    br(),
+                    plotOutput("mailer_response_plot",
+                               height = "800px")
                 )
                 
             ),
@@ -510,41 +537,7 @@ server <- function(input, output) {
             input$remove_source
         )
     })
-    
-    # output$rct_rate <- renderPlotly({
-    #     df <- ps_location %>%
-    #         filter(
-    #             ps_proj_eligible %in% proj(),
-    #             source %in% sources(),
-    #             recruit_date >= date_range()[[1]],
-    #             recruit_date <= date_range()[[2]]
-    #         )
-    #     if (input$switchScreened) {
-    #         df <- df %>% filter(screened == "yes")
-    #     }
-    #     
-    #     rct_rate(df)[[1]] %>%
-    #         ggplotly()
-    # })
-    
-    # output$rct_accrual <- renderPlotly({
-    #     df <- ps_location %>%
-    #         filter(
-    #             ps_proj_eligible %in% proj(),
-    #             source %in% sources(),
-    #             recruit_date >= date_range()[[1]],
-    #             recruit_date <= date_range()[[2]]
-    #         )
-    #     
-    #     if (input$switchScreened) {
-    #         df <- df %>% filter(screened == "yes")
-    #     }
-    #     
-    #     
-    #     rct_rate(df)[[2]] %>%
-    #         ggplotly()
-    # })
-    # 
+
     output$rct_rate_table <- renderDataTable({
         df <- ps_location %>%
             filter(
@@ -621,7 +614,7 @@ server <- function(input, output) {
             count(name = "n_prescreens") %>%
             ungroup() %>%
             mutate(
-                "% of prescreens" = round(n_prescreens / sum(n_prescreens) * 100),
+                "% from this source" = round(n_prescreens / sum(n_prescreens) * 100),
                 zip = ifelse(nchar(zip) == 4, paste("0", zip, sep = ""), zip)
                 ) %>%
             arrange(-n_prescreens)
@@ -633,14 +626,7 @@ server <- function(input, output) {
                       columnDefs = list(list(className = 'dt-center', targets = "_all"))
                   ))
     })
-    
-    # output$rct_cost_table <- renderDataTable({
-    #     rct_cost(overall_cost,
-    #              ps_location,
-    #              input$switchScreened,
-    #              sources())
-    # })
-    # 
+
     output$mailer_cost_table <- renderDataTable({
         mailer_breakdown(mailer_cost,
                          ps_location,
@@ -648,14 +634,28 @@ server <- function(input, output) {
                          input$switchScreened)
     })
     
-    output$mail_effectiveness <- renderTable({
-        mailer_effectiveness(mailer_cost,
-                             ps_location,
-                             proj(),
-                             input$switchScreened)
+    output$mailer_total_table <- renderDataTable({
+        ps_location %>%
+            filter(
+                ps_proj_eligible %in% proj(),
+                source %in% sources(),
+                recruit_date >= date_range()[[1]],
+                recruit_date <= date_range()[[2]]
+            ) %>%
+            mailer_overall(mailer_cost)
+            
     })
     
-    
+    output$mailer_response_plot <- renderPlot({
+        ps_location %>%
+            filter(
+                ps_proj_eligible %in% proj(),
+                source %in% sources(),
+                recruit_date >= date_range()[[1]],
+                recruit_date <= date_range()[[2]]
+            ) %>%
+            mailer_response(mailer_cost)
+    })
 }
 
 # Run the application
