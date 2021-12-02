@@ -36,11 +36,11 @@ mailer_breakdown <-
         
         if (filter_screen) {
             df <- df %>%
-                filter(screened == "yes")
+                filter(screened == "screened")
         }
         
         scrn <- df %>%
-            filter(screened == "yes") %>%
+            filter(screened == "screened") %>%
             count(name = "n_screenings") %>%
             mutate(screening_rate = paste(round(n_screenings / volume * 100, 2), "%", sep = "")) %>%
             ungroup() %>%
@@ -50,8 +50,11 @@ mailer_breakdown <-
             count(name = "n_prescreens") %>%
             mutate(prescreen_rate = paste(round(n_prescreens / volume * 100, 2), "%", sep = ""))
         
-        merge(ps, scrn, by = "zip_id") %>%
-            datatable(rownames = FALSE)
+        full_join(ps, scrn, by = "zip_id") %>%
+            datatable(rownames = FALSE,
+                      options = list(
+                          columnDefs = list(list(className = 'dt-center', targets = "_all"))
+                      ))
     }
 
 mailer_effectiveness <-
@@ -625,7 +628,10 @@ server <- function(input, output) {
         
         datatable(df,
                   rownames = FALSE,
-                  options = list(pageLength = 10))
+                  options = list(
+                      pageLength = 10,
+                      columnDefs = list(list(className = 'dt-center', targets = "_all"))
+                  ))
     })
     
     # output$rct_cost_table <- renderDataTable({
