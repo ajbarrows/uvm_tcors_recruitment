@@ -228,6 +228,10 @@ rct_rate_table <- function(ps_location) {
             values_from = n,
             values_fill = 0,
             values_fn = sum
+        ) %>%
+      rowwise() %>%
+      mutate(
+        enrolled = `In Progress` + `Complete` + `Withdrawn - Post-Product` + `Withdrawn - Pre-Product`
         )
     
     randomized <- t %>%
@@ -260,7 +264,8 @@ rct_rate_table <- function(ps_location) {
            `no-show`,
            `declined\nconsent` = declined_consent,
            `screening\nineligible` = `Screening Ineligible`,
-           randomized
+           # randomized,
+           enrolled
        ) %>%
        mutate(
            across(.cols = -c(source, `total\nprescreens*`),
