@@ -463,7 +463,7 @@ plot_ps_ineligible <- function(df, project, max_pct) {
 # Session Window Calendar ----
 
 session_window_distribution <- function(
-  ps_location, ste = "uvm", pjt
+  ps_location, ste = "uvm", pjt = c("Project 1", "Project 2", "Project 3")
   ) {
   
   # Compile visit window times, plot for aid in scheduling
@@ -494,7 +494,7 @@ session_window_distribution <- function(
       size = 3,
       show.legend = FALSE
     ) +
-    scale_x_time(labels = label_time("%H:%M"), breaks = scales::breaks_width("30 min")) +
+    scale_x_time(labels = scales::label_time("%H:%M"), breaks = scales::breaks_width("30 min")) +
     theme(axis.text.x = element_text(hjust = 1, angle = 90)) +
     labs(
       y = "",
