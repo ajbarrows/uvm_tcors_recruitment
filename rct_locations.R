@@ -5,6 +5,81 @@ library(dplyr)
 library(redcapAPI)
 library(ggplot2)
 
+
+# common -------
+rct_source_vars <-  list(
+  "recruit_1___0" = "TV",
+  "recruit_1___1" = "radio",
+  "recruit_1___2" = "metro_news",
+  "recruit_1___3" = "neighborhood_news",
+  "recruit_1___4" = "flyer",
+  "recruit_1___5" = "facebook",
+  "recruit_1___6" = "craigslist",
+  "recruit_1___7" = "bus_ad",
+  "recruit_1___8" = "pt_in_other_studies",
+  "recruit_1___9" = "clin_trials_web",
+  "recruit_1___10" = "direct_mail",
+  "recruit_1___11" = "other_person",
+  "recruit_1___12" = "other",
+  "recruit_1___13" = "instagram",
+  "recruit_1___14" = "google",
+  "recruit_1___15" = "youtube",
+  "recruit_1___16" = "front_porch_forum",
+  "recruit_1___17" = "reddit",
+  "recruit_1___18" = "spotify",
+  "recruit_1___19" = "tiktok",
+  "recruit_1___20" = "BuildClinical"
+)
+
+ps_exclusion_overall <- list(
+  "recruit_3" = "not_smoking_daily",
+  "recruit_3a" = "low_cpd",
+  "recruit_4b" = "daily_ecig_use",
+  "recruit_4d" = "other_tobacco_30days",
+  "recruit_5" = "nicotine_replacement",
+  "recruit_6" = "quit_smoking_medication",
+  "recruit_7" = "plans_to_quit",
+  "recruit_8" = "rolls_own_cigs",
+  "recruit_13" = "age",
+  "recruit_17a" = "rx_pain_med"
+)
+
+ps_exclusion_p1 <- list(
+  "recruit_11" = "male",
+  "recruit_11a" = "gender_identity",
+  "recruit_14" = "education_level",
+  "recruit_14a" = "current_degree_program",
+  "age_p1_p4" = "age_p1_p4"
+)
+
+ps_exclusion_p2 <- list(
+  "recruit_15" = "not_receiving_MAT"
+)
+
+ps_exclusion_p3 <- list(
+  "recruit_16ab_score" = "gad_score",
+  "recruit_16cd_score" = "phq_score",
+  "recruit_18a" = "current_psych_txt"
+)
+
+ps_exclusion_p4 <- list(
+  "recruit_12a" = "gest_age",
+  "age_p1_p4" = "age_p1_p4",
+  "education_level" = "education_level",
+  "current_degree_program" = "current_degree_program",
+  "gender_identity" = "gender_identity",
+  "male" = "male",
+  "recruit_12" = "not_pregnant"
+)
+
+excl_vector <- c(
+  ps_exclusion_overall, 
+  ps_exclusion_p1,
+  ps_exclusion_p2,
+  ps_exclusion_p3,
+  ps_exclusion_p4
+)
+
 # functions ---------
 
 build_rcon <- function(rc){
@@ -52,12 +127,9 @@ pjt_ste <- function(df){
   ste <- substr(df$screen_id, 3, 3)
   
   df$project <- NA
-  df$project[pjt == "X"] <- "Project 1"
-  df$project[pjt == "Y"] <- "Project 2"
-  df$project[pjt == "Z"] <- "Project 3"
-  df$project[pjt == "J"] <- "Project 1"
-  df$project[pjt == "K"] <- "Project 2"
-  df$project[pjt == "L"] <- "Project 3"
+  df$project[pjt == "X" | pjt == "J"] <- "Project 1"
+  df$project[pjt == "Y" | pjt == "K"] <- "Project 2"
+  df$project[pjt == "Z" | pjt == "L"] <- "Project 3"
   
   df$site <- NA
   df$site[ste == "A"] <- "uvm"
@@ -79,7 +151,10 @@ pull_status <- function(rcon) {
   # return tidy data frame from the TCORS Study 3 "session log" enrollment
   # status
   
-  fields <- c("sl_status", "is2_date")
+  fields <- c(
+    "sl_status", "is2_date", 
+    "sl_baseline1_vwstart", "sl_baseline1_vwend"
+    )
   events <- c("screening_arm_1", "baseline_2_arm_1")
   
   df <- download_rc_dataframe(rcon, fields = fields, events = events)
@@ -93,12 +168,23 @@ pull_status <- function(rcon) {
     ) %>%
     pjt_ste() %>%
     pi_prop() %>%
-    select(screen_id, sl_status, baseline2_date, project, site, pi_prop) %>%
+    select(
+      screen_id, sl_status, baseline2_date, 
+      sl_baseline1_vwstart, sl_baseline1_vwend,
+      project, site, pi_prop) %>%
     ungroup()
 }
 
+download_ps <- function(rcon, fields = NULL, events = NULL) {
+  # Make REDCap API call to recruitment projects. 
+  exportRecords(
+    rcon, fields = fields, labels = FALSE, survey = FALSE,
+    dag = TRUE, events = events, form_complete_auto = FALSE,
+    factors = FALSE
+  )
+}
 
-clean_ps <- function(ps_df, start_date = as.Date("2020-10-01")) {
+clean_ps <- function(ps_df, start_date = as.Date("2019-8-01")) {
   # Filter out pre-screen records flagged as duplicate, error, or 
   # having a date outside of the acceptable range.
   
@@ -128,27 +214,13 @@ ps_share <- function(df_id, df_ps) {
   return(df)
 }
 
-download_ps <- function(rcon, fields = NULL, events = NULL) {
-  # Make REDCap API call to recruitment projects. 
-  exportRecords(
-    rcon, fields = fields, labels = FALSE, survey = FALSE,
-    dag = TRUE, events = events, form_complete_auto = FALSE,
-    factors = FALSE
-  )
-}
-
 download_ps_data <- function() {
   # Produce merged pre-screen dataframe
   
   rcon_ps <- build_rcon("rc_prescreen_uvm")
   rcon_id <- build_rcon("rc_id_info_uvm")
-  
-  ps_fields <- c(
-    "redcap_id", "recruit_identinfo_id", "recruit_date", 
-    "elig_project_1", "elig_project_2", "elig_project_3",
-    "elig_project_none", "screen_subjectid", "recruit_1",
-    "recruit_1b", "recruit_int_summ", "screen_status"
-  )
+ 
+  ps_fields <- NULL
   
   id_fields <- c(
     "online_id", "fname_id", "lname_id", "address_id", "city_id", "state_id",
@@ -163,134 +235,143 @@ download_ps_data <- function() {
 }
 
 
+rename_matrix <- function(df) {
+  # make values names of columns
+  w1 <- which(df[,1:ncol(df)] == 1, arr.ind = TRUE)
+  w0 <- which(df[,1:ncol(df)] == 0, arr.ind = TRUE)
+  
+  # avoid zero-length error
+  if(length(w1 > 0)) {
+    df[w1] <- names(df)[w1[,"col"]]
+  }
+  df[w0] <- NA
+  
+  df
+}
 
-
-rename_source <- function(only_one, n_val) {
-  only_one <- only_one %>%
-    plyr::rename(
-      c(
-        "recruit_1___0" = "TV",
-        "recruit_1___1" = "radio",
-        "recruit_1___2" = "metro_news",
-        "recruit_1___3" = "neighborhood_news",
-        "recruit_1___4" = "flyer",
-        "recruit_1___5" = "facebook",
-        "recruit_1___6" = "craigslist",
-        "recruit_1___7" = "bus_ad",
-        "recruit_1___8" = "pt_in_other_studies",
-        "recruit_1___9" = "clin_trials_web",
-        "recruit_1___10" = "direct_mail",
-        "recruit_1___11" = "other_person",
-        "recruit_1___12" = "other",
-        "recruit_1___13" = "instagram",
-        "recruit_1___14" = "google",
-        "recruit_1___15" = "youtube",
-        "recruit_1___16" = "front_porch_forum",
-        "recruit_1___17" = "reddit",
-        "recruit_1___18" = "spotify",
-        "recruit_1___19" = "tiktok",
-        "recruit_1___20" = "BuildClinical"
-      )
-    ) 
+reshape_matrix <- function(df, rename_list, colname, prefix, rename = TRUE) {
   
-  # wrangle data to take values of column names
+  if (rename) {
+    df_sub <- df %>%
+      plyr::rename(rename_list)
+  } else {
+    df_sub <- df
+  }
   
-  w1 <- which(only_one[,1:(ncol(only_one)-n_val)] == 1, arr.ind = TRUE)
-  w0 <- which(only_one[,1:(ncol(only_one)-n_val)] == 0, arr.ind = TRUE)
-  only_one[w1] <- names(only_one)[w1[,"col"]]
-  only_one[w0] <- NA
-  
-  # create single-value
-  only_one %>%
+  df_sub <- df_sub %>%
+    select(unlist(rename_list, use.names = FALSE)) %>%
+    rename_matrix() %>%
     tidyr::unite(
-      col = "source",
-      TV, radio, metro_news, neighborhood_news,
-      flyer, facebook, craigslist, bus_ad, 
-      pt_in_other_studies, clin_trials_web,
-      direct_mail, other_person, other,
-      instagram, google, youtube, front_porch_forum,
-      reddit, spotify, tiktok, BuildClinical,
+      col = !!colname,
+      sep = ",",
       na.rm = TRUE
+    )
+  
+  df_sub[df_sub == ""] <- NA
+  
+  df %>%
+    select(-starts_with(prefix)) %>%
+    cbind(df_sub)
+}
+
+recode_flyer <- function(df) {
+  # participants often confuse "flyer" with "direct_mail." recode
+  # any flyer_location that suggests direct mailing
+  
+  pattern <- "mail|mailbox|home|house"
+  df %>%
+    mutate(
+      recruit_1___10 = ifelse(
+      !is.na(recruit_1b) &
+        stringr::str_detect(tolower(recruit_1b), pattern),
+        1, recruit_1___10
+      ),
+      recruit_1___4 = ifelse(
+        !is.na(recruit_1b) &
+          stringr::str_detect(tolower(recruit_1b), pattern),
+        0, recruit_1___4
+      )
     )
 }
 
-gather_ps_data <- function(ps_data) {
-  # return a list of prescreen zip codes, project eligible, and whether
-  # they attended in-person screening
-  
-  # clean and recode
-  ps_data <- ps_data %>%
-    filter(!is.na(recruit_date),!is.na(zip_id)) %>%
-    rename(flyer_location = recruit_1b) %>%
+detect_exclusion <- function(df_sub, excl_list) {
+  df_sub %>%
     mutate(
-      ps_proj_eligible = ifelse(elig_project_none == 1, "ineligible", NA),
-      ps_proj_eligible = ifelse(elig_project_2 == 1, "Project 2", ps_proj_eligible),
-      ps_proj_eligible = ifelse(
-        elig_project_1 == 1 &
-          elig_project_3 == 1,
-        "Project 1 and Project 3",
-        ps_proj_eligible
+      gen_excluded = purrr::map(
+        reasons_for_exclusion, 
+        stringr::str_detect,
+        pattern = excl_list
       ),
-      ps_proj_eligible = ifelse(
-        is.na(ps_proj_eligible) &
-          elig_project_1 == 1,
-        "Project 1",
-        ps_proj_eligible
-      ),
-      ps_proj_eligible = ifelse(
-        is.na(ps_proj_eligible) &
-          elig_project_3 == 1,
-        "Project 3",
-        ps_proj_eligible
-      ),
-      screened = ifelse(!is.na(screen_subjectid), "yes", "no"),
-      state_id = redcapFactorFlip(state_id),
-      num_sources = rowSums(across(starts_with("recruit_1")))
+      gen_excluded = purrr::map_lgl(
+        gen_excluded,
+        ~ifelse(TRUE %in% .x, TRUE, FALSE)
+      )
+    )
+}
+
+gather_ps_data <- function(df, rct_source_vars, excl_vector) {
+  # sources
+  df_source <- df %>%
+    recode_flyer() %>%
+    reshape_matrix(
+      rct_source_vars,
+      "recruitment_sources",
+      "recruit_1_"
     ) %>%
-    select(-c(
+    select(recruitment_sources)
+  
+  # exclusion
+  df_exclusion <- df %>%
+    plyr::rename(excl_vector) %>%
+    dplyr::mutate(
+      not_smoking_daily = ifelse(not_smoking_daily == 1, 1, 0),
+      low_cpd = ifelse(low_cpd <= 5, 1, 0),
+      daily_ecig_use = ifelse(daily_ecig_use >= 6, 1, 0),
+      other_tobacco_30days = ifelse(other_tobacco_30days > 9, 1, 0),
+      age = ifelse(age < 21 | age > 70, 1, 0),
+      male = ifelse(male == 0, 1, 0),
+      gender_identity = ifelse(gender_identity != 1, 1, 0),
+      education_level = ifelse(education_level > 4, 1, 0),
+      not_receiving_MAT = ifelse(not_receiving_MAT == 0, 1, 0),
+      gad_score = ifelse(gad_score < 3, 1, 0),
+      phq_score = ifelse(phq_score < 3, 1, 0),
+      gest_age = ifelse(gest_age > 26, 1, 0),
+      age_p1_p4 = ifelse(age > 44, 1, 0),
+      not_pregnant = ifelse(not_pregnant == 0, 1, 0)
+    ) %>%
+    reshape_matrix(
+      excl_vector,
+      "reasons_for_exclusion",
+      "recruit_",
+      rename = FALSE
+    ) %>%
+    mutate(reasons_for_exclusion = ifelse(
+      elig_project_none > 0,
+      reasons_for_exclusion,
+      NA
+    )) %>%
+    select(reasons_for_exclusion)
+  
+  df_out <- df %>%
+    select(
+      redcap_id,
+      recruit_date,
+      recruit_int_summ,
+      screen_status,
+      screen_subjectid,
+      zip_id,
       elig_project_1,
       elig_project_2,
       elig_project_3,
-      elig_project_none,
-      redcap_data_access_group,
-      email_id,
-      phone_id,
-      address_id,
-      fname_id,
-      lname_id
-    ))
+      elig_project_4,
+      elig_project_none
+    ) %>%
+    cbind(df_source) %>%
+    cbind(df_exclusion)
   
-  more_than_one <- ps_data %>%
-    filter(num_sources > 1) %>%
-    mutate(source = "multiple") %>%
-    select(-starts_with("recruit_1"))
-  
-  
-  only_one <- ps_data %>%
-    filter(num_sources == 1)
-  
-  only_one <- rename_source(only_one, n_val = 9)
-  
-  # manual replace list:
-  
-  only_one <- only_one %>%
-    mutate(zip_id = recode(zip_id,
-      "05852" = "05851",
-      "05402" = "05401",
-      "05246" = "05346",
-      "05378" = "05478",
-      "05467" = "05408",
-      "05856" = "05647",
-      "04503" = "05403",
-      "05402" = "05452",
-      "05750" = "05735",
-      "05462" = "05461",
-      "05671" = "05661"
-    ))
-  
-  list(only_one, more_than_one)
+  df_out %>% 
+    detect_exclusion(unlist(excl_vector[1], use.names = FALSE))
 }
-
 
 
 join_crosswalk <- function(ps_sub) {
@@ -302,31 +383,24 @@ join_crosswalk <- function(ps_sub) {
     )
 }
 
-recode_flyer <- function(ps_location) {
-  # participants often confuse "flyer" with "direct_mail." recode
-  # any flyer_location that suggests direct mailing
-  
-  pattern <- "mail|mailbox|home|house"
-  ps_location %>%
-    mutate(source = ifelse(
-      !is.na(flyer_location) &
-        stringr::str_detect(tolower(flyer_location), pattern), 
-      "direct_mail",
-      source)
-      )
-}
 
-recode_buildclinical <- function(ps_location, start_date = as.Date("2021-10-22")) {
+
+recode_buildclinical <- function(ps_sub, start_date = as.Date("2021-10-22")) {
   # BuildClinical took over digital recruitment for the TCORS
   # main trial on 10/22/2021
   
-  ps_location %>%
+  pattern <- "facebook|instagram|google"
+  
+  ps_sub %>%
     mutate(
-      source = ifelse(
-        as.Date(recruit_date) >= start_date &
-          (source == "facebook" | source == "instagram" | source == "google"),
-        "BuildClinical",
-        source
+      recruitment_sources = ifelse(
+        as.Date(recruit_date) >= start_date,
+        stringr::str_replace(
+          recruitment_sources,
+          pattern,
+          "BuildClinical"
+        ),
+        recruitment_sources
       )
     )
 }
@@ -341,7 +415,7 @@ merge_trial_data <- function(ps_location) {
       randomized = ifelse(!is.na(baseline2_date), "randomized", "not randomized"),
       complete = ifelse(sl_status == "Complete", "complete", "not complete"),
       complete = ifelse(is.na(complete), "not complete", complete),
-      screened = ifelse(screened == "yes", "screened", "not screened"),
+      screened = ifelse(!is.na(screen_subjectid), "screened", "not screened"),
       recruit_int_summ = recode(
         recruit_int_summ,
         "1" = "screening_scheduled",
@@ -351,11 +425,11 @@ merge_trial_data <- function(ps_location) {
         "5" = "lost_contact",
         .default = NA_character_
         ),
-      recruit_int_summ = ifelse(
-        ps_proj_eligible == "ineligible",
-        "ineligible",
-        recruit_int_summ
-        ),
+      # recruit_int_summ = ifelse(
+      #   ps_proj_eligible == "ineligible",
+      #   "ineligible",
+      #   recruit_int_summ
+      #   ),
       screen_status = recode(
         screen_status,
         "1" = "declined_consent",
@@ -370,140 +444,45 @@ merge_trial_data <- function(ps_location) {
     )
 }
 
-# P4 functions -----------
-
-download_ps_p4 <- function() {
-  # Project 4's REDCap project is structured differently, 
-  # which requires a different approach. 
-  
-  rcon_ps_p4 <- build_rcon("rc_prescreen_p4")
-  # rcon_id_p4 <- build_rcon("rd_id_info_p4")
-  
-  ps_fields <- c(
-    "redcap_id", "recruit_identinfo_id", "recruit_date",
-    "recruit_int_summ", "recruit_1",
-    "recruit_3", "recruit_4", "recruit_4a", "recruit_5",
-    "recruit_6", "recruit_7", "recruit_7a", "recruit_8",
-    "recruit_9", "recruit_10", "recruit_11", "recruit_12",
-    "recruit_13", "recruit_14", "recruit_15"
-  )
-  
-  df_ps <- download_ps(rcon_ps_p4, fields = ps_fields)
-  
-  df_ps %>%
-    mutate(elig_project_4 = ifelse(
-      recruit_3 == 1 & 
-        (recruit_4 == 0 |
-           (recruit_4 == 1 & recruit_4a < 10)) &
-        recruit_5 == 0 & 
-        recruit_6 == 0 &
-        recruit_7a == 0 & 
-        (recruit_8 == 0 | recruit_8 == 7777) &
-        recruit_9 == 0 &
-        recruit_10 == 0 &
-        (recruit_11 > 17 & recruit_11 < 45) &
-        recruit_12 == 1 &
-        recruit_13 == 1 & 
-        recruit_14 < 26 & 
-        recruit_15 %in% 1:4,
-      "Project 4", "ineligible"
-    ),
-    recruit_int_summ = recode(
-      as.character(recruit_int_summ),
-      "1" = "screening_scheduled",
-      "2" = "waiting_list",
-      "3" = "screening_declined",
-      "4" = "ineligible",
-      "5" = "lost_contact",
-      .default = NA_character_
+vectorize_final <- function(ps_location) {
+  ps_location %>%
+    mutate(
+      recruitment_sources = as.list(strsplit(recruitment_sources, ",")),
+      reasons_for_exclusion = as.list(strsplit(reasons_for_exclusion, ","))
     )
-    ) %>%
-    select(
-      redcap_id, recruit_identinfo_id, recruit_date,
-       recruit_int_summ, elig_project_4, starts_with("recruit_1___")
-    )
-}
-  
-
-gather_p4 <- function(p4_data) {
-  df <- p4_data %>% 
-    mutate(num_sources = rowSums(across(starts_with("recruit_1")), na.rm = TRUE))
-  
-  only_one <- df %>% 
-    filter(num_sources == 1) %>%
-    select(-recruit_int_summ, recruit_int_summ)
-  
-  only_one <- rename_source(only_one, n_val = 2)
-  
-  more_than_one <- df %>% 
-    filter(num_sources > 1) %>%
-    select(!starts_with("recruit_1___"))
-  more_than_one$source <- "multiple"
-  
-  rbind(only_one, more_than_one)
 }
 
 
 # main -----
 ps_data <- download_ps_data() # API call
 # ps_data <- ps_data %>% recode_facebook(as.Date("2021-10-22"), Sys.Date())
-p <- gather_ps_data(ps_data)
-ps_sub_one <- p[[1]]
-ps_sub_multi <- p[[2]]
+ps_sub <- gather_ps_data(
+  ps_data,
+  rct_source_vars,
+  excl_vector
+)
 
-ps_sub <- rbind(ps_sub_one, ps_sub_multi)
-
+ps_sub <- recode_buildclinical(ps_sub)
 ps_location <- join_crosswalk(ps_sub)
-ps_location <- recode_flyer(ps_location)
-
-did_not_merge <- ps_location %>%
-  filter(is.na(LAT) & !is.na(zip_id)) %>%
-  select(recruit_date, ps_proj_eligible, source, screened, zip_id, city_id, state_id)
 
 # impose trial data
 ps_location <- merge_trial_data(ps_location)
 
-# recode BuildClinical sources
-ps_location <- recode_buildclinical(ps_location)
+# vectorize
+ps_location <- vectorize_final(ps_location)
 
 
-# TODO function
-plot_main <- ps_location %>%
-  select(
-    redcap_id, recruit_date, source, recruit_int_summ,
-    ps_proj_eligible, screened, sl_status,
-    randomized, complete, rand_proj
-    )
-         
-# p4 ------
 
-p4_data <- download_ps_p4()
-
-p4_data <- clean_ps(p4_data, start_date = as.Date("2019-01-01"))
-p4 <- gather_p4(p4_data)
-p4 <- recode_buildclinical(p4)
-
-plot_p4 <- p4 %>%
-  select(
-    redcap_id, recruit_date, source, recruit_int_summ,
-    ps_proj_eligible = elig_project_4
-  ) %>%
-  mutate(
-    screened = NA,
-    sl_status = NA,
-    randomized = NA, 
-    complete = NA,
-    rand_proj = NA
-  )
+# TODO Lay this out so we can pick a timeframe, look at sources, find reasons for ineligiblity, and rates of everything
 
 
-# TODO sort of works but not really
-plot_df <- rbind(plot_main, plot_p4)
 
 # write to disk
-write.csv(ps_location, "./out/ps_locations.csv", row.names = FALSE)
-write.csv(did_not_merge, "./out/no_location_data.csv", row.names = FALSE)
-write.csv(plot_df, "./out/plot_df.csv", row.names = FALSE)
+# write.csv(ps_location, "./out/ps_locations.csv", row.names = FALSE)
+# write.csv(did_not_merge, "./out/no_location_data.csv", row.names = FALSE)
+# write.csv(plot_df, "./out/plot_df.csv", row.names = FALSE)
+
+save(ps_location, file = "./out/ps_locations.RData")
 
 # timestamp
 write.table(Sys.Date(), "./out/lastupdate.txt", row.names = FALSE, col.names = FALSE)
