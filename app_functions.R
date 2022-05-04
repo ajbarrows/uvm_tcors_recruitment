@@ -494,7 +494,6 @@ session_window_distribution <- function(
       size = 3,
       show.legend = FALSE
     ) +
-    scale_x_time(labels = scales::label_time("%H:%M"), breaks = scales::breaks_width("30 min")) +
     theme(axis.text.x = element_text(hjust = 1, angle = 90)) +
     labs(
       y = "",
